@@ -1,0 +1,176 @@
+body {
+    margin: 0 auto;
+    
+    padding: 0 20px;
+}
+
+.column {
+  float: left;
+  
+  padding: 10px;
+
+}
+
+
+
+
+.bot_msg_div {
+    overflow: hidden;
+    margin: 26px 0 26px;
+}
+
+.bot_msg_img {
+    display: inline-block;
+    width: 10%;
+}
+
+.bot_msg_main_div {
+    display: inline-block;
+    padding: 0 0 0 10px;
+    vertical-align: top;
+    width: 65%;
+}
+
+.bot_msg_inner_div {
+    width: 100%;
+}
+
+    .bot_msg_inner_div p {
+        background: #ebebeb none repeat scroll 0 0;
+        border-radius: 3px;
+        color: #646464;
+        font-size: 14px;
+        margin: 0;
+        padding: 5px 10px 5px 12px;
+        width: 100%;
+        border-radius: 20px;
+        border-top-left-radius: 0;
+        /*box-shadow: 5px 10px #888888;*/
+    }
+
+
+
+
+
+.user_msg_div {
+    overflow: hidden;
+    margin: 26px 0 26px;
+}
+
+.user_msg_img {
+    display: inline-block;
+    width: 10%;
+    float: right;
+}
+
+.user_msg_main_div {
+    float: right;
+    width: 65%;
+    padding-right:10px;
+    
+}
+
+    .user_msg_main_div p {
+        background: #9dc4f4 none repeat scroll 0 0;
+        border-radius: 3px;
+        font-size: 14px;
+        margin: 0;
+        color: #115bb7;
+        padding: 5px 10px 5px 12px;
+        width: 100%;
+        border-radius: 20px;
+        border-top-right-radius: 0;
+        /*box-shadow: 5px 10px #888888;*/
+    }
+
+.time_date {
+    color: #747474;
+    display: block;
+    font-size: 12px;
+    margin: 8px 0 0;
+}
+
+
+.tiblock {
+    align-items: center;
+    display: flex;
+    height: 17px;
+}
+
+.ticontainer {
+    padding-top: 20px;
+}
+
+.user_msg_main_div .ticontainer {
+    float: right;
+}
+
+
+.ticontainer .tidot {
+    background-color: #90949c;
+}
+
+.tidot {
+    -webkit-animation: mercuryTypingAnimation 1.5s infinite ease-in-out;
+    border-radius: 4px;
+    display: inline-block;
+    height: 6px;
+    margin-right: 2px;
+    width: 6px;
+}
+
+@-webkit-keyframes mercuryTypingAnimation {
+    0% {
+        -webkit-transform: translateY(0px)
+    }
+
+    28% {
+        -webkit-transform: translateY(-5px)
+    }
+
+    44% {
+        -webkit-transform: translateY(0px)
+    }
+}
+
+.tidot:nth-child(1) {
+    -webkit-animation-delay: 200ms;
+}
+
+.tidot:nth-child(2) {
+    -webkit-animation-delay: 300ms;
+}
+
+.tidot:nth-child(3) {
+    -webkit-animation-delay: 400ms;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-size: 10px;
+}
+
+td {
+    border: 1px solid black;
+    font-size: 10px;
+    text-align: right;
+}
+
+    td.white {
+        border: 1px solid white;
+        font-size: 10px;
+        text-align: right;
+    }
+
+div.test2 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    width: 20px;
+    height: 100px;
+    font-size: 10px;
+}
+
