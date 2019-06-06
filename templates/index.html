@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../static/main.css" />
 
+<head>
+    <title>ChatBot Grid</title>
     <style>
+
         table {
             border-collapse: collapse;
             border: 1px solid black;
@@ -21,6 +15,7 @@
             border: 1px solid black;
             font-size: 10px;
             text-align: right;
+            background-image: url(https://www.vectorstock.com/royalty-free-vector/red-cross-symbol-icon-as-delete-remove-vector-22586546);
         }
 
             td.white {
@@ -43,385 +38,346 @@
             height: 100px;
             font-size: 10px;
         }
-
         }
-
     </style>
 
+    <script>
+        function getCellRow(td) {
+            td = td ? td.target : window.event ? event.srcElement : '';
+            var rc = [], pa = td.parentNode;
+            if (pa.tagName == 'TR') {
+                alert([pa.rowIndex, td.cellIndex]);
+                td.innerHTML = "<img src='myImageURL' alt='hello'/>";
+            }
+        }
+
+        window.onload = function () {
+            document.getElementsByTagName('table')[0].onclick = getCellRow;
+        }
+    </script>
 </head>
-
 <body>
-    <div class="container" style="height:100vh;width:100%">
-        <br />
-        <div class="row" style="height:90vh">
-            <div class="column" style=" width: 60%;height:90vh">
-                <table>
-                    <tr>
-                        <!-- first row-->
-                        <td colspan="2" rowspan="2"></td>
-                        <td colspan="5" class="center">Office Location</td>
-                        <td colspan="5" class="center">Role</td>
-                        <td colspan="5" class="center">Project Hours/Week</td>
-                    </tr>
-                    <tr>
-                        <!-- second row -->
-                        <!-- Office Location column-->
-                        <td><div class="test2">New York</div></td>
-                        <td><div class="test2">Boston</div></td>
-                        <td><div class="test2">Chicago</div></td>
-                        <td><div class="test2">Seattle</div></td>
-                        <td><div class="test2">Los Angeles</div></td>
-                        <!--Role column-->
-                        <td><div class="test2">Network Architect</div></td>
-                        <td><div class="test2">Quality Assurance Engineer</div></td>
-                        <td><div class="test2">Systems Analyst</div></td>
-                        <td><div class="test2">Cyber Security Specalist</div></td>
-                        <td><div class="test2">Database Administrator</div></td>
-                        <!-- Project Column -->
-                        <td><div class="test2">4</div></td>
-                        <td><div class="test2">6</div></td>
-                        <td><div class="test2">8</div></td>
-                        <td><div class="test2">10</div></td>
-                        <td><div class="test2">12</div></td>
-                    </tr>
-                    <tr>
-                        <!--Name -1st row-->
-                        <td rowspan="5"><div class="test2">Name</div></td>
-                        <td>Alex</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <!--Name -2nd row-->
-                        <td>Leon</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <!--Name - 3rd row-->
-                        <td>Michael</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <!--Name -4th row-->
-                        <td>Rachel</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <!--Name -5th row-->
-                        <td>Tina</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <!--Proj Hours First Roww-->
-                        <td rowspan="5">
-                            <div class="test2">Project Hours per Week</div>
-                        </td>
-                        <td>4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                    </tr>
-                    <tr>
-                        <!--Proj Hours Second Row-->
-                        <td>6</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                    </tr>
-                    <tr>
-                        <!--Proj Hours Third Row -->
-                        <td>8</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                    </tr>
-                    <tr>
-                        <!--Proj Hours Fourth Row -->
-                        <td>10</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                    </tr>
-                    <tr>
-                        <!--Proj Hours Fifth Row -->
-                        <td>12</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                    </tr>
-                    <tr>
-                        <!-- Role -1st row-->
-                        <td rowspan="5"><div class="test2">Role</div></td>
-                        <td>Network Architect</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                    </tr>
-                    <tr>
-                        <!-- Role -2nd row-->
-                        <td>Quality Assurance Engineer</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                    </tr>
-                    <tr>
-                        <!-- Role -3rd row-->
-                        <td>Systems Analyst</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>>
-                    </tr>
-                    <tr>
-                        <!-- Role -4th row-->
-                        <td>Cyber Security Specalist</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                    </tr>
-                    <tr>
-                        <!-- Role -5th row-->
-                        <td>Database Adminstrator</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                        <td class="white"></td>
-                    </tr>
-                </table>
 
+    <table>
+        <tr>
+            <!-- first row-->
+            <td colspan="2" rowspan="2"></td>
+            <td colspan="5" class="center">Office Location</td>
+            <td colspan="5" class="center">Role</td>
+            <td colspan="5" class="center">Project Hours/Week</td>
+        </tr>
+        <tr>
+            <!-- second row -->
+            <!-- Office Location column-->
+            <td><div class="test2">New York</div></td>
+            <td><div class="test2">Boston</div></td>
+            <td><div class="test2">Chicago</div></td>
+            <td><div class="test2">Seattle</div></td>
+            <td><div class="test2">Los Angeles</div></td>
+            <!--Role column-->
+            <td><div class="test2">Network Architect</div></td>
+            <td><div class="test2">Quality Assurance Engineer</div></td>
+            <td><div class="test2">Systems Analyst</div></td>
+            <td><div class="test2">Cyber Security Specalist</div></td>
+            <td><div class="test2">Database Administrator</div></td>
+            <!-- Project Column -->
+            <td><div class="test2">4</div></td>
+            <td><div class="test2">6</div></td>
+            <td><div class="test2">8</div></td>
+            <td><div class="test2">10</div></td>
+            <td><div class="test2">12</div></td>
+        </tr>
+        <tr>
+            <!--Name -1st row-->
+            <td rowspan="5"><div class="test2">Name</div></td>
+            <td>Alex</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <!--Name -2nd row-->
+            <td>Leon</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <!--Name - 3rd row-->
+            <td>Michael</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <!--Name -4th row-->
+            <td>Rachel</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <!--Name -5th row-->
+            <td>Tina</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <!--Proj Hours First Roww-->
+            <td rowspan="5">
+                <div class="test2">Project Hours per Week</div>
+            </td>
+            <td>4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+        </tr>
+        <tr>
+            <!--Proj Hours Second Row-->
+            <td>6</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+        </tr>
+        <tr>
+            <!--Proj Hours Third Row -->
+            <td>8</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+        </tr>
+        <tr>
+            <!--Proj Hours Fourth Row -->
+            <td>10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+        </tr>
+        <tr>
+            <!--Proj Hours Fifth Row -->
+            <td>12</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+        </tr>
+        <tr>
+            <!-- Role -1st row-->
+            <td rowspan="5"><div class="test2">Role</div></td>
+            <td>Network Architect</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+        </tr>
+        <tr>
+            <!-- Role -2nd row-->
+            <td>Quality Assurance Engineer</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+        </tr>
+        <tr>
+            <!-- Role -3rd row-->
+            <td>Systems Analyst</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>>
+        </tr>
+        <tr>
+            <!-- Role -4th row-->
+            <td>Cyber Security Specalist</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+        </tr>
+        <tr>
+            <!-- Role -5th row-->
+            <td>Database Adminstrator</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+            <td class="white"></td>
+        </tr>
+    </table>
 
-            </div>
-            <div class="column" style="width: 40%;border:solid #808080 0.5px;">
-                <div id="chatDiv" style="height:80vh;overflow:auto">
-                    
-                    <!--<div class="bot_msg_div">
-                        <div class="bot_msg_img">
-                            <img src="../static/images/bot.png"
-                                 alt="Avatar" style="width:100%;">
-                        </div>
-                        <div class="bot_msg_main_div">
-                            <div class="bot_msg_inner_div">
-                                <p>
-                                    Test which is a new approach to have all
-                                    solutions
-                                </p>
-                                <span class="time_date"> 11:01 AM    |    June 9</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="user_msg_div">
-                        <div class="user_msg_img">
-                            <img src="../static/images/user.png"
-                                 alt="Avatar" style="width:100%;">
-                        </div>
-                        <div class="user_msg_main_div">
-                            <p>
-                                Test which is a new approach to have all
-                                solutions
-                            </p>
-                            <span class="time_date"> 11:01 AM    |    June 9</span>
-                        </div>
-                    </div>-->
-
-
-                    
-                </div>
-
-                <div>
-                    <input class="form-control" id="userMessage" type="text" placeholder="Type something here . . .">
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <script src="../static/main.js"></script>
 </body>
-
 </html>
