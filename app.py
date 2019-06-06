@@ -24,6 +24,12 @@ def getResponse():
     botResponse = userMessage
     return jsonify({"botResponse":botResponse})
 
+@app.route('/getJson',methods=['GET'])
+def getJson():
+    fileName = os.getcwd()+'\\static\\tutorial\\content.json'
+    with open(fileName) as json_data:
+        content= json.load(json_data)
+        return jsonify({"jsonContent":content})
 
 if __name__ == "__main__":
     try:

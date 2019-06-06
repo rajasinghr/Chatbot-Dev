@@ -1,12 +1,43 @@
-
+var jsonData = ''
+var condition = 'LLL'
+var tutorialMsgs = []
 $(document).ready(function () {
-    if (!$.trim($('#leftmenu').html()).length) {
-        var bot_intro = "Hello, My name is Rocky. It's nice to meet you. I'm here to help by providing the information that you need to make the right decision!"
-        addThinking('bot')
-        setTimeout(function () {
-            $('#bot_thinking').remove();
-            addMessage('bot', bot_intro)
-        }, 2000);
+    if (!$.trim($('#chatDiv').html()).length) {
+
+        $.ajax({
+            url: '/getJson',
+            type: 'GET',
+            success: function (response) {
+                jsonData = response['jsonContent']
+                
+                Object.entries(jsonData[condition]).forEach(([key, value]) => {
+                    Object.entries(value).forEach(([key1, value1]) => {
+                        tutorialMsgs.push(value1)
+                        
+                    });
+                });
+
+                for (var i = 0; i < tutorialMsgs.length; i++) {
+                    (function (ind) {
+                        
+                        setTimeout(function () {
+                                addThinking('bot')
+                                $('#bot_thinking').remove();
+                                addMessage('bot', tutorialMsgs[ind])
+                                console.log(tutorialMsgs[ind]);
+                            }, 1000 + (2000 * ind));
+                    })(i);
+                }
+                
+            }
+        });
+
+        //var bot_intro = "Hello, My name is Rocky. It's nice to meet you. I'm here to help by providing the information that you need to make the right decision!"
+        //addThinking('bot')
+        //setTimeout(function () {
+        //    $('#bot_thinking').remove();
+        //    addMessage('bot', bot_intro)
+        //}, 2000);
     }
     $('#userMessage').focus()
     $('#userMessage').keypress(function (e) {
