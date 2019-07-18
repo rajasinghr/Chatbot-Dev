@@ -1,8 +1,48 @@
 {
   "main": {
     "1": {
-      "clue": "The 5 different ",
-      "explanation": "When all "
-      }
+      "clue": "The 5 different project members are: (1) Tina, (2) the one in Seattle, (3) the Systems Analyst, (4) the one with the most project hours, and (5) the one with the fewest project hours.",
+      "explanation": "When all of the available information was crossreferenced, it was determined that the 5 members identified here by name/role/office/hours have incompatible requirements and thus, are mutually exclusive."
+    },
+    "2": {
+      "clue": "Rachel should be assigned exactly twice as many hours as the person assigned to the Los Angeles office (who should not be Tina). The person working from Los Angeles should be assigned more hours than the Database Administrator.",
+      "explanation": "Reminder: Project members must be provided enough hours to work as full-time employees while avoiding overtime pay. Analyses of hourly requirements have determined that the number of hours assigned to Rachel, the Los Angeles office, and the Database Administrator must be different amounts. The exact amount of hours could not be identified, but their relative order (from greater to fewer hours) could be determined and has been described above. Additionally, Tina has specifically requested not to be assigned to the Los Angeles office"
+    },
+    "3": {
+      "clue": "Leon needs to be assigned exactly half as many hours as the Chicago office.",
+      "explanation": "Reminder: Each branch must maximize profits by having as many project hours as possible while minimizing expensive overtime wages. The data indicates that Leon is close to reaching overtime wages while the Chicago office is falling quite short of the company's minimum requirement for project hours. Thus, in order to maximize profit and reduce overtime pay, it has been determined that Leon should receive exactly half the number of hours that the Chicago office will receive."
+    },
+    "4": {
+      "clue": "The Boston office needs more project hours per week than what is required of the Cybersecurity Specialist role.",
+      "explanation": "Current estimates predict that the Cybersecurity Specialist's tasks will be fewer than what is needed for the Boston office. Thus, if the Boston office is assigned the Cybersecurity Specialist, it will not be able to meet the company's miniumum requirement of project hours"
+    },
+    "5": {
+      "clue": "Alex needs more hours than the Network Architect role provides.",
+      "explanation": "Reminder: Project members must meet the minimum weekly requirement to qualify as full-time employees. Alex requires more project hours to meet the company’s minimum weekly requirement for a full-time employee. However, the Network Architect’s role does not provide enough hours to meet Alex's needs."
     }
+  },
+  "redundant": {
+    "1": {
+      "clue": "Tina should not be assigned to work in Seattle.",
+      "explanation": "Tina has no friends or family near Seattle and is likely to feel unhappy if she needs to move far away from them."
+    },
+    "2": {
+      "clue": "Tina should not be the Systems Analyst.",
+      "explanation": "Tina does not have the experience nor the personal interest in a Systems Analyst’s tasks."
+    },
+    "3": {
+      "clue": "Tina should not be assigned 4 or 12 hours to work on the project.",
+      "explanation": "All employees must meet a minimum number of billable hours per week. However, all employees receive 1.5X their normal pay for any overtime work. 4 hours will not be enough for Tina to meet the minimum weekly requirement, but assigning 12 hours will require expensive overtime pay."
+    },
+    "4": {
+      "clue": "The Systems Analyst should not be assigned to the Seattle office.",
+      "explanation": "There are not enough skilled assistants at the Seattle branch that can help the System Analyst complete key tasks on time. It will be more efficient if the System Analyst works out of a different office"
+    },
+    "5": {
+      "clue": "The Systems Analyst should not be assigned 4 or 12 hours on the project.",
+      "explanation": "The System Analyst’s tasks will most likely require more than 4 hours per week. However, 12 hours per week may be excessive and require expensive overtime pay."
+    }
+      
+    }
+
 }
