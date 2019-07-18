@@ -22,7 +22,7 @@ class Chatbot:
 
         #fileName = os.getcwd()+'\\static\\tutorial\\clues.json'
         fileName = os.getcwd()+'/static/tutorial/clues.json'
-        with open(fileName) as json_data:
+        with open(fileName, encoding='utf-8') as json_data:
             self.clueData = json.load(json_data)
 
         #fileName = os.getcwd()+'\\static\\tutorial\\conditions.json'
