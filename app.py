@@ -15,7 +15,8 @@ class Chatbot:
         self.conditionData = None
       
     def getJson(self):
-        fileName = os.getcwd()+'\\static\\tutorial\\content.json'
+        #fileName = os.getcwd()+'\\static\\tutorial\\content.json'
+        fileName = os.getcwd()+'/static/tutorial/content.json'
         with open(fileName) as json_data:
             self.jsonData = json.load(json_data)
 
