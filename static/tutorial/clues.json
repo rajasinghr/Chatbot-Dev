@@ -20,29 +20,6 @@
       "clue": "Alex needs more hours than the Network Architect role provides.",
       "explanation": "Reminder: Project members must meet the minimum weekly requirement to qualify as full-time employees. Alex requires more project hours to meet the company’s minimum weekly requirement for a full-time employee. However, the Network Architect’s role does not provide enough hours to meet Alex's needs."
     }
-  },
-  "redundant": {
-    "1": {
-      "clue": "Tina should not be assigned to work in Seattle.",
-      "explanation": "Tina has no friends or family near Seattle and is likely to feel unhappy if she needs to move far away from them."
-    },
-    "2": {
-      "clue": "Tina should not be the Systems Analyst.",
-      "explanation": "Tina does not have the experience nor the personal interest in a Systems Analyst’s tasks."
-    },
-    "3": {
-      "clue": "Tina should not be assigned 4 or 12 hours to work on the project.",
-      "explanation": "All employees must meet a minimum number of billable hours per week. However, all employees receive 1.5X their normal pay for any overtime work. 4 hours will not be enough for Tina to meet the minimum weekly requirement, but assigning 12 hours will require expensive overtime pay."
-    },
-    "4": {
-      "clue": "The Systems Analyst should not be assigned to the Seattle office.",
-      "explanation": "There are not enough skilled assistants at the Seattle branch that can help the System Analyst complete key tasks on time. It will be more efficient if the System Analyst works out of a different office"
-    },
-    "5": {
-      "clue": "The Systems Analyst should not be assigned 4 or 12 hours on the project.",
-      "explanation": "The System Analyst’s tasks will most likely require more than 4 hours per week. However, 12 hours per week may be excessive and require expensive overtime pay."
-    }
-      
-    }
+  }
 
 }
