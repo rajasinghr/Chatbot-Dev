@@ -27,17 +27,17 @@
       "1": "Consider the following 5 major pieces of information:"
     },
     "Redundant_Ins": {
-      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
-      "2": "Additional, but redundant information will be provided below. This information has already been described above, but will be stated in different wording."
+      "1": "The information above is deemed sufficient to reach an appropriate decision.",
+      "2": "However, additional information will be provided for ease of decision making."
     },
     "Submit": {
       "1": "Status: All available information has been provided. Final decisions may be submitted.",
       "2": "Select the team assignments for each project member using the table:",
-      "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments. This will conclude the task."
+      "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments."
     },
     "Conclusion": {
       "1": "Project assignments have been recorded.",
-      "2": "Status: Task completed."
+      "2": "Click 'Next' to proceed."
     }
   },
   "LLH": {
@@ -90,17 +90,17 @@
       "1": "Consider the following 5 major pieces of information:"
     },
     "Redundant_Ins": {
-      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
-      "2": "Additional, but redundant information will be provided below. This information has already been described above, but will be stated in different wording."
+      "1": "The information above is deemed sufficient to reach an appropriate decision.",
+      "2": "However, additional information will be provided for ease of decision making."
     },
     "Submit": {
       "1": "Status: All available information has been provided. Final decisions may be submitted.",
       "2": "Select the team assignments for each project member using the table:",
-      "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments. This will conclude the task."
+      "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments."
     },
     "Conclusion": {
       "1": "Project assignments have been recorded.",
-      "2": "Status: Task completed."
+      "2": "Click 'Next' to proceed."
     }
   },
   "LHL": {
@@ -132,18 +132,18 @@
       "1": "Here are 5 major pieces of information that you might want to consider."
     },
     "Redundant_Ins": {
-      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
-      "2": "Additional, but redundant information will be provided below. This information has already been described above, but will be stated in different wording."
+      "1": "I'm confident you have enough information to make an appropriate decision.",
+      "2": "However, I will give you some additional information to make decision making easier."
     },
     "Submit": {
       "1": "Okay, now that you've seen all the information I have, it's time to submit your final decisions!",
       "2": "Please show me the team assignments for each person using the table:",
-      "3": "When you're happy with the final decisions, please click the 'Submit' button to  enter the team assignments. This will conclude the task."
+      "3": "When you're happy with the final decisions, please click the 'Submit' button to  enter the team assignments."
     },
     "Conclusion": {
       "1": "Thanks, [Name]! I appreciate all your hard work.",
-      "2": "Great job!  You've completed the task.",
-      "3": "It's been a pleasure working with you. Take care!"
+      "2": "It's been a pleasure working with you. ",
+      "3": "Please click 'Next' to proceed."
     }
   },
   "LHH": {
@@ -196,19 +196,19 @@
       "1": "Here are 5 major pieces of information that you might want to consider."
     },
     "Redundant_Ins": {
-      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
-      "2": "Additional, but redundant information will be provided below. This information has already been described above, but will be stated in different wording."
+      "1": "I'm confident you have enough information to make an appropriate decision.",
+      "2": "However, I will give you some additional information to make decision making easier."
     },
     "Submit": {
       "1": "Okay, now that you've seen all the information I have, it's time to submit your final decisions!",
       "2": "Please show me the team assignments for each person using the table:",
-      "3": "When you're happy with the final decisions, please click the 'Submit' button to  enter the team assignments. This will conclude the task."
+      "3": "When you're happy with the final decisions, please click the 'Submit' button to  enter the team assignments."
     },
     "Conclusion": {
       "1": "Thanks, [Name]! I appreciate all your hard work.",
-      "2": "Great job!  You've completed the task.",
-      "3": "It's been a pleasure working with you. Take care!"
+      "2": "It's been a pleasure working with you. ",
+      "3": "Please click 'Next' to proceed."
     }
   }
-        
+
 }
