@@ -18,7 +18,7 @@
     },
     "5": {
       "clue": "Alex needs more hours than the Network Architect role provides.",
-      "explanation": "Reminder: Project members must meet the minimum weekly requirement to qualify as full-time employees. Alex requires more project hours to meet the company’s minimum weekly requirement for a full-time employee. However, the Network Architect’s role does not provide enough hours to meet Alex's needs."
+      "explanation": "Reminder: Project members must meet the minimum weekly requirement to qualify as full-time employees. Alex requires more project hours to meet the company's minimum weekly requirement for a full-time employee. However, the Network Architect's role does not provide enough hours to meet Alex's needs."
     }
   },
   "redundant": {
@@ -28,7 +28,7 @@
     },
     "2": {
       "clue": "Tina should not be the Systems Analyst.",
-      "explanation": "Tina does not have the experience nor the personal interest in a Systems Analyst’s tasks."
+      "explanation": "Tina does not have the experience nor the personal interest in a Systems Analyst's tasks."
     },
     "3": {
       "clue": "Tina should not be assigned 4 or 12 hours to work on the project.",
@@ -40,11 +40,11 @@
     },
     "5": {
       "clue": "The Systems Analyst should not be assigned 4 or 12 hours on the project.",
-      "explanation": "The System Analyst’s tasks will most likely require more than 4 hours per week. However, 12 hours per week may be excessive and require expensive overtime pay."
+      "explanation": "The System Analyst's tasks will most likely require more than 4 hours per week. However, 12 hours per week may be excessive and require expensive overtime pay."
     },
     "6": {
       "clue": "Seattle should not be budgeted for either 4 or 12 hours.",
-      "explanation": "Due to corporate policies, each office must meet a certain number of project hours per week. The Seattle office needs more than 4 hours to meet the company’s minimum requirements. However, if the Seattle branch is assigned 12 hours, several support staff will require overtime pay and cause the office to exceed their budget."
+      "explanation": "Due to corporate policies, each office must meet a certain number of project hours per week. The Seattle office needs more than 4 hours to meet the company's minimum requirements. However, if the Seattle branch is assigned 12 hours, several support staff will require overtime pay and cause the office to exceed their budget."
     },
     "7": {
       "clue": "Rachel should not be assigned to work in Los Angeles.",
