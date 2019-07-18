@@ -266,6 +266,5 @@ div.horizontal {
 
 .empty {
     background-color: white;
-    background-image: url("../static/images/emptyImage.PNG");
     background-size: contain;
 }
