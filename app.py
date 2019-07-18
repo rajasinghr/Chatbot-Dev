@@ -53,10 +53,10 @@ class Chatbot:
 
     def insertTransaction(self,sessionId,conditionId,clueId,Response,timeTaken,gridAction):
         #print("Transaction")
-        server = 'DESKTOP-MA7ED8M'
+        server = 'chatbot-study1.database.windows.net'
         database = 'chatbot'
         username = 'chatbot-study'
-        password = '123Welcome'
+        password = '123$Welcome'
         driver= '{ODBC Driver 17 for SQL Server}'
         #sessionId = ''
         conn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
@@ -81,10 +81,10 @@ class Chatbot:
 
     def insertMatrixResult(self,sessionId,conditionId,matrixDict):
         print("Transaction")
-        server = 'DESKTOP-MA7ED8M'
+        server = 'chatbot-study1.database.windows.net'
         database = 'chatbot'
         username = 'chatbot-study'
-        password = '123Welcome'
+        password = '123$Welcome'
         driver= '{ODBC Driver 17 for SQL Server}'
         #sessionId = ''
         conn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
