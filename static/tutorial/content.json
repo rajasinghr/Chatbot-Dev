@@ -1,161 +1,214 @@
 {
-    "LLL": 
-    {
-        "Introduction": 
-        {
-            "1":"Status: Information bot is online.",
-            "2":"The information bot will query the database to provide relevant information.",
-            "3":"Instructions on how to use the information grid will be provided."
-        },
-      "Tutorial": {
-        "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
-        "2": "Example Scenario: 5 people will each be given a gift. Each gift needs to be wrapped in each person's favorite color. No one can receive the same gift or the same color of wrapping paper.",
-        "3": "The grid for this example is provided in the panel to the right. Markings should be placed on the grid as instructed throughout the tutorial.",
-        "4": "In this example, Brian's gift will not be combined wrapped with the Silver wrapping paper. Eliminate this option by marking it with an X (click once on the corresponding box).",
-        "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
-        "6": "In this example, Amy will receive the Necklace. Select this option by marking it with an O (click twice on the corresponding box).",
-        "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
-        "8": "Other combinations will need to be eliminated based on previous decisions. Since Amy will be given the Necklace (and no one else can have the same gift), the Necklace options should be eliminated for everyone else. Place X's for the Necklace options for everyone else.",
-        "9": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
-        "10": "Thus, the information grid is used to note which combinations have been eliminated (X) or selected (O).",
-        "11": "Note: The grid should only be marked if it is certain that an option should be eliminated or selected. To remove a marking, click on the selected box a third time.",
-        "12": "Status: Tutorial 1 completed."
-      },
-        "Task Reminder":
-        {
-            "1":"The task will now begin.",
-            "2":"Reminder: The purpose of the task is to assign each person a project role, office location, and amount of weekly project hours."
-        }
+  "LLL": {
+    "Introduction": {
+      "1": "Status: Information bot is online.",
+      "2": "The information bot will query the database to provide relevant information.",
+      "3": "Instructions on how to use the information grid will be provided."
     },
-    "LLH": {
-        "Introduction": 
-        {
-            "1":"Status: Information bot is online.",
-            "2":"The information bot will query the database to provide relevant information.",
-            "3":"Instructions on how to use the information grid will be provided."
-        },
-        "Tutorial": 
-        {
-            "1":"In the following messages, an example will be described which will demonstrate how to use the information grid.",
-            "2":"Example Scenario: 5 people will each be given a gift. Each gift needs to be wrapped in each person's favorite color. No one can receive the same gift or the same color of wrapping paper.",
-            "3":"The grid for this example is provided in the panel to the right. Markings should be placed on the grid as instructed throughout the tutorial.",
-            "4":"In this example, Brian's gift will not be combined wrapped with the Silver wrapping paper. Eliminate this option by marking it with an X (click once on the corresponding box).",
-            "5":"The grid should look like this: <br /><img src=#></img>",
-            "6":"In this example, Amy will receive the Necklace. Select this option by marking it with an O (click twice on the corresponding box).",
-            "7":"The grid should look like this: <br /><img src=#></img>",
-            "8":"Other combinations will need to be eliminated based on previous decisions. Since Amy will be given the Necklace (and no one else can have the same gift), the Necklace options should be eliminated for everyone else. Place X’s for the Necklace options for everyone else.",
-            "9":"The grid should look like this: <br /><img src=#></img>",
-            "10":"Thus, the information grid is used to note which combinations have been eliminated (X) or selected (O).",
-            "11":"Note: The grid should only be marked if it is certain that an option should be eliminated or selected. To remove a marking, click on the selected box a third time.",
-            "12":"Status: Tutorial 1 completed.",
-            "13":"Tutorial 2 will now begin.  The previous example will be continued. Instructions on how to use the grid to identify logical shortcuts and errors will be provided.",
-            "14":"Consider the following piece of information: Amy and Cierra only like Pink and Orange wrapping paper. <br/> Based on the given information, the following assumptions can be made: <br/>(A) Amy and Cierra should not be given any other wrapping paper colors. <br/>(B) No one else should receive the Pink or Orange wrapping paper. Using either Pink or Orange paper for anyone else will require Amy's or Cierra's gift to be wrapped in a color that they dislike.",
-            "15":"Mark the grid to reflect the new information. ",
-            "16":"(A) Amy and Cierra should not be given any other wrapping paper colors: <br/> <img src='../static/tutorial/img4.png' style='width:100%;'></img>",
-            "17":"(B) No one else should receive the Pink or Orange wrapping paper: <br /><img src='../static/tutorial/img5.png' style='width:100%;'></img>",
-            "18":"Marked options should be copied over throughout the grid when applicable. Since the Necklace will be given to Amy, and Amy will receive either the Silver, Green, or Blue paper, these colors should also be eliminated from the Necklace column. Mark the grid reflect these deductions.",
-            "19":"The grid should look like this: <br /><img src='../static/tutorial/img6.png' style='width:100%;'></img>",
-            "20":"Consider the next piece of information: Eric wants the Skateboard or the Sweater. Mark the grid to reflect the new information.",
-            "21":"The grid should look like this: <br /><img src='../static/tutorial/img7.png' style='width:100%;'></img>",
-            "22":"However, the Skateboard and the Sweater are quite large. There is not enough Silver or Green paper to wrap either of these gifts. Mark the grid to reflect the new information.",
-            "23":"The grid should look like this: <br /><img src='../static/tutorial/img8.png' style='width:100%;'></img>",
-            "24":"There are marked options that can be copied to other parts of the grid. Since Eric will receive the Skateboard or Sweater, and these gifts can only be wrapped in Silver or Green paper, these colors should be eliminated from the column for Eric. Mark these deductions in the grid.",
-            "25":"The grid should look like this: <br /><img src='../static/tutorial/img9.png' style='width:100%;'></img>",
-            "26":"Additional deductions can be made based on the grid. 4 of the 5 colors have been eliminated for Derek and for Eric. Therefore, there is only one remaining color for each of these people. Mark the grid to identify which colors should be used for Derek and Eric.",
-            "27":"The grid should look like this: <br /><img src='../static/tutorial/img10.png' style='width:100%;'></img>",
-            "28":"As previously mentioned, mark the remaining boxes for that particular category with an X. Note that the group of boxes ont he right side of the grid represent the WRAPPING PAPER category. 3 options can be eliminated for this category. Place an X where options should be eliminated; these should be placed in a row or column containing an O).",
-            "29":"The grid should look like this: <br /><img src='../static/tutorial/img11.png' style='width:100%;'></img>",
-            "30":"The grid now indicates that the only available color for Brian is Green. This option should be marked in the grid. <br /><img src='../static/tutorial/img12.png' style='width:100%;'></img>",
-            "31":"The tutorial will now explain how to identify possible mistakes.",
-            "32":"There should never be all X's for a particular category (i.e. gift or color).  In the example shown below, all of the configurations are incorrect. <br /><img src='../static/tutorial/img13.png' style='width:100%;'></img>",
-            "33":"There should never be more than one O for a category (i.e. gift or color). In the example shown below, all of the configurations are incorrect. <br /><img src='../static/tutorial/img14.png' style='width:100%;'></img>",
-            "34":"Status: Tutorial 2 completed."
-        },
-        "Task Reminder":
-        {
-            "1":"The task will now begin.",
-            "2":"Reminder: The purpose of the task is to assign each person a project role, office location, and amount of weekly project hours."
-        }
+    "Tutorial": {
+      "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
+      "2": "Example Scenario: 5 people will each be given a gift. Each gift needs to be wrapped in each person's favorite color. No one can receive the same gift or the same color of wrapping paper.",
+      "3": "The grid for this example is provided in the panel to the right. Markings should be placed on the grid as instructed throughout the tutorial.",
+      "4": "In this example, Brian's gift will not be combined wrapped with the Silver wrapping paper. Eliminate this option by marking it with an X (click once on the corresponding box).",
+      "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
+      "6": "In this example, Amy will receive the Necklace. Select this option by marking it with an O (click twice on the corresponding box).",
+      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
+      "8": "Other combinations will need to be eliminated based on previous decisions. Since Amy will be given the Necklace (and no one else can have the same gift), the Necklace options should be eliminated for everyone else. Place X's for the Necklace options for everyone else.",
+      "9": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
+      "10": "Thus, the information grid is used to note which combinations have been eliminated (X) or selected (O).",
+      "11": "Note: The grid should only be marked if it is certain that an option should be eliminated or selected. To remove a marking, click on the selected box a third time.",
+      "12": "Status: Tutorial completed."
     },
-    "LHL": 
-    {
-        "Introduction": 
-        {
-            "1":"Hello! My name is Rocky.",
-            "2":"What's your name?",
-            "3":"It's nice to meet you, [Name]. 😊",
-            "4":"I'm here to help by providing the information that you need to make the right decision."
-        },
-        "Tutorial": 
-        {   
-            "1":"First things first. Let’s go over how to use the information grid. I’ll use a running example to teach you how to use the information grid.",
-            "2":"Imagine you are deciding which gift to give to 5 friends. You also want to wrap each gift in the friend's favorite color. Each gift should be special so no one can receive the same gift or the same color of wrapping paper.",
-            "3":"The grid for this example is located in the panel to the right. You may want to practice on this grid as we go through the example together.",
-            "4":"Brian hates the color Silver so you shouldn't wrap his gift in this color. Please eliminate this option by marking it with an X (click once on the corresponding box).",
-            "5":"Your grid should look like this: <br /><img src='../static/tutorial/img1.png' style='width:100%;'></img>",
-            "6":"Amy loves jewelry so you decide to give her the Necklace. Please select this option by marking it with an O (click twice on the corresponding box).",
-            "7":"Your grid should look like this: <br /><img src='../static/tutorial/img2.png' style='width:100%;'></img>",
-            "8":"Other combinations will need to be eliminated based on previous decisions. Since Amy will be given the Necklace (and no one else can have the same gift), the Necklace options should be eliminated for everyone else. Place X’s for the Necklace options for everyone else.",
-            "9":"The grid should look like this: <br /><img src='../static/tutorial/img3.png' style='width:100%;'></img>",
-            "10":"As you can see, the information grid is used to note which combinations you have eliminated (X) or selected (O).",
-            "11":"And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
-            "12":"Okay, [Name]! That concludes the basic training on how to use the grid. I think you're ready for the task 😀."
-        },
-        "Task Reminder":
-        {
-            "1":"Let's get started!",
-            "2":"And remember, your goal is to assign each candidate a project role, office location, and weekly project hours."
-        }
+    "Task Reminder": {
+      "1": "The task will now begin.",
+      "2": "Reminder: The purpose of the task is to assign each person a project role, office location, and amount of weekly project hours."
     },
-    "LHH": {
-        "Introduction": 
-        {
-            "1":"Hello! My name is Rocky.",
-            "2":"What's your name?",
-            "3":"It's nice to meet you, [Name]. 😊",
-            "4":"I'm here to help by providing the information that you need to make the right decision."
-        },
-        "Tutorial": 
-        {
-            "1":"First things first. Let’s go over how to use the information grid. I’ll use a running example to teach you how to use the information grid.",
-            "2":"Imagine you are deciding which gift to give to 5 friends. You also want to wrap each gift in the friend's favorite color. Each gift should be special so no one can receive the same gift or the same color of wrapping paper.",
-            "3":"The grid for this example is located in the panel to the right. You may want to practice on this grid as we go through the example together.",
-            "4":"Brian hates the color Silver so you shouldn't wrap his gift in this color. Please eliminate this option by marking it with an X (click once on the corresponding box).",
-            "5":"Your grid should look like this: <br /><img src='../static/tutorial/img1.png' style='width:100%;'></img>",
-            "6":"Amy loves jewelry so you decide to give her the Necklace. Please select this option by marking it with an O (click twice on the corresponding box).",
-            "7":"Your grid should look like this: <br /><img src='../static/tutorial/img2.png' style='width:100%;'></img>",
-            "8":"Other combinations will need to be eliminated based on previous decisions. Since Amy will be given the Necklace (and no one else can have the same gift), the Necklace options should be eliminated for everyone else. Place X’s for the Necklace options for everyone else.",
-            "9":"The grid should look like this: <br /><img src='../static/tutorial/img3.png' style='width:100%;'></img>",
-            "10":"As you can see, the information grid is used to note which combinations you have eliminated (X) or selected (O).",
-            "11":"And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
-            "12":"Let's move on and go over some useful tricks. We'll continue working on this example. I'll teach you how to use the grid to identify logical shortcuts and errors.",
-            "13":"Now, let's say that Amy and Cierra only like Pink and Orange wrapping paper. <br/> Based on the given information, the following assumptions can be made: <br/>(A) Amy and Cierra should not be given any other wrapping paper colors. <br/>(B) No one else should receive the Pink or Orange wrapping paper. Using either Pink or Orange paper for anyone else will require Amy's or Cierra's gift to be wrapped in a color that they dislike.",
-            "14":"Let's mark the grid to reflect this new information. ",
-            "15":"(A) Amy and Cierra should not be given any other wrapping paper colors: <br/> <img src='../static/tutorial/img4.png' style='width:100%;'></img>",
-            "16":"(B) No one else should receive the Pink or Orange wrapping paper: <br /><img src='../static/tutorial/img5.png' style='width:100%;'></img>",
-            "17":"Remember to copy over options throughout the grid when applicable. Since you will give the Necklace to Amy, and Amy will not be given either Silver, Green, or Blue paper, we know that these colors should also be eliminated from the Necklace column. Please mark the grid reflect these deductions. ",
-            "18":"The grid should look like this: <br /><img src='../static/tutorial/img6.png' style='width:100%;'></img>",
-            "19":"For the next step, let's say that we know that Eric really wants a Skateboard or a new Sweater. Please mark the grid with this new information.",
-            "20":"The grid should look like this: <br /><img src='../static/tutorial/img7.png' style='width:100%;'></img>",
-            "21":"However, the Skateboard and the Sweater are quite large. There is not enough Silver or Green paper to wrap either of these gifts. Please mark the grid to reflect the new information.",
-            "22":"The grid should look like this: <br /><img src='../static/tutorial/img8.png' style='width:100%;'></img>",
-            "23":"There are marked options that can be copied to other parts of the grid. Since Eric will receive the Skateboard or Sweater, and these gifts can only be wrapped in Silver or Green paper, you should eliminate these colors from the column for Eric. Again, please mark these the grid with this new information.",
-            "24":"The grid should look like this: <br /><img src='../static/tutorial/img9.png' style='width:100%;'></img>",
-            "25":"Now, there are additional deductions that can be made based on the grid. We can see that 4 of the 5 colors have been eliminated for Derek and for Eric. This tells us that there is only one remaining color for each of these friends. (You should mark the grid to identify which colors should be used for Derek and Eric).",
-            "26":"The grid should look like this: <br /><img src='../static/tutorial/img10.png' style='width:100%;'></img>",
-            "27":"Remember, when you've made a selection (O), mark the remaining boxes for that particular category with an X. Look closely at the group of boxes on the right side of the grid which represent the WRAPPING PAPER category. 3 options can be eliminated here. Place an X where options should be eliminated (hint: look at the row or column where there is an O).",
-            "28":"The grid should look like this: <br /><img src='../static/tutorial/img11.png' style='width:100%;'></img>",
-            "29":"Now, we see that the only available color for Brian is Green.This option should be marked in the grid. <br /><img src='../static/tutorial/img12.png' style='width:100%;'></img>",
-            "30":"Now, let's go over some possible mistakes you should look out for.",
-            "31":"There should never be all X's for a particular category (i.e. gift or color).  In the example shown below, all of the configurations are incorrect. <br /><img src='../static/tutorial/img13.png' style='width:100%;'></img>",
-            "32":"There should never be more than one O for a category (i.e. gift or color). In the example shown below, all of the configurations are incorrect. <br /><img src='../static/tutorial/img14.png' style='width:100%;'></img>",
-            "33":"Okay, [Name]! That concludes the tutorial. I think you're ready for the task 😀."
-        },
-        "Task Reminder":
-        {
-            "1":"Let's get started!",
-            "2":"And remember, your goal is to assign each candidate a project role, office location, and weekly project hours."
-        }
+    "Clue_Ins": {
+      "1": "Consider the following 5 major pieces of information:"
+    },
+    "Redundant_Ins": {
+      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
+      "2": "Additional, but redundant information will be provided below. This information has already been described above, but will be stated in different wording."
+    },
+    "Submit": {
+      "1": "Status: All available information has been provided. Final decisions may be submitted.",
+      "2": "Select the team assignments for each project member using the table:",
+      "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments. This will conclude the task."
+    },
+    "Conclusion": {
+      "1": "Project assignments have been recorded.",
+      "2": "Status: Task completed."
     }
+  },
+  "LLH": {
+    "Introduction": {
+      "1": "Status: Information bot is online.",
+      "2": "The information bot will query the database to provide relevant information.",
+      "3": "Instructions on how to use the information grid will be provided."
+    },
+    "Tutorial": {
+      "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
+      "2": "Example Scenario: 5 people will each be given a gift. Each gift needs to be wrapped in each person's favorite color. No one can receive the same gift or the same color of wrapping paper.",
+      "3": "The grid for this example is provided in the panel to the right. Markings should be placed on the grid as instructed throughout the tutorial.",
+      "4": "In this example, Brian's gift will not be combined wrapped with the Silver wrapping paper. Eliminate this option by marking it with an X (click once on the corresponding box).",
+      "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
+      "6": "In this example, Amy will receive the Necklace. Select this option by marking it with an O (click twice on the corresponding box).",
+      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
+      "8": "Other combinations will need to be eliminated based on previous decisions. Since Amy will be given the Necklace (and no one else can have the same gift), the Necklace options should be eliminated for everyone else. Place X's for the Necklace options for everyone else.",
+      "9": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
+      "10": "Thus, the information grid is used to note which combinations have been eliminated (X) or selected (O).",
+      "11": "Note: The grid should only be marked if it is certain that an option should be eliminated or selected. To remove a marking, click on the selected box a third time.",
+      "12": "Status: Tutorial 1 completed.",
+      "13": "Tutorial 2 will now begin.  The previous example will be continued. Instructions on how to use the grid to identify logical shortcuts and errors will be provided.",
+      "14": "Consider the following piece of information: Amy and Cierra only like Pink and Orange wrapping paper. <br/> Based on the given information, the following assumptions can be made: <br/>(A) Amy and Cierra should not be given any other wrapping paper colors. <br/>(B) No one else should receive the Pink or Orange wrapping paper. Using either Pink or Orange paper for anyone else will require Amy's or Cierra's gift to be wrapped in a color that they dislike.",
+      "15": "Mark the grid to reflect the new information. ",
+      "16": "(A) Amy and Cierra should not be given any other wrapping paper colors: <br/> <img class='grid' src='../static/images/tutorial/img4.png' ></img>",
+      "17": "(B) No one else should receive the Pink or Orange wrapping paper: <br /><img class='grid' src='../static/images/tutorial/img5.png' ></img>",
+      "18": "Marked options should be copied over throughout the grid when applicable. Since the Necklace will be given to Amy, and Amy will receive either the Silver, Green, or Blue paper, these colors should also be eliminated from the Necklace column. Mark the grid reflect these deductions.",
+      "19": "The grid should look like this: <br /><img class='grid' src='../static/images/tutorial/img6.png' ></img>",
+      "20": "Consider the next piece of information: Eric wants the Skateboard or the Sweater. Mark the grid to reflect the new information.",
+      "21": "The grid should look like this: <br /><img class='grid' src='../static/images/tutorial/img7.png' ></img>",
+      "22": "However, the Skateboard and the Sweater are quite large. There is not enough Silver or Green paper to wrap either of these gifts. Mark the grid to reflect the new information.",
+      "23": "The grid should look like this: <br /><img src='../static/images/tutorial/img8.png' class='grid'></img>",
+      "24": "There are marked options that can be copied to other parts of the grid. Since Eric will receive the Skateboard or Sweater, and these gifts can only be wrapped in Silver or Green paper, these colors should be eliminated from the column for Eric. Mark these deductions in the grid.",
+      "25": "The grid should look like this: <br /><img src='../static/images/tutorial/img9.png' class='grid'></img>",
+      "26": "Additional deductions can be made based on the grid. 4 of the 5 colors have been eliminated for Derek and for Eric. Therefore, there is only one remaining color for each of these people. Mark the grid to identify which colors should be used for Derek and Eric.",
+      "27": "The grid should look like this: <br /><img src='../static/images/tutorial/img10.png' class='grid'></img>",
+      "28": "As previously mentioned, mark the remaining boxes for that particular category with an X. Note that the group of boxes ont he right side of the grid represent the WRAPPING PAPER category. 3 options can be eliminated for this category. Place an X where options should be eliminated; these should be placed in a row or column containing an O).",
+      "29": "The grid should look like this: <br /><img src='../static/images/tutorial/img11.png' class='grid'></img>",
+      "30": "The grid now indicates that the only available color for Brian is Green. This option should be marked in the grid. <br /><img src='../static/images/tutorial/img12.png' class='grid'></img>",
+      "31": "The tutorial will now explain how to identify possible mistakes.",
+      "32": "There should never be all X's for a particular category (i.e. gift or color).  In the example shown below, all of the configurations are incorrect. <br /><img src='../static/images/tutorial/img13.png' class='grid'></img>",
+      "33": "There should never be more than one O for a category (i.e. gift or color). In the example shown below, all of the configurations are incorrect. <br /><img src='../static/images/tutorial/img14.png' class='grid'></img>",
+      "34": "Status: Tutorial 2 completed."
+    },
+    "Task Reminder": {
+      "1": "The task will now begin.",
+      "2": "Reminder: The purpose of the task is to assign each person a project role, office location, and amount of weekly project hours."
+    },
+    "Clue_Ins": {
+      "1": "Consider the following 5 major pieces of information:"
+    },
+    "Redundant_Ins": {
+      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
+      "2": "Additional, but redundant information will be provided below. This information has already been described above, but will be stated in different wording."
+    },
+    "Submit": {
+      "1": "Status: All available information has been provided. Final decisions may be submitted.",
+      "2": "Select the team assignments for each project member using the table:",
+      "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments. This will conclude the task."
+    },
+    "Conclusion": {
+      "1": "Project assignments have been recorded.",
+      "2": "Status: Task completed."
+    }
+  },
+  "LHL": {
+    "Introduction": {
+      "1": "Hello! My name is Rocky.",
+      "2": "What's your name?",
+      "3": "It's nice to meet you,",
+      "4": "I'm here to help by providing the information that you need to make the right decision."
+    },
+    "Tutorial": {
+      "1": "First things first. Let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid.",
+      "2": "Imagine you are deciding which gift to give to 5 friends. You also want to wrap each gift in the friend's favorite color. Each gift should be special so no one can receive the same gift or the same color of wrapping paper.",
+      "3": "The grid for this example is located in the panel to the right. You may want to practice on this grid as we go through the example together.",
+      "4": "Brian hates the color Silver so you shouldn't wrap his gift in this color. Please eliminate this option by marking it with an X (click once on the corresponding box).",
+      "5": "Your grid should look like this: <br /><img src='../static/images/tutorial/img1.png' class='grid'></img>",
+      "6": "Amy loves jewelry so you decide to give her the Necklace. Please select this option by marking it with an O (click twice on the corresponding box).",
+      "7": "Your grid should look like this: <br /><img src='../static/images/tutorial/img2.png' class='grid'></img>",
+      "8": "Other combinations will need to be eliminated based on previous decisions. Since Amy will be given the Necklace (and no one else can have the same gift), the Necklace options should be eliminated for everyone else. Place X's for the Necklace options for everyone else.",
+      "9": "The grid should look like this: <br /><img src='../static/images/tutorial/img3.png' class='grid'></img>",
+      "10": "As you can see, the information grid is used to note which combinations you have eliminated (X) or selected (O).",
+      "11": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
+      "12": "Okay, [Name]! That concludes the basic training on how to use the grid. I think you're ready for the task."
+    },
+    "Task Reminder": {
+      "1": "Let's get started!",
+      "2": "And remember, your goal is to assign each candidate a project role, office location, and weekly project hours."
+    },
+    "Clue_Ins": {
+      "1": "Here are 5 major pieces of information that you might want to consider."
+    },
+    "Redundant_Ins": {
+      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
+      "2": "Additional, but redundant information will be provided below. This information has already been described above, but will be stated in different wording."
+    },
+    "Submit": {
+      "1": "Okay, now that you've seen all the information I have, it's time to submit your final decisions!",
+      "2": "Please show me the team assignments for each person using the table:",
+      "3": "When you're happy with the final decisions, please click the 'Submit' button to  enter the team assignments. This will conclude the task."
+    },
+    "Conclusion": {
+      "1": "Thanks, [Name]! I appreciate all your hard work.",
+      "2": "Great job!  You've completed the task.",
+      "3": "It's been a pleasure working with you. Take care!"
+    }
+  },
+  "LHH": {
+    "Introduction": {
+      "1": "Hello! My name is Rocky.",
+      "2": "What's your name?",
+      "3": "It's nice to meet you,",
+      "4": "I'm here to help by providing the information that you need to make the right decision."
+    },
+    "Tutorial": {
+      "1": "First things first. Let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid.",
+      "2": "Imagine you are deciding which gift to give to 5 friends. You also want to wrap each gift in the friend's favorite color. Each gift should be special so no one can receive the same gift or the same color of wrapping paper.",
+      "3": "The grid for this example is located in the panel to the right. You may want to practice on this grid as we go through the example together.",
+      "4": "Brian hates the color Silver so you shouldn't wrap his gift in this color. Please eliminate this option by marking it with an X (click once on the corresponding box).",
+      "5": "Your grid should look like this: <br /><img src='../static/images/tutorial/img1.png' class='grid'></img>",
+      "6": "Amy loves jewelry so you decide to give her the Necklace. Please select this option by marking it with an O (click twice on the corresponding box).",
+      "7": "Your grid should look like this: <br /><img src='../static/images/tutorial/img2.png' class='grid'></img>",
+      "8": "Other combinations will need to be eliminated based on previous decisions. Since Amy will be given the Necklace (and no one else can have the same gift), the Necklace options should be eliminated for everyone else. Place X's for the Necklace options for everyone else.",
+      "9": "The grid should look like this: <br /><img src='../static/images/tutorial/img3.png' class='grid'></img>",
+      "10": "As you can see, the information grid is used to note which combinations you have eliminated (X) or selected (O).",
+      "11": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
+      "12": "Let's move on and go over some useful tricks. We'll continue working on this example. I'll teach you how to use the grid to identify logical shortcuts and errors.",
+      "13": "Now, let's say that Amy and Cierra only like Pink and Orange wrapping paper. <br/> Based on the given information, the following assumptions can be made: <br/>(A) Amy and Cierra should not be given any other wrapping paper colors. <br/>(B) No one else should receive the Pink or Orange wrapping paper. Using either Pink or Orange paper for anyone else will require Amy's or Cierra's gift to be wrapped in a color that they dislike.",
+      "14": "Let's mark the grid to reflect this new information. ",
+      "15": "(A) Amy and Cierra should not be given any other wrapping paper colors: <br/> <img src='../static/images/tutorial/img4.png' class='grid'></img>",
+      "16": "(B) No one else should receive the Pink or Orange wrapping paper: <br /><img src='../static/images/tutorial/img5.png' class='grid'></img>",
+      "17": "Remember to copy over options throughout the grid when applicable. Since you will give the Necklace to Amy, and Amy will not be given either Silver, Green, or Blue paper, we know that these colors should also be eliminated from the Necklace column. Please mark the grid reflect these deductions. ",
+      "18": "The grid should look like this: <br /><img src='../static/images/tutorial/img6.png' class='grid'></img>",
+      "19": "For the next step, let's say that we know that Eric really wants a Skateboard or a new Sweater. Please mark the grid with this new information.",
+      "20": "The grid should look like this: <br /><img src='../static/images/tutorial/img7.png' class='grid'></img>",
+      "21": "However, the Skateboard and the Sweater are quite large. There is not enough Silver or Green paper to wrap either of these gifts. Please mark the grid to reflect the new information.",
+      "22": "The grid should look like this: <br /><img src='../static/images/tutorial/img8.png' class='grid'></img>",
+      "23": "There are marked options that can be copied to other parts of the grid. Since Eric will receive the Skateboard or Sweater, and these gifts can only be wrapped in Silver or Green paper, you should eliminate these colors from the column for Eric. Again, please mark these the grid with this new information.",
+      "24": "The grid should look like this: <br /><img src='../static/images/tutorial/img9.png' class='grid'></img>",
+      "25": "Now, there are additional deductions that can be made based on the grid. We can see that 4 of the 5 colors have been eliminated for Derek and for Eric. This tells us that there is only one remaining color for each of these friends. (You should mark the grid to identify which colors should be used for Derek and Eric).",
+      "26": "The grid should look like this: <br /><img src='../static/images/tutorial/img10.png' class='grid'></img>",
+      "27": "Remember, when you've made a selection (O), mark the remaining boxes for that particular category with an X. Look closely at the group of boxes on the right side of the grid which represent the WRAPPING PAPER category. 3 options can be eliminated here. Place an X where options should be eliminated (hint: look at the row or column where there is an O).",
+      "28": "The grid should look like this: <br /><img src='../static/images/tutorial/img11.png' class='grid'></img>",
+      "29": "Now, we see that the only available color for Brian is Green.This option should be marked in the grid. <br /><img src='../static/images/tutorial/img12.png' class='grid'></img>",
+      "30": "Now, let's go over some possible mistakes you should look out for.",
+      "31": "There should never be all X's for a particular category (i.e. gift or color).  In the example shown below, all of the configurations are incorrect. <br /><img src='../static/images/tutorial/img13.png' class='grid'></img>",
+      "32": "There should never be more than one O for a category (i.e. gift or color). In the example shown below, all of the configurations are incorrect. <br /><img src='../static/images/tutorial/img14.png' class='grid'></img>",
+      "33": "Okay, [Name]! That concludes the tutorial. I think you're ready for the task."
+    },
+    "Task Reminder": {
+      "1": "Let's get started!",
+      "2": "And remember, your goal is to assign each candidate a project role, office location, and weekly project hours."
+    },
+    "Clue_Ins": {
+      "1": "Here are 5 major pieces of information that you might want to consider."
+    },
+    "Redundant_Ins": {
+      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
+      "2": "Additional, but redundant information will be provided below. This information has already been described above, but will be stated in different wording."
+    },
+    "Submit": {
+      "1": "Okay, now that you've seen all the information I have, it's time to submit your final decisions!",
+      "2": "Please show me the team assignments for each person using the table:",
+      "3": "When you're happy with the final decisions, please click the 'Submit' button to  enter the team assignments. This will conclude the task."
+    },
+    "Conclusion": {
+      "1": "Thanks, [Name]! I appreciate all your hard work.",
+      "2": "Great job!  You've completed the task.",
+      "3": "It's been a pleasure working with you. Take care!"
+    }
+  }
         
 }

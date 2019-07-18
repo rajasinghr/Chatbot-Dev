@@ -1,0 +1,91 @@
+{
+  "1": {
+    "clue": "Tina does not want to work in Seattle.",
+    "explanation": "Tina has no friends or family near Seattle and is likely to feel unhappy if she needs to move far away from them."
+  },
+  "2": {
+    "clue": "Tina does not want to be a Systems Analyst.",
+    "explanation": "Tina does not have the experience nor the personal interest in a Systems Analyst’s tasks."
+  },
+  "3": {
+    "clue": "4 hours per week on the project is not enough for Tina.",
+    "explanation": "All employees must meet a minimum number of billable hours per week. Tina will not be able to meet this requirement if she is not assigned more than 4 hours for the project."
+  },
+  "4": {
+    "clue": "If Tina spends 12 hours per week on this project, she will need to receive overtime pay.",
+    "explanation": "All employees receive 1.5X their normal pay for any overtime work. Since funding for the project is very limited, overtime work is likely to cause you to go over budget."
+  },
+  "5": {
+    "clue": "The person who works from Seattle cannot work 4 hours per week.",
+    "explanation": "Due to corporate policies, each office must meet a certain number of project hours per week. The Seattle office needs more than 4 hours to meet the company’s minimum requirements."
+  },
+  "6": {
+    "clue": "The person who works from Seattle should not work 12 hours per week.",
+    "explanation": "The Seattle office will also need to pay support staff (who are needed to assist the project member) for all of their work. If 12 hours are assigned, overtime will need to be paid to the support staff and it is likely that the office will have to exceed their budget."
+  },
+  "7": {
+    "clue": "The Seattle branch does not have the capabilities to support the Systems Analyst’s tasks.",
+    "explanation": "There are not enough skilled assistants that can help the System Analyst complete their key tasks on time. Therefore, it will be more efficient if the System Analyst works out of a different office."
+  },
+  "8": {
+    "clue": "The System Analyst cannot work on the project for 4 or 12 hours.",
+    "explanation": "The System Analyst’s tasks will most likely require more than 4 hours per week. However, 12 hours per week may be excessive and will require expensive overtime pay."
+  },
+  "9": {
+    "clue": "Rachel should be given twice as many hours as the person who will work from Los Angeles.",
+    "explanation": "Rachel requires several project hours to meet the company’s minimum weekly requirement for a full-time employee. In contrast, the Los Angeles office is close to reaching their maximum weekly limit so it should not be assigned too many hours on the project."
+  },
+  "10": {
+    "clue": "Tina prefers not to work at the Los Angeles branch.",
+    "explanation": "Tina has no family or friends near Los Angeles. She is likely to feel unhappy and dissatisfied with her position if she needs to relocate here."
+  },
+  "11": {
+    "clue": "The person who works from Los Angeles should be assigned more project hours than the Database Administrator.",
+    "explanation": "Although the Los Angeles office is close to their maximum weekly number of hours, it is ideal that their hours be as close to the upper limit as possible (so that profit can be maximized without incurring overtime pay). However, the Database Administrator’s tasks will not require enough project hours for the Los Angeles office to meet their goals"
+  },
+  "12": {
+    "clue": "Leon requires half as many hours as the person who will work from Chicago.",
+    "explanation": "The Chicago branch will require more hours compared to the other offices. On the other hand, Leon is somewhat close to accruing expensive overtime wages so he should be assigned  somewhat fewer project hours."
+  },
+  "13": {
+    "clue": "The Cybersecurity Specialist should have less project hours than the team member working from Boston.",
+    "explanation": "The Cybersecurity Specialist’s tasks will not require a great deal of time. The Boston office needs extra hours."
+  },
+  "14": {
+    "clue": "Alex will need more project hours than the Network Architect.",
+    "explanation": "Alex requires several project hours to meet the company’s minimum weekly requirement. However, the Network Architect’s tasks will require fewer hours than what Alex needs."
+  },
+  "15": {
+    "clue": "Rachel does not want to move to Los Angeles to work on the project.",
+    "explanation": "Rachel does not have any family or friends near Los Angeles. She is likely to be unhappy and dissatisfied if she needs to move far from her loved ones."
+  },
+  "16": {
+    "clue": "The Los Angeles office does not have the capabilities to support the Database Administrator’s tasks.",
+    "explanation": "There are no support staff in the Los Angeles office with the correct qualifications; the Database Administrator is unlikely to be assisted adequately. Therefore, it may be more efficient if the Database Administrator works out of a different office."
+  },
+  "17": {
+    "clue": "Leon should work on the project for either 4 or 6 hours per week.",
+    "explanation": "If Leon works more than 6 hours per week on the project, he will require overtime pay"
+  },
+  "18": {
+    "clue": "The Chicago office needs someone who will work more than 6 hours on the project.",
+    "explanation": "To meet the company’s minimum requirement, the Chicago office will need a project member who can work more than 6 hours on the project"
+  },
+  "19": {
+    "clue": "Alex should not be the Network Architect.",
+    "explanation": "Alex does not have the necessary training or skills to take on the role of Network Architect."
+  },
+  "20": {
+    "clue": "The Boston office does not have the capabilities to support the Cybersecurity Specialist’s tasks.",
+    "explanation": "None of the staff at the Boston office have all of the credentials and clearances that are required to assist the Cybersecurity Specialist."
+  },
+  "21": {
+    "clue": "The Boston office should not be assigned the fewest amount of project hours.",
+    "explanation": "Each office must meet the weekly minimum number of hours set by corporate. There is at least one other office that needs more project hours than the Boston office."
+  },
+  "22": {
+    "clue": "The Cybersecurity Specialist should not be assigned 12 hours per week.",
+    "explanation": "The Cybersecurity Specialist’s tasks are not projected to take more time than any of the other roles."
+  }
+
+}

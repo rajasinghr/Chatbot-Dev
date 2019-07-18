@@ -152,11 +152,12 @@ img {
 
 .tidot:nth-child(3) {
     -webkit-animation-delay: 400ms;
+    
 }
 
 
 
-table {
+/*table {
     border-collapse: collapse;
     border: 1px solid black;
     font-size: 10px;
@@ -172,14 +173,99 @@ td {
         border: 1px solid white;
         font-size: 10px;
         text-align: right;
-    }
+    }*/
 
-div.test2 {
+div.vertical {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     text-align: center;
     width: 20px;
-    height: 100px;
-    font-size: 10px;
+    height: 80px;
+    font-size: 8px;
+    font-weight:bold;
+    margin: 0px 2px 0px 0px;
 }
 
+div.horizontal {
+    text-align: center;
+    font-size: 8px;
+    font-weight: bold;
+    
+}
+
+.next-button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border-color: #4CAF50;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    float: right !important;
+    text-decoration: none !important;
+    font-size: 17px;
+    border: 1px solid #cccccc;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border-color: #4CAF50;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    float: right !important;
+    text-decoration: none !important;
+    font-size: 17px;
+    border: 1px solid #cccccc;
+    display:none;
+}
+
+.inputBar {
+    display: none;
+}
+
+
+.white {
+    border: 1px solid white;
+    font-size: 10px;
+    text-align: right;
+}
+
+.center {
+    border: 1px solid black;
+    font-size: 10px;
+    text-align: center;
+}
+
+.click {
+    border: 1px solid black;
+    font-size: 10px;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.cross {
+    /*background-color: red;*/
+    background-image: url("../static/images/cross.png");
+    background-size: contain;
+}
+
+.circle {
+    /*background-color: green;*/
+    background-image: url("../static/images/circle.png");
+    background-size: contain;
+}
+
+.empty {
+    background-color: white;
+    background-image: url("../static/images/emptyImage.PNG");
+    background-size: contain;
+}

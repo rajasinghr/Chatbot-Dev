@@ -1,0 +1,34 @@
+{
+  "LHH": {
+    "Introduction": {
+      "1": "Hello! My name is Rocky.",
+      "2": "What's your name?",
+      "3": "It's nice to meet you,"
+    },
+    "Tutorial": {
+      "1": "First things first. Let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid.",
+      "2": "Imagine you are deciding which gift to give to 5 friends. You also want to wrap each gift in the friend's favorite color. Each gift should be special so no one can receive the same gift or the same color of wrapping paper."
+    },
+    "Task Reminder": {
+      "1": "Let's get started!",
+      "2": "And remember, your goal is to assign each candidate a project role, office location, and weekly project hours."
+    },
+    "Clue_Ins": {
+      "1": "Here are 5 major pieces of information that you might want to consider."
+    },
+    "Redundant_Ins": {
+      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
+      "2": "Additional, but redundant information will be provided below. This information has already been described above, but will be stated in different wording."
+    },
+    "Submit": {
+      "1": "Okay, now that you've seen all the information I have, it's time to submit your final decisions!",
+      "2": "Please show me the team assignments for each person using the table:",
+      "3": "When you're happy with the final decisions, please click the 'Submit' button to  enter the team assignments. This will conclude the task."
+    },
+    "Conclusion": {
+      "1": "Thanks, [Name]! I appreciate all your hard work.",
+      "2": "Great job!  You've completed the task.",
+      "3": "It's been a pleasure working with you. Take care!"
+    }
+  }
+}
