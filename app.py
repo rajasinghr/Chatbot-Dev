@@ -52,7 +52,7 @@ class Chatbot:
         return (topic,index,data)
 
     def insertTransaction(self,sessionId,conditionId,clueId,Response,timeTaken,gridAction):
-        print("Transaction")
+        #print("Transaction")
         server = 'DESKTOP-MA7ED8M'
         database = 'chatbot'
         username = 'chatbot-study'

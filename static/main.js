@@ -210,7 +210,7 @@ $(document).ready(function () {
                         message = response["botResponse"][0];
                     }
                     
-                    console.log(message)
+                    //console.log(message)
                     if (response['topic'] == 'Clue') {
                         var seconds = new Date().getTime() / 1000;
                         $('#timeTaken').val(seconds);
@@ -438,8 +438,8 @@ $(document).ready(function () {
                     }
                     if (isTaskCompleted) {
 
-                        alert("refreshing page in 3 seconds")
-                        window.setTimeout(function () { location.reload() }, 5000)
+                        alert("Task Completed. Click OK. Page will refresh in 3 seconds")
+                        window.setTimeout(function () { location.reload() }, 3000)
                     }
                 }, 1000);
                 //console.log("outside timeout")
@@ -504,7 +504,7 @@ $(document).ready(function () {
                 }
 
             }
-            console.log(JSON.stringify(result))
+            //console.log(JSON.stringify(result))
             var ajaxData = {
                 'sessionId': $('#sessionId').val(),
                 'condition': $('#condition').val(),
@@ -515,10 +515,10 @@ $(document).ready(function () {
                 data: ajaxData,
                 type: 'GET',
                 success: function (response) {
-                    console.log(response)
+                    //console.log(response)
                 }
             });
-            console.log(result)
+            //console.log(result)
             $("#submitButton").hide();
             $("#nextButton").show();
             $("#nextButton").attr("disabled", false);
@@ -570,7 +570,7 @@ $(document).ready(function () {
 
                 //}
             }
-            console.log(col, row, className)
+            //console.log(col, row, className)
             
         });
     }
