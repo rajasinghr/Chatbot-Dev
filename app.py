@@ -20,11 +20,13 @@ class Chatbot:
         with open(fileName) as json_data:
             self.jsonData = json.load(json_data)
 
-        fileName = os.getcwd()+'\\static\\tutorial\\clues.json'
+        #fileName = os.getcwd()+'\\static\\tutorial\\clues.json'
+        fileName = os.getcwd()+'/static/tutorial/clues.json'
         with open(fileName) as json_data:
             self.clueData = json.load(json_data)
 
-        fileName = os.getcwd()+'\\static\\tutorial\\conditions.json'
+        #fileName = os.getcwd()+'\\static\\tutorial\\conditions.json'
+        fileName = os.getcwd()+'/static/tutorial/conditions.json'
         with open(fileName) as json_data:
             self.conditionData = json.load(json_data)
 
