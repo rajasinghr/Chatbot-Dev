@@ -1,0 +1,15 @@
+{
+  "All": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],
+  "Alex": [ 20, 21 ],
+  "Leon": [ 14, 15 ],
+  "Rachel": [ 7, 9, 11 ],
+  "Tina": [ 1, 2, 3, 8 ],
+  "Network Architect": [ 20, 22 ],
+  "Systems Analyst": [ 2, 4, 5 ],
+  "Cybersecurity Specialist": [ 17, 18 ],
+  "Database Administrator": [ 9, 10, 13 ],
+  "Boston": [ 17, 19 ],
+  "Chicago": [ 14, 16 ],
+  "Seattle": [ 1, 4, 6 ],
+  "Los Angeles": [ 7, 8, 10, 12 ]
+}

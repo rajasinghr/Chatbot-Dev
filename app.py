@@ -31,26 +31,50 @@ class Chatbot:
             self.conditionData = json.load(json_data)
 
     def getData(self,condition,topic,index):
-        topics = ['Introduction','Tutorial','Task Reminder','Clue_Ins','Clue','Redundant_Ins','Redundant','Submit','Conclusion']
         data = ''
-
         #check notepad++ for old code
 
-        if(topic != 'Clue' and topic != 'Redundant'):
-            if( (str(int(index)+1) not in self.jsonData[condition][topic]) ):
+        if condition[0] == 'L':
+            topics = ['Introduction','Tutorial','Task Reminder','Clue_Ins','Clue','Redundant_Ins','Redundant','Submit','Conclusion']
+            if(topic != 'Clue' and topic != 'Redundant'):
+                if( (str(int(index)+1) not in self.jsonData[condition][topic]) ):
+                    topic = topics[topics.index(topic)+1]
+                    index = "0"
+            else:
                 topic = topics[topics.index(topic)+1]
                 index = "0"
-        else:
-            topic = topics[topics.index(topic)+1]
-            index = "0"
 
-        if(topic == 'Clue'):
-            data = [self.clueData['main']]
-        elif(topic == 'Redundant'):
-            data = [self.clueData['redundant']]
+            if(topic == 'Clue'):
+                data = [self.clueData['main']]
+            elif(topic == 'Redundant'):
+                data = [self.clueData['redundant']]
+            else:
+                index = str(int(index)+1)
+                data = [self.jsonData[condition][topic][index]]
         else:
+            topics = ['Introduction','Tutorial','Task Reminder','Clue_Ins','Clue','Clue_End_Ins','Redundant_Ins','Redundant','Submit','Conclusion']
+            if(topic != 'Clue' and topic != 'Redundant'):
+                if( (str(int(index)+1) not in self.jsonData[condition][topic]) ):
+                    topic = topics[topics.index(topic)+1]
+                    index = "0"
+            elif(topic == 'Redundant'):
+                if( (str(int(index)+1) not in self.clueData['redundant']) ):
+                    topic = topics[topics.index(topic)+1]
+                    index = "0"
+            elif(topic == 'Clue'):
+                if( (str(int(index)+1) not in self.clueData['main']) ):
+                    topic = topics[topics.index(topic)+1]
+                    index = "0"
+            
+
             index = str(int(index)+1)
-            data = [self.jsonData[condition][topic][index]]
+            if(topic == 'Clue'):
+                data = [self.clueData['main'][index]]
+            elif(topic == 'Redundant'):
+                data = [self.clueData['redundant'][index]]
+            else:
+                data = [self.jsonData[condition][topic][index]]
+
 
         return (topic,index,data)
 
@@ -81,6 +105,11 @@ class Chatbot:
             conn.close()
         return sessionId
 
+    def getRedundantClueById(self,clueId):
+        print(type(clueId))
+        print(clueId)
+        return self.clueData['redundant'][clueId]
+       
 
     def insertMatrixResult(self,sessionId,conditionId,matrixDict):
         print("Transaction")
@@ -126,9 +155,10 @@ class Chatbot:
 app = Flask(__name__)
 chatbot = Chatbot()
 
-@app.route('/')
-def home():
+@app.route('/<int:clue_id>')
+def home(clue_id):
     chatbot.getJson()
+    print("Clue ID:" + str(clue_id))
     return render_template("index.html")
 
 
@@ -192,7 +222,15 @@ def storeMatrixResult():
 
     return jsonify({"result":"success"});
     
+@app.route('/getRedundantClueById',methods=['GET'])
+def getRedundantClueById():
+    id = ''
+    if 'id' in request.args:
+        id = request.args['id']
+        print(id)
 
+    data = chatbot.getRedundantClueById(id)
+    return jsonify({"clue":data})
 
 #@app.route('/getResponse',methods=['GET'])
 #def getResponse():
