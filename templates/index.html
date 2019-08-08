@@ -15,492 +15,492 @@
 <body>
     <div class="container" style="height:100vh;width:100%">
         <br />
-        <div class="row" style="height:90vh">
-            <div class="column" style=" width: 54%;overflow: auto;">
-                <div>
-                    <p style="font-size:9px !important">
-                        Use this grid to note which combinations have been eliminated or selected.
-                        <br />
-                        Click the box once to place an <img src='../static/images/cross.png' alt='Avatar' style='width:12px;' />. Click the same box again to place an <img src='../static/images/circle.png' alt='Avatar' style='width:12px;' />.  Click the same box a third time to remove the <img src='../static/images/circle.png' alt='Avatar' style='width:12px;' />.
-                    </p>
+        <div class="row" style="height:95vh">
+            <div  class="column" style=" width: 54%;overflow: auto;">
+                <div id="clickableGrid" style="display:none">
+                    <div>
+                        <p style="font-size:12px !important">
+                            Use this grid to note which combinations have been eliminated or selected.
+                             Click the box once to place an <img src='../static/images/cross.png' alt='Avatar' style='width:12px;' />. Click the same box again to place an <img src='../static/images/circle.png' alt='Avatar' style='width:12px;' />.  Click the same box a third time to remove the <img src='../static/images/circle.png' alt='Avatar' style='width:12px;' />.
+                        </p>
+                    </div>
+                    <table class="table  table-sm" style="height:75%; max-height:75%">
+                        <thead>
+                            <tr>
+                                <th class="border" colspan="2" rowspan="2"></th>
+                                <th class="border" colspan="5" align="center"><div style="font-size: 8px;text-align:center">Office Location</div></th>
+                                <th class="border" colspan="5" align="center"><div style="font-size: 8px;text-align:center">Role</div></th>
+                                <th class="border" colspan="5" align="center"><div style="font-size: 8px;text-align:center">Project Hours/Week</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border" colspan="2"></td>
+                                <td class="border"><div class="vertical ">New York</div></td>
+                                <td class="border"><div class="vertical ">Boston</div></td>
+                                <td class="border"><div class="vertical ">Chicago</div></td>
+                                <td class="border"><div class="vertical ">Seattle</div></td>
+                                <td class="border"><div class="vertical ">Los Angeles</div></td>
+
+                                <td class="border"><div class="vertical ">Network Architect</div></td>
+                                <td class="border"><div class="vertical ">Quality Assurance Engineer</div></td>
+                                <td class="border"><div class="vertical ">Systems Analyst</div></td>
+                                <td class="border"><div class="vertical ">Cyber Security Specalist</div></td>
+                                <td class="border"><div class="vertical ">Database Administrator</div></td>
+
+                                <td class="border"><div class="vertical">4</div></td>
+                                <td class="border"><div class="vertical">6</div></td>
+                                <td class="border"><div class="vertical">8</div></td>
+                                <td class="border"><div class="vertical">10</div></td>
+                                <td class="border"><div class="vertical">12</div></td>
+                            </tr>
+                            <tr>
+                                <td class="border" rowspan="5"><div style="font-size: 8px;text-align:center;writing-mode: vertical-rl;transform: rotate(180deg);font-weight: bold;height: 140px;">Name</div></td>
+                                <td class="border"><div class="horizontal">Alex</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">Leon</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">Michael</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">Rachel</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">Tina</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                            </tr>
+                            <tr>
+                                <td class="border" rowspan="5">
+                                    <div class="vertical" style="font-size: 8px;text-align:center;writing-mode: vertical-rl;transform: rotate(180deg);font-weight: bold;height: 140px;">Project Hours per Week</div>
+                                </td>
+                                <td class="border"><div class="horizontal">4</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">6</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">8</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">10</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">12</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+                            <tr>
+                                <td class="border" rowspan="5"><div style="font-size: 8px;text-align:center;writing-mode: vertical-rl;font-weight: bold;height: 140px;transform: rotate(180deg);">Role</div></td>
+                                <td class="border"><div class="horizontal">Network Architect</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">Quality Assurance Engineer</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">Systems Analyst</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">Cyber Security Specalist</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">Database Adminstrator</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!--<table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">Team Member</th>
+                                <th scope="col">Role</th>
+                                <th scope="col"># Project hours/week</th>
+                                <th scope="col">Office Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>Alex</td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Leon</td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Michael</td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Rachel</td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tina</td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class="form-control form-control-sm">
+                                        <option>Role 1</option>
+                                        <option>Role 2</option>
+                                        <option>Role 3</option>
+                                        <option>Role 4</option>
+                                        <option>Role 5</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>-->
                 </div>
-                <table class="table table-bordered table-sm" style="height:85%;">
-                    <thead>
-                        <tr>
-                            <th colspan="2" rowspan="2"></th>
-                            <th colspan="5" align="center"><div class="horizontal">Office Location</div></th>
-                            <th colspan="5" align="center"><div class="horizontal">Role</div></th>
-                            <th colspan="5" align="center"><div class="horizontal">Project Hours/Week</div></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="2"></td>
-                            <td><div class="vertical">New York</div></td>
-                            <td><div class="vertical">Boston</div></td>
-                            <td><div class="vertical">Chicago</div></td>
-                            <td><div class="vertical">Seattle</div></td>
-                            <td><div class="vertical">Los Angeles</div></td>
-
-                            <td><div class="vertical">Network Architect</div></td>
-                            <td><div class="vertical">Quality Assurance Engineer</div></td>
-                            <td><div class="vertical">Systems Analyst</div></td>
-                            <td><div class="vertical">Cyber Security Specalist</div></td>
-                            <td><div class="vertical">Database Administrator</div></td>
-
-                            <td><div class="vertical">4</div></td>
-                            <td><div class="vertical">6</div></td>
-                            <td><div class="vertical">8</div></td>
-                            <td><div class="vertical">10</div></td>
-                            <td><div class="vertical">12</div></td>
-                        </tr>
-                        <tr>
-                            <td rowspan="5"><div class="vertical">Name</div></td>
-                            <td><div class="horizontal">Alex</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                        </tr>
-                        <tr>
-                            <td><div class="horizontal">Leon</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                        </tr>
-                        <tr>
-                            <td><div class="horizontal">Michael</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                        </tr>
-                        <tr>
-                            <td><div class="horizontal">Rachel</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                        </tr>
-                        <tr>
-                            <td><div class="horizontal">Tina</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                        </tr>
-                        <tr>
-                            <td rowspan="5">
-                                <div class="vertical">Project Hours per Week</div>
-                            </td>
-                            <td><div class="horizontal">4</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><div class="horizontal">6</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><div class="horizontal">8</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><div class="horizontal">10</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><div class="horizontal">12</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td rowspan="5"><div class="vertical">Role</div></td>
-                            <td><div class="horizontal">Network Architect</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><div class="horizontal">Quality Assurance Engineer</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><div class="horizontal">Systems Analyst</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><div class="horizontal">Cyber Security Specalist</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><div class="horizontal">Database Adminstrator</div></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td class="click"></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <!--<table class="table table-sm">
-                    <thead>
-                        <tr>
-                            <th scope="col">Team Member</th>
-                            <th scope="col">Role</th>
-                            <th scope="col"># Project hours/week</th>
-                            <th scope="col">Office Location</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        <tr>
-                            <td>Alex</td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Leon</td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Michael</td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Rachel</td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Tina</td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-control form-control-sm">
-                                    <option>Role 1</option>
-                                    <option>Role 2</option>
-                                    <option>Role 3</option>
-                                    <option>Role 4</option>
-                                    <option>Role 5</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>-->
-
 
             </div>
             <div class="column" style="width: 46%;border:solid #808080 0.5px;height: 95vh;">
                 <div id="chatDiv" style="height:80vh;overflow:auto">
-                    
+
                 </div>
 
 

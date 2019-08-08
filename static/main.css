@@ -57,6 +57,18 @@ img {
         /*box-shadow: 5px 10px #888888;*/
     }
 
+    .submit_msg_inner_div p {
+        background: #ffffff none repeat scroll 0 0;
+        border-radius: 3px;
+        color: #646464;
+        font-size: 14px;
+        margin: 0;
+        padding: 5px 10px 5px 12px;
+        width: 100%;
+        border-radius: 20px;
+        border-top-left-radius: 0;
+        /*box-shadow: 5px 10px #888888;*/
+    }
 
 
 
@@ -179,8 +191,8 @@ div.vertical {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     text-align: center;
-    width: 20px;
-    height: 80px;
+    width: 18px;
+    height: 70px;
     font-size: 8px;
     font-weight:bold;
     margin: 0px 2px 0px 0px;
@@ -190,7 +202,8 @@ div.horizontal {
     text-align: center;
     font-size: 8px;
     font-weight: bold;
-    
+    width: 70px;
+    height: 18px;
 }
 
 .next-button {
@@ -249,6 +262,10 @@ div.horizontal {
     text-align: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.border {
+    border: 1px solid black !important;
 }
 
 

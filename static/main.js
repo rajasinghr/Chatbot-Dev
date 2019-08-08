@@ -54,7 +54,7 @@ $(document).ready(function () {
                     $("#nextButton").attr("disabled", false);
 
 
-                    //$('#topic').val('Redundant_Ins')
+                    //$('#topic').val('Submit')
                     //$('#index').val("1")
 
                 }
@@ -1070,6 +1070,10 @@ $(document).ready(function () {
             message = response["botResponse"][0];
         }
 
+        if (response['topic'] == 'Tutorial') {
+            $('#clickableGrid').css('display', 'inline-block');
+        }
+
         //console.log(message)
         if (response['topic'] == 'Clue') {
             var seconds = new Date().getTime() / 1000;
@@ -1078,7 +1082,10 @@ $(document).ready(function () {
 
         if (response['topic'] == 'Submit' && response['index'] == "2") {
             message = message + '<br/><br/>'
-            message += getMatrixHtml()
+            addMessage('bot', response["condition"], message);
+            message = getMatrixHtml()
+            
+
         }
 
         if (response['topic'] == 'Submit' && response['index'] == "3") {
@@ -1122,9 +1129,11 @@ $(document).ready(function () {
             message = msgs[0] + $('#userName').val() + msgs[1];
 
         }
-        if (response['topic'] != 'Redundant') {
+        if (response['topic'] == 'Submit' && response['index'] == "2" ) {
+            addMessage('full', response["condition"], message);
+        }
+        else if ((response['topic'] != 'Redundant')){
             addMessage('bot', response["condition"], message);
-
         }
         $("#nextButton").attr("disabled", false);
         if (istriggerEnterKeyEventActive) {
@@ -1135,8 +1144,9 @@ $(document).ready(function () {
         }
         if (isTaskCompleted) {
 
-            alert("Task Completed. Click OK. Page will refresh in 3 seconds")
-            window.setTimeout(function () { location.reload() }, 3000)
+            //alert("Task Completed. Click OK. Page will refresh in 3 seconds")
+            //window.setTimeout(function () { location.reload() }, 3000)
+            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_80LHjIFlXjQlfWl")
         }
     }
 
@@ -1197,7 +1207,8 @@ $(document).ready(function () {
 
         if (response['topic'] == 'Submit' && response['index'] == "2") {
             message = message + '<br/><br/>'
-            message = message + getMatrixHtml()
+            addMessage('bot', response["condition"], message);
+            message = getMatrixHtml()
         }
 
         if (response['topic'] == 'Submit' && response['index'] == "3") {
@@ -1241,8 +1252,11 @@ $(document).ready(function () {
             message = msgs[0] + $('#userName').val() + msgs[1];
 
         }
-
-        if (response['topic'] != 'Redundant') {
+        
+        if (response['topic'] == 'Submit' && response['index'] == "2") {
+            addMessage('full', response["condition"], message);
+        }
+        else if ((response['topic'] != 'Redundant')) {
             addMessage('bot', response["condition"], message);
         }
         
@@ -1272,8 +1286,9 @@ $(document).ready(function () {
         }
         if (isTaskCompleted) {
 
-            alert("Task Completed. Click OK. Page will refresh in 3 seconds")
-            window.setTimeout(function () { location.reload() }, 3000)
+            //alert("Task Completed. Click OK. Page will refresh in 3 seconds")
+            //window.setTimeout(function () { location.reload() }, 3000)
+            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_80LHjIFlXjQlfWl")
         }
 
 
@@ -1444,8 +1459,8 @@ $(document).ready(function () {
                     <tr style='font-size: 10px;font-weight:bold;'>
                         <th scope='col'>Team Member</th>
                         <th scope='col'>Role</th>
-                        <th scope='col'># Project hours/week</th>
-                        <th scope='col'>Office Location</th>
+                        <th scope='col'>Pjt hrs/wk</th>
+                        <th scope='col'>Location</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1454,6 +1469,7 @@ $(document).ready(function () {
                         <td style='font-size: 14px;font-weight:bold;'>Alex</td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>Network Architect</option>
                                 <option value='2'>Quality Assurance Engineer</option>
                                 <option value='3'>Systems Analyst</option>
@@ -1463,6 +1479,7 @@ $(document).ready(function () {
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>4</option>
                                 <option value='2'>6</option>
                                 <option value='3'>8</option>
@@ -1472,6 +1489,7 @@ $(document).ready(function () {
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>New York</option>
                                 <option value='2'>Boston</option>
                                 <option value='3'>Chicago</option>
@@ -1484,6 +1502,7 @@ $(document).ready(function () {
                         <td style='font-size: 14px;font-weight:bold;'>Leon</td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>Network Architect</option>
                                 <option value='2'>Quality Assurance Engineer</option>
                                 <option value='3'>Systems Analyst</option>
@@ -1493,6 +1512,7 @@ $(document).ready(function () {
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>4</option>
                                 <option value='2'>6</option>
                                 <option value='3'>8</option>
@@ -1502,6 +1522,7 @@ $(document).ready(function () {
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>New York</option>
                                 <option value='2'>Boston</option>
                                 <option value='3'>Chicago</option>
@@ -1514,6 +1535,7 @@ $(document).ready(function () {
                         <td style='font-size: 14px;font-weight:bold;'>Michael</td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>Network Architect</option>
                                 <option value='2'>Quality Assurance Engineer</option>
                                 <option value='3'>Systems Analyst</option>
@@ -1523,6 +1545,7 @@ $(document).ready(function () {
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>4</option>
                                 <option value='2'>6</option>
                                 <option value='3'>8</option>
@@ -1532,6 +1555,7 @@ $(document).ready(function () {
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>New York</option>
                                 <option value='2'>Boston</option>
                                 <option value='3'>Chicago</option>
@@ -1544,6 +1568,7 @@ $(document).ready(function () {
                         <td style='font-size: 14px;font-weight:bold;'>Rachel</td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>Network Architect</option>
                                 <option value='2'>Quality Assurance Engineer</option>
                                 <option value='3'>Systems Analyst</option>
@@ -1553,6 +1578,7 @@ $(document).ready(function () {
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>4</option>
                                 <option value='2'>6</option>
                                 <option value='3'>8</option>
@@ -1562,6 +1588,7 @@ $(document).ready(function () {
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>New York</option>
                                 <option value='2'>Boston</option>
                                 <option value='3'>Chicago</option>
@@ -1574,6 +1601,7 @@ $(document).ready(function () {
                         <td style='font-size: 14px;font-weight:bold;'>Tina</td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>Network Architect</option>
                                 <option value='2'>Quality Assurance Engineer</option>
                                 <option value='3'>Systems Analyst</option>
@@ -1583,6 +1611,7 @@ $(document).ready(function () {
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>4</option>
                                 <option value='2'>6</option>
                                 <option value='3'>8</option>
@@ -1592,6 +1621,7 @@ $(document).ready(function () {
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
+                                <option value='0'>Select</option>
                                 <option value='1'>New York</option>
                                 <option value='2'>Boston</option>
                                 <option value='3'>Chicago</option>
@@ -1601,7 +1631,8 @@ $(document).ready(function () {
                         </td>
                     </tr>
                 </tbody>
-            </table ></div >`
+            </table >
+            <div><span style='display:none;color:red;font-size:9px'>* All the values should be selected.</span></div></div >`
         return html
     }
 
@@ -1627,16 +1658,24 @@ $(document).ready(function () {
     function addMessage(type,condition,message) {
         var html = '';
         if (type == 'user') {
-            html = "<div class='user_msg_div'><div class='user_msg_img'><img src='../static/images/user.png' alt='Avatar' style='width:100%;'></div><div class='user_msg_main_div'><p style='word-wrap: break-word'>"+message+"</p></div></div>"
+            html = "<div class='user_msg_div'><div class='user_msg_img'><img src='../static/images/user.png' alt='Avatar' style='width:100%;'></div><div class='user_msg_main_div'><p style='word-wrap: break-word'>" + message + "</p></div></div>"
         }
-        else {
+        else if (type == 'bot') {
             if (condition[1] == 'H') {
                 html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/man.png' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='bot_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
             }
             else {
                 html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/bot3.jpg' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='bot_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
             }
-            console.log(html)
+            
+        }
+        else {
+            if (condition[1] == 'H') {
+                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/man.png' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='submit_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
+            }
+            else {
+                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/bot3.jpg' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='submit_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
+            }
         }
         $('#chatDiv').append(html)
         var element = document.getElementById("chatDiv");
@@ -1654,37 +1693,50 @@ $(document).ready(function () {
     function gridSubmit() {
         $('#submitButton').click(function () {
             var rows = document.querySelector('#matrixResult').getElementsByTagName('table')[0].getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+            var errorMsg = document.querySelector('#matrixResult').getElementsByTagName('span')[0]
+            var isValid = true
             var result = {}
             for (var row = 0; row < rows.length; row++) {
                 var role = rows[row].getElementsByTagName('td')[1].getElementsByTagName('select')[0].value
                 var projectHours = rows[row].getElementsByTagName('td')[2].getElementsByTagName('select')[0].value
                 var location = rows[row].getElementsByTagName('td')[3].getElementsByTagName('select')[0].value
+                if (role == "0" || projectHours == "0" || location == "0") {
+                    $('#matrixResult div span').css('display', 'inline-block');
+                    isValid = false
+                    break
+                }
                 result[row+1] = {
                     "role": role,
                     "projectHours": projectHours,
                     "location": location
                 }
-
+                
             }
-            //console.log(JSON.stringify(result))
-            var ajaxData = {
-                'sessionId': $('#sessionId').val(),
-                'condition': $('#condition').val(),
-                'matrixDict': JSON.stringify(result)
-            }
-            $.ajax({
-                url: '/storeMatrixResult',
-                data: ajaxData,
-                type: 'GET',
-                success: function (response) {
-                    //console.log(response)
+            
+            if (isValid) {
+                console.log(JSON.stringify(result))
+                $('#matrixResult div span').css('display', 'none');
+                var ajaxData = {
+                    'sessionId': $('#sessionId').val(),
+                    'condition': $('#condition').val(),
+                    'matrixDict': JSON.stringify(result)
                 }
-            });
-            //console.log(result)
-            $("#submitButton").hide();
-            $("#nextButton").show();
-            $("#nextButton").attr("disabled", false);
-            triggerEnterKeyEvent = true;
+                $.ajax({
+                    url: '/storeMatrixResult',
+                    data: ajaxData,
+                    type: 'GET',
+                    success: function (response) {
+                        //console.log(response)
+                    }
+                });
+                //console.log(result)
+                $("#submitButton").hide();
+                $("#nextButton").show();
+                $("#nextButton").attr("disabled", false);
+                //triggerEnterKeyEvent = true;
+                triggerEnterKeyEvent = false;
+                getDataEvent();
+            }
         });
     }
 
