@@ -6,6 +6,7 @@ import os
 import logging
 from logging.handlers import RotatingFileHandler
 import pyodbc
+import random
 
 
 class Chatbot:
@@ -13,6 +14,7 @@ class Chatbot:
         self.jsonData = None
         self.clueData = None
         self.conditionData = None
+
       
     def getJson(self):
         #fileName = os.getcwd()+'\\static\\tutorial\\content.json'
@@ -30,6 +32,7 @@ class Chatbot:
         with open(fileName) as json_data:
             self.conditionData = json.load(json_data)
 
+    
     def getData(self,condition,topic,index):
         data = ''
         #check notepad++ for old code
@@ -77,6 +80,33 @@ class Chatbot:
 
 
         return (topic,index,data)
+
+    def insertConsent(self,sessionId,fullname,uid):
+        server = 'chatbot-study1.database.windows.net'
+        database = 'chatbot'
+        username = 'chatbot-study'
+        password = '123$Welcome'
+        driver= '{ODBC Driver 17 for SQL Server}'
+        #sessionId = ''
+        conn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
+        cursor = conn.cursor()
+        try:
+            if sessionId == None or sessionId == '':
+                cursor.execute('''SELECT MAX(sessionId) FROM ParticipantConsent''')
+                sessionId = cursor.fetchone()[0]+1
+            elif sessionId == 0:
+                sessionId = 1
+            
+            insertValues = (sessionId,fullname,uid)
+            print(insertValues)
+            cursor.execute('''INSERT INTO ParticipantConsent (sessionId,fullname,unumber)  VALUES (?,?,?)''',insertValues)
+            conn.commit()
+            conn.close()
+        except:
+            print(error)
+            conn.close()
+        return sessionId
+
 
     def insertTransaction(self,sessionId,conditionId,clueId,Response,timeTaken,gridAction):
         #print("Transaction")
@@ -154,6 +184,43 @@ class Chatbot:
 
 app = Flask(__name__)
 chatbot = Chatbot()
+
+@app.route('/')
+def consent():
+    return render_template("consent.html")
+
+@app.route('/getSession')
+def getSession():
+    name = ''
+    uid = '' 
+    if 'name' in request.args:
+        name = request.args['name']
+        
+    if 'uid' in request.args:
+        uid = request.args['uid']
+        
+    fileName = os.getcwd()+'/static/tutorial/availableLimit.json'
+    allowedLimit = None
+    randomCondition = 0
+    with open(fileName) as json_data:
+        allowedLimit = json.load(json_data)
+    print(allowedLimit)
+    availableConditions = [condition[0] for condition in list(allowedLimit.items()) if condition[1] !=0] 
+    if len(availableConditions) != 0:
+        randomCondition = random.choice(availableConditions)
+        currentLimit = allowedLimit[randomCondition]
+    else:
+        return jsonify({"condition":0})
+    
+    while currentLimit == 0 and len(availableConditions) != 0:
+        availableConditions.remove(randomCondition)
+        randomCondition = random.choice(availableConditions)
+        currentLimit = allowedLimit[randomCondition]
+    allowedLimit[randomCondition] = currentLimit-1
+    sessionId = chatbot.insertConsent(None,name,uid)
+    with open(fileName, 'w') as outfile:
+        json.dump(allowedLimit, outfile)
+    return jsonify({"condition":randomCondition,"sessionId":sessionId})
 
 @app.route('/<int:clue_id>')
 def home(clue_id):

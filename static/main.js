@@ -5,9 +5,12 @@ var triggerEnterKeyEvent = true
 var sessionDictData = {}
 var currentClue = {}
 $(document).ready(function () {
+    //alert(localStorage.getItem("sessionId"))
+    
+
     console.log(window.location.href.split('/').pop())
-    //$('#conditionSetupModal').modal('show');
-    conditionSelectButton();
+    
+    initialDataSetup();
     
 
     function onloadSetup() {
@@ -15,7 +18,7 @@ $(document).ready(function () {
             
             $('#topic').val('Introduction');
             $('#index').val('0');
-            $('#sessionId').val('');
+            $('#sessionId').val(localStorage.getItem("sessionId"));
             $.ajax({
                 url: '/getResponse',
                 data: {
@@ -54,13 +57,13 @@ $(document).ready(function () {
                     $("#nextButton").attr("disabled", false);
 
 
-                    //$('#topic').val('Submit')
-                    //$('#index').val("1")
+                    $('#topic').val('Task Reminder')
+                    $('#index').val("1")
 
                 }
             });
 
-
+         
             $("#nextButton").click(function (e) {
                 triggerEnterKeyEvent = false;
                 getDataEvent();
@@ -906,15 +909,8 @@ $(document).ready(function () {
         
     }
 
-    function conditionSelectButton() {
-        //$("#conditionSelectButton").click(function () {
-        //    var radioValue1 = $("input[name='autonomyOption']:checked").val();
-        //    var radioValue2 = $("input[name='relatednessOption']:checked").val();
-        //    var radioValue3 = $("input[name='competencyOption']:checked").val();
-            
-        //    $('#condition').val(radioValue1 + radioValue2 + radioValue3);
-        //    onloadSetup();
-        //});
+    function initialDataSetup() {
+        
         var conditionDict = {
             1:"LLL",
             2:"LLH",
@@ -925,6 +921,7 @@ $(document).ready(function () {
             7:"HHL",
             8:"HHH"
         }
+        console.log(window.location.href.split('/'))
         var condition = window.location.href.split('/').pop()
         console.log(conditionDict[condition])
         $('#condition').val(conditionDict[condition])
@@ -1070,9 +1067,9 @@ $(document).ready(function () {
             message = response["botResponse"][0];
         }
 
-        if (response['topic'] == 'Tutorial') {
-            $('#clickableGrid').css('display', 'inline-block');
-        }
+        //if (response['topic'] == 'Tutorial') {
+        //    $('#clickableGrid').css('display', 'inline-block');
+        //}
 
         //console.log(message)
         if (response['topic'] == 'Clue') {
@@ -1148,6 +1145,8 @@ $(document).ready(function () {
             //window.setTimeout(function () { location.reload() }, 3000)
             window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_80LHjIFlXjQlfWl")
         }
+
+        
     }
 
     function fillHighConditionContent(response, istriggerEnterKeyEventActive, isTaskCompleted) {
@@ -1348,7 +1347,7 @@ $(document).ready(function () {
                         html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
                     }
                     else if (i == 1) {
-                        html += `<button type="button" class="btn btn-secondary showClueExplanation" style="font-size:10px">`
+                        html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
                     }
                     
                 }
@@ -1369,21 +1368,10 @@ $(document).ready(function () {
                         html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
                     }
                     else if (i == 1) {
-                        html += `<button type="button" class="btn btn-secondary showClueExplanation" style="font-size:10px">`
-                    }
-                    else if (i == 2) {
                         html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
                     }
                 }
-                else {
-                    if (i == 0) {
-                        html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
-                    }
-                    else if (i == 1) {
-                        html += `<button type="button" class="btn btn-secondary showClueExplanation" style="font-size:10px">`
-                    }
-
-                }
+                
 
             }
             else if (type == 'category') {

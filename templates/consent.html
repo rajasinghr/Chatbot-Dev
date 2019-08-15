@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/main.css" />
+
+</head>
+
+<body>
+    <div class="container" style="width:100%;padding:20px 0px 0px 0px;margin-bottom:60px">
+        <div style="text-align:center"><b>Informed Consent to Participate in Research </b></div>
+        <br />
+        <div>
+            <p style="text-align:justify">
+                <b>Overview:</b>  You are being asked to take part in a research study. The information in this document should help you to decide if you would like to participate. The sections in this Overview provide the basic information about the study. More detailed information is provided in the remainder of the document.
+            </p>
+            <p style="text-align:justify">
+                <u>Study Staff:</u>  This study is being led by Dr. Triparna de Vreede who is a professor in the Information Systems and Decision Sciences Department at the Muma College of Business. This person is called the Principal Investigator. Other approved research staff may act on behalf of the Principal Investigator.
+            </p>
+            <p style="text-align:justify">
+                <u>Study Details:</u>  This study is being conducted online.  The purpose of the study is to examine how certain characteristics of artificial intelligence (AI) can improve user experiences and outcomes.
+
+                If you choose to participate in this study, you will be asked to complete a decision-making task at an external website. In the study scenario, you will take on the role of an IT project manager and assign various roles, offices, and project hours to 5 team members. You will be able to chat with a virtual assistant that will provide you with the information necessary to make these decisions. At the end of the task, you will need to complete an electronic survey. All data will be collected anonymously and linked using only identification numbers that cannot be used to identify you.
+            </p>
+            <p style="text-align:justify;color:red">
+                The session is expected to take about 45 minutes to complete (30 minutes for the task and 15 minutes for the survey).
+            </p>
+            <p style="text-align:justify">
+                <u>Participants:</u>  You are being asked to take part because you, as an adult, represent the kind of person that is often needed to make complex decisions.
+            </p>
+            <p style="text-align:justify">
+                <u>Voluntary Participation:</u>  Your participation is voluntary. You do not have to participate and may stop your participation at any time. There will be no penalties or loss of benefits or opportunities if you do not participate or decide to stop once you start. Alternatives to participating in the study include assignments offered by your professor (such as a research report or essay). These alternative assignments generally require at least the same amount of time and effort as participation in research. Your decision to participate or not to participate will not affect your student status, course grade, recommendations, or access to future courses or training opportunities.
+            </p>
+            <p style="text-align:justify">
+                <u>Benefits & Risks:</u> We do not know if you will receive any benefit from your participation. However, there is no cost to participate. This research is considered minimal risk. Minimal risk means that study risks are the same as the risks you face in daily life.
+            </p>
+            <p style="text-align:justify">
+                <u>Compensation:</u> You will be compensated 1.5 SONA credits for your participation. If for any reason you withdraw from the study before completion, you will only be compensated 1 SONA credit for each half hour completed.
+            </p>
+            <p style="text-align:justify">
+                <u>Privacy & Confidentiality:</u> We will do our best to keep your records private and confidential. We cannot guarantee absolute confidentiality. Your personal information may be disclosed if required by law. Certain people may need to see your study records. The only people who will be allowed to see these records are the Principal Investigator, research team, and The University of South Florida Institutional Review Board (IRB).
+            </p>
+            <p style="text-align:justify">
+                <u>Online Survey:</u> It is possible, although unlikely, that unauthorized individuals could gain access to your responses because you are responding online. Confidentiality will be maintained to the degree permitted by the technology used. No guarantees can be made regarding the interception of data sent via the Internet.  However, your participation in this online survey involves risks similar to a person's everyday use of the Internet. If you complete and submit an anonymous survey and later request your data be withdrawn, this may or may not be possible as the researcher may be unable to extract anonymous data from the database.
+            </p>
+            <p style="text-align:justify">
+                <u>Contact Information:</u> If you have any questions, concerns or complaints about this study, call Dr. Triparna de Vreede at [telephone] or email her at tdevreede@usf.edu. If you have questions about your rights, complaints, or issues as a person taking part in this study, call the USF IRB at (813) 974-5638 or contact by email at RSCH-IRB@usf.edu.
+            </p>
+            <p style="text-align:justify">
+                We may publish what we learn from this study. If we do, we will not let anyone know your name and keep your study information private and confidential. We will not publish anything else that would let people know who you are. You can print a copy of this consent form for your records.
+            </p>
+            <p style="text-align:justify">
+                I freely give my consent to take part in this study. I understand that by proceeding with this survey that I am agreeing to take part in research and I am 18 years of age or older.
+            </p>
+        </div>
+        <div>
+            <div class="radio">
+                <label>
+                    <input type="radio" value="yes" name="optradio" checked>
+                    <input class="col-lg-4  form-control-sm form-control" required id="participantFullName" placeholder="Enter your full name" type="text" style="display: inline !important">
+                    <input class="col-lg-3 form-control form-control-sm" required id="participantUid" placeholder="Enter U number" style="display: inline !important">
+                    I consent, begin the study
+                </label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" value="no" name="optradio"><span style="padding-left:10px">I do not consent, I do not wish to participate</span></label>
+            </div>
+        </div>
+        <div style="float:right">
+            <button type="button" id="consentNext"  class="btn btn-primary">Next</button>
+        </div>
+    </div>
+    <script src="../static/consent.js"></script>
+</body>
+</html>

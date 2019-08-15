@@ -37,7 +37,7 @@
     },
     "Conclusion": {
       "1": "Project assignments have been recorded.",
-      "2": "Click 'Next' to proceed."
+      "2": "You will be redirected to Qualtrics shortly"
     }
   },
   "LLH": {
@@ -100,7 +100,7 @@
     },
     "Conclusion": {
       "1": "Project assignments have been recorded.",
-      "2": "Click 'Next' to proceed."
+      "2": "You will be redirected to Qualtrics shortly."
     }
   },
   "LHL": {
@@ -143,7 +143,7 @@
     "Conclusion": {
       "1": "Thanks, [Name]! I appreciate all your hard work.",
       "2": "It's been a pleasure working with you. ",
-      "3": "Please click 'Next' to proceed."
+      "3": "You will be redirected to Qualtrics shortly."
     }
   },
   "LHH": {
@@ -207,7 +207,7 @@
     "Conclusion": {
       "1": "Thanks, [Name]! I appreciate all your hard work.",
       "2": "It's been a pleasure working with you. ",
-      "3": "Please click 'Next' to proceed."
+      "3": "You will be redirected to Qualtrics shortly."
     }
   },
   "HLL": {
@@ -254,7 +254,7 @@
     },
     "Conclusion": {
       "1": "Project assignments have been recorded.",
-      "2": "Click 'Next' to proceed."
+      "2": "You will be redirected to Qualtrics shortly."
     }
   },
   "HLH": {
@@ -323,7 +323,7 @@
     },
     "Conclusion": {
       "1": "Project assignments have been recorded.",
-      "2": "Click 'Next' to proceed."
+      "2": "You will be redirected to Qualtrics shortly."
     }
   },
   "HHL": {
@@ -372,7 +372,7 @@
     "Conclusion": {
       "1": "Thanks, [Name]! I appreciate all your hard work.",
       "2": "It's been a pleasure working with you. ",
-      "3": "Please click 'Next' to proceed."
+      "3": "You will be redirected to Qualtrics shortly."
     }
   },
   "HHH": {
@@ -442,7 +442,7 @@
     "Conclusion": {
       "1": "Thanks, [Name]! I appreciate all your hard work.",
       "2": "It's been a pleasure working with you. ",
-      "3": "Please click 'Next' to proceed."
+      "3": "You will be redirected to Qualtrics shortly."
     }
   }
 }
