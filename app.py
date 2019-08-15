@@ -155,7 +155,7 @@ class Chatbot:
             
             insertValues = (sessionId,conditionId,matrixDict)
             print(insertValues)
-            cursor.execute('''INSERT INTO MatrixResult VALUES (?,?,?)''',insertValues)
+            cursor.execute('''INSERT INTO MatrixResult (sessionId,conditionId,matrixDict) VALUES (?,?,?)''',insertValues)
             conn.commit()
             conn.close()
         except:
