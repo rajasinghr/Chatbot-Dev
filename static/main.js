@@ -57,8 +57,8 @@ $(document).ready(function () {
                     $("#nextButton").attr("disabled", false);
 
 
-                    $('#topic').val('Task Reminder')
-                    $('#index').val("1")
+                    //$('#topic').val('Task Reminder')
+                    //$('#index').val("1")
 
                 }
             });
