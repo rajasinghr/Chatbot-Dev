@@ -8,7 +8,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../static/main.css" />
+    <link rel="stylesheet" href="../static/consent.css" />
+
+
+    <!--<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css" />
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
 
 </head>
 
@@ -59,23 +65,51 @@
                 I freely give my consent to take part in this study. I understand that by proceeding with this survey that I am agreeing to take part in research and I am 18 years of age or older.
             </p>
         </div>
+
+
         <div>
-            <div class="radio">
+            <div id="nameError" style="display:none" class="alert alert-danger alert-dismissible fade show" role="alert">
+                User Name is required
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="uidError" style="display:none" class="alert alert-danger alert-dismissible fade show" role="alert">
+                U number is required
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="uidValidError" style="display:none" class="alert alert-danger alert-dismissible fade show" role="alert">
+                Enter a valid U number
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="radio ">
                 <label>
                     <input type="radio" value="yes" name="optradio" checked>
-                    <input class="col-lg-4  form-control-sm form-control" required id="participantFullName" placeholder="Enter your full name" type="text" style="display: inline !important">
-                    <input class="col-lg-3 form-control form-control-sm" required id="participantUid" placeholder="Enter U number" style="display: inline !important">
+                    <input class="col-lg-4  form-control-sm form-control" required name="participantFullName" id="participantFullName" placeholder="Enter your full name" type="text" style="display: inline !important">
+                    
+                    <span class="input-group-text" style="margin-right: -5px;display:inline !important;padding: 4px 8px !important;" >U-</span>
+                    <input class="col-lg-3 form-control form-control-sm" required name="participantUid" id="participantUid" placeholder="Enter U number" style="display: inline !important">
                     I consent, begin the study
                 </label>
             </div>
             <div class="radio">
                 <label><input type="radio" value="no" name="optradio"><span style="padding-left:10px">I do not consent, I do not wish to participate</span></label>
             </div>
+            <div style="float:right">
+                <button type="button" id="consentNext" class="btn btn-primary">Next</button>
+            </div>
         </div>
-        <div style="float:right">
-            <button type="button" id="consentNext"  class="btn btn-primary">Next</button>
-        </div>
+
+
     </div>
+    
     <script src="../static/consent.js"></script>
+
+    
+
 </body>
 </html>

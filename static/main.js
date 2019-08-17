@@ -57,7 +57,7 @@ $(document).ready(function () {
                     $("#nextButton").attr("disabled", false);
 
 
-                    //$('#topic').val('Task Reminder')
+                    //$('#topic').val('Clue_Ins')
                     //$('#index').val("1")
 
                 }
@@ -852,12 +852,31 @@ $(document).ready(function () {
 
         }
         
-        $('#userMessage').keypress(function (e) {
+        $('#userMessage').keyup(function (e) {
             if (e.key != 'Enter') {
                 if ($("#user_thinking").length < 1) {
                     addThinking('user')
                 }
             }
+            else if (e.key === 'Enter' ) {
+                if ($('#userMessage').val().length > 0) {
+                    triggerEnterKeyEvent = false;
+
+                    getDataEvent();
+                }
+            }
+
+            if ($('#userMessage').val().length > 0) {
+                $("#nextButton").attr("disabled", false);
+                istriggerEnterKeyEventActive = true
+                $('#userMessage').css('border-color', '#80bdff');
+                $('#userMessage').css('box - shadow', '0 0 0 0.2rem rgba(0,123,255,.25)');  
+            }
+            else {
+                $('#userMessage').css('border-color', 'red');
+                $('#userMessage').css('box - shadow', '0 0 0 0.2rem rgba(255,123,0,.25)');  
+            }
+            
         })
 
         
@@ -885,13 +904,16 @@ $(document).ready(function () {
             if (isRepeat) {
                 addMessage('bot', $('#condition').val(), 'Indicate if additional information is requested.')
                 var navItems = []
-                if ($('#condition').val()[2] != 'H' || explanationBlock) {
+                if ($('#condition').val()[2] != 'H') {
                     navItems = ["Yes, I would like <br /> to request specific information.", "No, I'm ready to make <br /> my final decisions."]
                 }
                 else {
                     navItems = ["Yes, I would like <br /> to request specific information.", "Explain the rationale <br /> for this information." ,"No, I'm ready to make <br /> my final decisions."]
                 }
-                userActionBlock = buildUserActionButtonGroup(navItems, $('#condition').val(), 'askRedundant')
+                if (explanationBlock) {
+                    navItems = ["Yes, I would like <br /> to request specific information.", "No, I'm ready to make <br /> my final decisions."]
+                }
+                userActionBlock = buildUserActionButtonGroup(navItems, $('#condition').val(), 'askRedundant', explanationBlock)
                 addActionBlock(userActionBlock)
             }
             else {
@@ -985,7 +1007,7 @@ $(document).ready(function () {
             var clues = []
             var explanations = []
             for (var key in response_dict) {
-                message += '<b>Clue ' + key.toString() + '</b><br/>';
+                message = '<b>Clue ' + key.toString() + '</b><br/>';
                 message += '<b>Clue: </b>' + response_dict[key]['clue'] + '<br/>';
                 if (response['condition'][2] == 'H') {
                     message += '<b>Explanation: </b>' + response_dict[key]['explanation'] + '<br/>';
@@ -993,6 +1015,8 @@ $(document).ready(function () {
                 message += '<br/>'
                 clues.push(response_dict[key]['clue']);
                 explanations.push(response_dict[key]['explanation']);
+
+                addMessage('bot', response["condition"], message);
             }
         }
         else if (response['topic'] == 'Redundant') {
@@ -1073,8 +1097,15 @@ $(document).ready(function () {
 
         //console.log(message)
         if (response['topic'] == 'Clue') {
+            
             var seconds = new Date().getTime() / 1000;
             $('#timeTaken').val(seconds);
+        }
+
+        if (response['topic'] == 'Clue' && response['index'] == "1") {
+
+            var seconds = new Date().getTime() / 1000;
+            $('#clueStartTimestamp').val(seconds);
         }
 
         if (response['topic'] == 'Submit' && response['index'] == "2") {
@@ -1108,6 +1139,8 @@ $(document).ready(function () {
             $("#userMessage").show();
             $('#userMessage').focus()
             $('#userInputType').val("name")
+            $("#nextButton").attr("disabled", true);
+            istriggerEnterKeyEventActive = false
 
         }
         else if ($('#userInputType').val() == 'name') {
@@ -1129,7 +1162,7 @@ $(document).ready(function () {
         if (response['topic'] == 'Submit' && response['index'] == "2" ) {
             addMessage('full', response["condition"], message);
         }
-        else if ((response['topic'] != 'Redundant')){
+        else if ((response['topic'] != 'Redundant') && (response['topic'] != 'Clue')){
             addMessage('bot', response["condition"], message);
         }
         $("#nextButton").attr("disabled", false);
@@ -1200,8 +1233,15 @@ $(document).ready(function () {
             message = response["botResponse"][0];
         }
         if (response['topic'] == 'Clue') {
+            
             var seconds = new Date().getTime() / 1000;
             $('#timeTaken').val(seconds);
+        }
+
+        if (response['topic'] == 'Clue' && response['index'] == "1") {
+            
+            var seconds = new Date().getTime() / 1000;
+            $('#clueStartTimestamp').val(seconds);
         }
 
         if (response['topic'] == 'Submit' && response['index'] == "2") {
@@ -1232,7 +1272,9 @@ $(document).ready(function () {
         if (($('#condition').val() == 'HHL' || $('#condition').val() == 'HHH') && response["topic"] == 'Introduction' && response["index"] == "2") {
             $("#userMessage").show();
             $('#userMessage').focus()
-            $('#userInputType').val("name")
+            $('#userInputType').val("name");
+            $("#nextButton").attr("disabled", true);
+            istriggerEnterKeyEventActive = false
 
         }
         else if ($('#userInputType').val() == 'name') {
@@ -1322,7 +1364,7 @@ $(document).ready(function () {
         return data
     }
 
-    function buildUserActionButtonGroup(content,condition,type) {
+    function buildUserActionButtonGroup(content, condition, type, explanationBlock) {
         var html = ''
         html += `<div class='actionBlock' style="margin: 26px 0 26px;overflow: hidden;">
                         <div style="display: inline-block;text-align: center;width: 100%;">
@@ -1362,8 +1404,27 @@ $(document).ready(function () {
                 }
 
             }
+            else if (explanationBlock) {
+                if (i == 0) {
+                    html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
+                }
+                else if (i == 1) {
+                    html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
+                }
+            }
             else if (type == 'askRedundant') {
                 if (condition[2] == 'H') {
+                    if (i == 0) {
+                        html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
+                    }
+                    else if (i == 1) {
+                        html += `<button type="button" class="btn btn-secondary showClueExplanation" style="font-size:10px">`
+                    }
+                    else if (i == 2) {
+                        html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
+                    }
+                }
+                else {
                     if (i == 0) {
                         html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
                     }
@@ -1374,6 +1435,7 @@ $(document).ready(function () {
                 
 
             }
+            
             else if (type == 'category') {
                 if (i == 0) {
                     html += `<button type="button" class="btn btn-secondary person" style="font-size:10px">`
@@ -1627,11 +1689,11 @@ $(document).ready(function () {
     function addThinking(type,condition) {
         var html = '';
         if (type == 'user') {
-            html = "<div id='user_thinking' class='user_msg_div'><div class='user_msg_img' ><img src='../static/images/user.png' alt='Avatar' style='width:100%;'></div><div class='user_msg_main_div'><div class='ticontainer'><div class='tiblock'><div class='tidot'></div><div class='tidot'></div><div class='tidot'></div></div></div></div></div > "
+            html = "<div id='user_thinking' class='user_msg_div'><div class='user_msg_img' ><img src='../static/images/user.png' alt='Avatar' fstyle='width:100%;'></div><div class='user_msg_main_div'><div class='ticontainer'><div class='tiblock'><div class='tidot'></div><div class='tidot'></div><div class='tidot'></div></div></div></div></div > "
         }
         else {
             if (condition[1] == 'H') {
-                html = "<div id='bot_thinking' class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/man.png' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='bot_msg_inner_div'><div class='ticontainer'><div class='tiblock'><div class='tidot'></div><div class='tidot'></div><div class='tidot'></div></div></div></div></div></div>"
+                html = "<div id='bot_thinking' class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/pic1.jpg' alt='Avatar' style='width:100%;border-radius: 70%;'></div><div class='bot_msg_main_div'><div class='bot_msg_inner_div'><div class='ticontainer'><div class='tiblock'><div class='tidot'></div><div class='tidot'></div><div class='tidot'></div></div></div></div></div></div>"
             }
             else {
                 html = "<div id='bot_thinking' class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/bot3.jpg' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='bot_msg_inner_div'><div class='ticontainer'><div class='tiblock'><div class='tidot'></div><div class='tidot'></div><div class='tidot'></div></div></div></div></div></div>"
@@ -1650,7 +1712,7 @@ $(document).ready(function () {
         }
         else if (type == 'bot') {
             if (condition[1] == 'H') {
-                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/man.png' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='bot_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
+                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/pic1.jpg' alt='Avatar' style='width:100%;border-radius: 70%;'></div><div class='bot_msg_main_div'><div class='bot_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
             }
             else {
                 html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/bot3.jpg' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='bot_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
@@ -1659,7 +1721,7 @@ $(document).ready(function () {
         }
         else {
             if (condition[1] == 'H') {
-                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/man.png' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='submit_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
+                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/pic1.jpg' alt='Avatar' style='width:100%;border-radius: 70%;'></div><div class='bot_msg_main_div'><div class='submit_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
             }
             else {
                 html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/bot3.jpg' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='submit_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
@@ -1704,11 +1766,18 @@ $(document).ready(function () {
             if (isValid) {
                 console.log(JSON.stringify(result))
                 $('#matrixResult div span').css('display', 'none');
+                var timeTaken = 0.0
+
+                var seconds = new Date().getTime() / 1000;
+                timeTaken = seconds - parseInt($('#clueStartTimestamp').val());
+
                 var ajaxData = {
                     'sessionId': $('#sessionId').val(),
+                    'timeTaken': timeTaken,
                     'condition': $('#condition').val(),
                     'matrixDict': JSON.stringify(result)
                 }
+                console.log(ajaxData)
                 $.ajax({
                     url: '/storeMatrixResult',
                     data: ajaxData,

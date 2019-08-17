@@ -141,7 +141,7 @@ class Chatbot:
         return self.clueData['redundant'][clueId]
        
 
-    def insertMatrixResult(self,sessionId,conditionId,matrixDict):
+    def insertMatrixResult(self,sessionId,conditionId,matrixDict,timeTaken):
         print("Transaction")
         server = 'chatbot-study1.database.windows.net'
         database = 'chatbot'
@@ -153,9 +153,9 @@ class Chatbot:
         cursor = conn.cursor()
         try:
             
-            insertValues = (sessionId,conditionId,matrixDict)
+            insertValues = (sessionId,conditionId,matrixDict,timeTaken)
             print(insertValues)
-            cursor.execute('''INSERT INTO MatrixResult (sessionId,conditionId,matrixDict) VALUES (?,?,?)''',insertValues)
+            cursor.execute('''INSERT INTO MatrixResult (sessionId,conditionId,matrixDict,timetaken) VALUES (?,?,?,?)''',insertValues)
             conn.commit()
             conn.close()
         except:
@@ -274,6 +274,7 @@ def storeMatrixResult():
     condition = ''
     sessionId = ''
     matrixDict = ''
+    timeTaken = ''
     
     if 'sessionId' in request.args:
         sessionId = request.args['sessionId']
@@ -281,11 +282,14 @@ def storeMatrixResult():
     if 'condition' in request.args:
         condition = request.args['condition']
         print(condition)
+    if 'timeTaken' in request.args:
+        timeTaken = request.args['timeTaken']
+        print(timeTaken)
     if 'matrixDict' in request.args:
         matrixDict = request.args['matrixDict']
         print(matrixDict)
 
-    chatbot.insertMatrixResult(sessionId,chatbot.conditionData[condition],matrixDict)
+    chatbot.insertMatrixResult(sessionId,chatbot.conditionData[condition],matrixDict,timeTaken)
 
     return jsonify({"result":"success"});
     
