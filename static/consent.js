@@ -96,7 +96,7 @@ $(document).ready(function () {
                     },
                     type: 'GET',
                     success: function (response) {
-                        console.log(response)
+                        //console.log(response)
                         if (response['condition'] == 0) {
                             alert("Contact Administrator. Resetting the limit is required")
                         }

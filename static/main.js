@@ -8,7 +8,7 @@ $(document).ready(function () {
     //alert(localStorage.getItem("sessionId"))
     
 
-    console.log(window.location.href.split('/').pop())
+    ////console.log(window.location.href.split('/').pop())
     
     initialDataSetup();
     
@@ -172,7 +172,7 @@ $(document).ready(function () {
 
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
-                            console.log(sessionDictData)
+                            ////console.log(sessionDictData)
                             sessionDictData['Alex'] = dataList
                             isUsed = true
                         }
@@ -230,7 +230,7 @@ $(document).ready(function () {
                             var allList = sessionDictData['All']
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
-                            console.log(sessionDictData)
+                            //////console.log(sessionDictData)
                             sessionDictData['Leon'] = dataList
                             isUsed = true
                         }
@@ -286,7 +286,7 @@ $(document).ready(function () {
                             var allList = sessionDictData['All']
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
-                            console.log(sessionDictData)
+                            ////console.log(sessionDictData)
                             sessionDictData['Rachel'] = dataList
                             isUsed = true
                         }
@@ -342,7 +342,7 @@ $(document).ready(function () {
                             var allList = sessionDictData['All']
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
-                            console.log(sessionDictData)
+                            ////console.log(sessionDictData)
                             sessionDictData['Tina'] = dataList
                             isUsed = true
                         }
@@ -410,7 +410,7 @@ $(document).ready(function () {
                             var allList = sessionDictData['All']
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
-                            console.log(sessionDictData)
+                            ////console.log(sessionDictData)
                             sessionDictData['Network Architect'] = dataList
                             isUsed = true
                         }
@@ -466,7 +466,7 @@ $(document).ready(function () {
                             var allList = sessionDictData['All']
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
-                            console.log(sessionDictData)
+                            ////console.log(sessionDictData)
                             sessionDictData['Systems Analyst'] = dataList
                             isUsed = true
                         }
@@ -522,7 +522,7 @@ $(document).ready(function () {
                             var allList = sessionDictData['All']
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
-                            console.log(sessionDictData)
+                            ////console.log(sessionDictData)
                             sessionDictData['Cybersecurity Specialist'] = dataList
                             isUsed = true
                         }
@@ -580,7 +580,7 @@ $(document).ready(function () {
                             var allList = sessionDictData['All']
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
-                            console.log(sessionDictData)
+                            ////console.log(sessionDictData)
                             sessionDictData['Database Administrator'] = dataList
                             isUsed = true
                         }
@@ -648,7 +648,7 @@ $(document).ready(function () {
                             var allList = sessionDictData['All']
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
-                            console.log(sessionDictData)
+                            ////console.log(sessionDictData)
                             sessionDictData['Boston'] = dataList
                             isUsed = true
                         }
@@ -704,7 +704,7 @@ $(document).ready(function () {
                             var allList = sessionDictData['All']
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
-                            console.log(sessionDictData)
+                            ////console.log(sessionDictData)
                             sessionDictData['Chicago'] = dataList
                             isUsed = true
                         }
@@ -761,7 +761,7 @@ $(document).ready(function () {
                             var allList = sessionDictData['All']
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
-                            console.log(sessionDictData)
+                            ////console.log(sessionDictData)
                             sessionDictData['Seattle'] = dataList
                             isUsed = true
                         }
@@ -820,7 +820,7 @@ $(document).ready(function () {
                             var allList = sessionDictData['All']
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
-                            console.log(sessionDictData)
+                            ////console.log(sessionDictData)
                             sessionDictData['Los Angeles'] = dataList
                             isUsed = true
                             
@@ -943,9 +943,9 @@ $(document).ready(function () {
             7:"HHL",
             8:"HHH"
         }
-        console.log(window.location.href.split('/'))
+        ////console.log(window.location.href.split('/'))
         var condition = window.location.href.split('/').pop()
-        console.log(conditionDict[condition])
+        ////console.log(conditionDict[condition])
         $('#condition').val(conditionDict[condition])
         onloadSetup();
     }
@@ -956,7 +956,7 @@ $(document).ready(function () {
         $("#nextButton").attr("disabled", true);
         $('#user_thinking').remove();
         var timeTaken = 0.0
-        if ($('#topic').val() == 'Clue') {
+        if ($('#topic').val() == 'Clue' ) {
             var seconds = new Date().getTime() / 1000;
             timeTaken = seconds - parseInt($('#timeTaken').val());
         }
@@ -990,7 +990,7 @@ $(document).ready(function () {
                     }
                     
                 }, 1000);
-                //console.log("outside timeout")
+                //////console.log("outside timeout")
                 //$("#nextButton").attr("disabled", false);
 
 
@@ -1095,7 +1095,7 @@ $(document).ready(function () {
         //    $('#clickableGrid').css('display', 'inline-block');
         //}
 
-        //console.log(message)
+        //////console.log(message)
         if (response['topic'] == 'Clue') {
             
             var seconds = new Date().getTime() / 1000;
@@ -1764,7 +1764,7 @@ $(document).ready(function () {
             }
             
             if (isValid) {
-                console.log(JSON.stringify(result))
+                ////console.log(JSON.stringify(result))
                 $('#matrixResult div span').css('display', 'none');
                 var timeTaken = 0.0
 
@@ -1777,16 +1777,16 @@ $(document).ready(function () {
                     'condition': $('#condition').val(),
                     'matrixDict': JSON.stringify(result)
                 }
-                console.log(ajaxData)
+                ////console.log(ajaxData)
                 $.ajax({
                     url: '/storeMatrixResult',
                     data: ajaxData,
                     type: 'GET',
                     success: function (response) {
-                        //console.log(response)
+                        ////console.log(response)
                     }
                 });
-                //console.log(result)
+                ////console.log(result)
                 $("#submitButton").hide();
                 $("#nextButton").show();
                 $("#nextButton").attr("disabled", false);
@@ -1841,7 +1841,7 @@ $(document).ready(function () {
 
                 //}
             }
-            //console.log(col, row, className)
+            ////console.log(col, row, className)
             
         });
     }
