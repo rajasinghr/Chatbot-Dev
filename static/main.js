@@ -974,7 +974,7 @@ $(document).ready(function () {
             type: 'GET',
             success: function (response) {
                 $('#sessionId').val(response["sessionId"]),
-                    $('#condition').val(response["condition"]);
+                $('#condition').val(response["condition"]);
                 $('#topic').val(response["topic"]);
                 $('#index').val(response["index"]);
                 $('#gridAction').val("");
@@ -1101,8 +1101,8 @@ $(document).ready(function () {
             var seconds = new Date().getTime() / 1000;
             $('#timeTaken').val(seconds);
         }
-
-        if (response['topic'] == 'Clue' && response['index'] == "1") {
+        //console.log(response)
+        if (response['topic'] == 'Clue' && response['index'] == "0") {
 
             var seconds = new Date().getTime() / 1000;
             $('#clueStartTimestamp').val(seconds);
@@ -1762,7 +1762,7 @@ $(document).ready(function () {
                 }
                 
             }
-            
+            //console.log(isValid)
             if (isValid) {
                 ////console.log(JSON.stringify(result))
                 $('#matrixResult div span').css('display', 'none');
@@ -1777,13 +1777,13 @@ $(document).ready(function () {
                     'condition': $('#condition').val(),
                     'matrixDict': JSON.stringify(result)
                 }
-                ////console.log(ajaxData)
+                //console.log(ajaxData)
                 $.ajax({
                     url: '/storeMatrixResult',
                     data: ajaxData,
                     type: 'GET',
                     success: function (response) {
-                        ////console.log(response)
+                        //console.log(response)
                     }
                 });
                 ////console.log(result)

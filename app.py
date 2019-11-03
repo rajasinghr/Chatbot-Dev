@@ -152,7 +152,8 @@ class Chatbot:
         conn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
         cursor = conn.cursor()
         try:
-            
+            if timeTaken=='NaN':
+                timeTaken=0
             insertValues = (sessionId,conditionId,matrixDict,timeTaken)
             #print(insertValues)
             cursor.execute('''INSERT INTO MatrixResult (sessionId,conditionId,matrixDict,timetaken) VALUES (?,?,?,?)''',insertValues)
@@ -272,7 +273,7 @@ def storeMatrixResult():
         #print(matrixDict)
 
     chatbot.insertMatrixResult(sessionId,chatbot.conditionData[condition],matrixDict,timeTaken)
-
+    #print("Store matrix:"+matrixDict)
     return jsonify({"result":"success"});
     
 @app.route('/getRedundantClueById',methods=['GET'])
