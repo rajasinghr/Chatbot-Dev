@@ -82,10 +82,10 @@ class Chatbot:
         return (topic,index,data)
 
     def insertConsent(self,sessionId,fullname,uid):
-        server = 'chatbot-study1.database.windows.net'
-        database = 'chatbot'
-        username = 'chatbot-study'
-        password = '123$Welcome'
+        server = 'mumachatserver.database.windows.net'
+        database = 'mumachatdb'
+        username = 'mumaadmin'
+        password = 'Mum@ch@t'
         driver= '{ODBC Driver 17 for SQL Server}'
         #sessionId = ''
         conn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
@@ -98,7 +98,7 @@ class Chatbot:
                 sessionId = 1
             
             insertValues = (sessionId,fullname,uid)
-            print(insertValues)
+            #print(insertValues)
             cursor.execute('''INSERT INTO ParticipantConsent (sessionId,fullname,unumber)  VALUES (?,?,?)''',insertValues)
             conn.commit()
             conn.close()
@@ -110,10 +110,10 @@ class Chatbot:
 
     def insertTransaction(self,sessionId,conditionId,clueId,Response,timeTaken,gridAction):
         #print("Transaction")
-        server = 'chatbot-study1.database.windows.net'
-        database = 'chatbot'
-        username = 'chatbot-study'
-        password = '123$Welcome'
+        server = 'mumachatserver.database.windows.net'
+        database = 'mumachatdb'
+        username = 'mumaadmin'
+        password = 'Mum@ch@t'
         driver= '{ODBC Driver 17 for SQL Server}'
         #sessionId = ''
         conn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
@@ -126,7 +126,7 @@ class Chatbot:
                 sessionId = 1
             
             insertValues = (sessionId,conditionId,clueId,Response,round(float(timeTaken)),gridAction)
-            print(insertValues)
+            #print(insertValues)
             cursor.execute('''INSERT INTO Transactions VALUES (?,?,?,?,?,?)''',insertValues)
             conn.commit()
             conn.close()
@@ -136,17 +136,17 @@ class Chatbot:
         return sessionId
 
     def getRedundantClueById(self,clueId):
-        print(type(clueId))
-        print(clueId)
+        #print(type(clueId))
+        #print(clueId)
         return self.clueData['redundant'][clueId]
        
 
     def insertMatrixResult(self,sessionId,conditionId,matrixDict,timeTaken):
-        print("Transaction")
-        server = 'chatbot-study1.database.windows.net'
-        database = 'chatbot'
-        username = 'chatbot-study'
-        password = '123$Welcome'
+        #print("Transaction")
+        server = 'mumachatserver.database.windows.net'
+        database = 'mumachatdb'
+        username = 'mumaadmin'
+        password = 'Mum@ch@t'
         driver= '{ODBC Driver 17 for SQL Server}'
         #sessionId = ''
         conn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
@@ -154,7 +154,7 @@ class Chatbot:
         try:
             
             insertValues = (sessionId,conditionId,matrixDict,timeTaken)
-            print(insertValues)
+            #print(insertValues)
             cursor.execute('''INSERT INTO MatrixResult (sessionId,conditionId,matrixDict,timetaken) VALUES (?,?,?,?)''',insertValues)
             conn.commit()
             conn.close()
@@ -162,24 +162,6 @@ class Chatbot:
             print('error')
             conn.close()
         return sessionId
-
-    def getClue(self,clueId):
-        server = 'DESKTOP-MA7ED8M'
-        database = 'chatbot'
-        username = 'chatbot-study'
-        password = '123Welcome'
-        driver= '{ODBC Driver 17 for SQL Server}'
-        #sessionId = ''
-        conn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
-        cursor = conn.cursor()
-        try:
-            cursor.execute('''SELECT * FROM Clues WHERE clueId = (?)''',(clueId))
-            row = cursor.fetchone()
-            conn.commit()
-            conn.close()
-        except:
-            conn.close()
-        return row
 
 
 app = Flask(__name__)
@@ -204,7 +186,7 @@ def getSession():
     randomCondition = 0
     with open(fileName) as json_data:
         allowedLimit = json.load(json_data)
-    print(allowedLimit)
+    #print(allowedLimit)
     availableConditions = [condition[0] for condition in list(allowedLimit.items()) if condition[1] !=0] 
     if len(availableConditions) != 0:
         randomCondition = random.choice(availableConditions)
@@ -225,7 +207,7 @@ def getSession():
 @app.route('/<int:clue_id>')
 def home(clue_id):
     chatbot.getJson()
-    print("Clue ID:" + str(clue_id))
+    #print("Clue ID:" + str(clue_id))
     return render_template("index.html")
 
 
@@ -240,30 +222,30 @@ def getResponse():
     gridAction = ''
     if 'condition' in request.args:
         condition = request.args['condition']
-        print(condition)
+        #print(condition)
     if 'topic' in request.args:
         topic = request.args['topic']
-        print(topic)
+        #print(topic)
     if 'index' in request.args:
         index = request.args['index']
-        print(index)
+        #print(index)
     if 'sessionId' in request.args:
         sessionId = request.args['sessionId']
-        print(sessionId)
+        #print(sessionId)
     if 'response' in request.args:
         response = request.args['response']
-        print(response)
+        #print(response)
     if 'timeTaken' in request.args:
         timeTaken = request.args['timeTaken']
-        print(timeTaken)
+        #print(timeTaken)
     if 'gridAction' in request.args:
         gridAction = request.args['gridAction']
-        print(gridAction)
+        #print(gridAction)
 
     if(topic == 'Clue'):
-        print("Insert Data")
+        #print("Insert Data")
         sessionId = chatbot.insertTransaction(sessionId,chatbot.conditionData[condition],index,response,timeTaken,gridAction)
-        print(sessionId)
+        #print(sessionId)
     topic,index,data = chatbot.getData(condition,topic,index)
     
     return jsonify({"botResponse":data,'topic':topic,'index':index,'sessionId':sessionId,'condition':condition})
@@ -278,16 +260,16 @@ def storeMatrixResult():
     
     if 'sessionId' in request.args:
         sessionId = request.args['sessionId']
-        print(sessionId)
+        #print(sessionId)
     if 'condition' in request.args:
         condition = request.args['condition']
-        print(condition)
+        #print(condition)
     if 'timeTaken' in request.args:
         timeTaken = request.args['timeTaken']
-        print(timeTaken)
+        #print(timeTaken)
     if 'matrixDict' in request.args:
         matrixDict = request.args['matrixDict']
-        print(matrixDict)
+        #print(matrixDict)
 
     chatbot.insertMatrixResult(sessionId,chatbot.conditionData[condition],matrixDict,timeTaken)
 
@@ -298,7 +280,7 @@ def getRedundantClueById():
     id = ''
     if 'id' in request.args:
         id = request.args['id']
-        print(id)
+        #print(id)
 
     data = chatbot.getRedundantClueById(id)
     return jsonify({"clue":data})
