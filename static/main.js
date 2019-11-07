@@ -902,7 +902,13 @@ $(document).ready(function () {
             $('#bot_thinking').remove();
             addMessage('bot', $('#condition').val(), message)
             if (isRepeat) {
-                addMessage('bot', $('#condition').val(), 'Indicate if additional information is requested.')
+                //addMessage('bot', $('#condition').val(), 'Indicate if additional information is requested.')
+                if ($('#condition').val()[1] == 'H') {
+                    addMessage('bot', $('#condition').val(), 'Do you want more information?')
+                }
+                else {
+                    addMessage('bot', $('#condition').val(), 'Is more information required ?')
+                }
                 var navItems = []
                 if ($('#condition').val()[2] != 'H') {
                     navItems = ["Yes, I would like <br /> to request specific information.", "No, I'm ready to make <br /> my final decisions."]
@@ -1193,7 +1199,7 @@ $(document).ready(function () {
             $("#nextButton").attr("disabled", true);
             $("#nextButton").hide()
             if (response['condition'][2] == 'H') {
-                navItems = ["Yes, I would <br /> like more information.", "Explanation this <br /> information.", "No, I'm ready to make <br /> my final decisions."]
+                navItems = ["Yes, I would <br /> like more information.", "I need more explanation <br /> for this information.", "No, I'm ready to make <br /> my final decisions."]
             }
             else {
                 navItems = ["Yes, I would <br /> like more information.", "No, I'm ready to make <br /> my final decisions."]
@@ -1209,7 +1215,7 @@ $(document).ready(function () {
             $("#nextButton").show()
             message = response["botResponse"][0];
         }
-        else if (response['topic'] == 'Redundant_Ins' && response['index'] == '4') {
+        else if (response['topic'] == 'Redundant_Ins' && response['index'] == '3') {
             var navItems = []
             navItems = ["Yes, I would like <br /> to request specific information.", "No, I'm ready to make <br /> my final decisions."]            
             userActionBlock = buildUserActionButtonGroup(navItems, response['condition'], 'redundantConfirmation')
@@ -1218,7 +1224,7 @@ $(document).ready(function () {
             $("#nextButton").attr("disabled", true);
             $("#nextButton").hide()
         }
-        else if ((response['topic'] == 'Redundant_Ins' && response['index'] == '5') ) {
+        else if ((response['topic'] == 'Redundant_Ins' && response['index'] == '4') ) {
             sessionDictData = redundantDictData();
             message = response["botResponse"][0]
             triggerEnterKeyEvent = true
@@ -1300,12 +1306,20 @@ $(document).ready(function () {
         else if ((response['topic'] != 'Redundant')) {
             addMessage('bot', response["condition"], message);
         }
-        
+
+        if (response['topic'] == 'Clue') {
+            if (response['condition'][1] == 'H') {
+                addMessage('bot', $('#condition').val(), 'Do you want more information?')
+            }
+            else {
+                addMessage('bot', $('#condition').val(), 'Is more information required ?')
+            }
+        }
 
         if (response['condition'][0] == 'H') {
             addActionBlock(userActionBlock)
         }
-        if ((response['topic'] == 'Redundant_Ins' && response['index'] == '5')) {
+        if ((response['topic'] == 'Redundant_Ins' && response['index'] == '4')) {
             
             redundantBlock(response['condition'])
             $('#topic').val('Redundant')

@@ -8,7 +8,7 @@
     "Tutorial": {
       "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
       "2": "Example Scenario: 5 people will each be given a gift. Each gift needs to be wrapped in each person's favorite color. No one can receive the same gift or the same color of wrapping paper.",
-      "3": "The grid for this example is provided in the panel to the right. Markings should be placed on the grid as instructed throughout the tutorial.",
+      "3": "The grid for this example is displayed along with the tutorial. Go through the example by clicking next.",
       "4": "In this example, Brian's gift will not be combined wrapped with the Silver wrapping paper. Eliminate this option by marking it with an X (click once on the corresponding box).",
       "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
       "6": "In this example, Amy will receive the Necklace. Select this option by marking it with an O (click twice on the corresponding box).",
@@ -21,7 +21,8 @@
     },
     "Task Reminder": {
       "1": "The task will now begin.",
-      "2": "Reminder: The purpose of the task is to assign each person a project role, office location, and amount of weekly project hours."
+      "2": "The grid provided to the left can be used to mark the options.",
+      "3": "Reminder: The purpose of the task is to assign each person a project role, office location, and amount of weekly project hours."
     },
     "Clue_Ins": {
       "1": "Consider the following 5 major pieces of information:"
@@ -49,7 +50,7 @@
     "Tutorial": {
       "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
       "2": "Example Scenario: 5 people will each be given a gift. Each gift needs to be wrapped in each person's favorite color. No one can receive the same gift or the same color of wrapping paper.",
-      "3": "The grid for this example is provided in the panel to the right. Markings should be placed on the grid as instructed throughout the tutorial.",
+      "3": "The grid for this example is displayed along with the tutorial. Go through the example by clicking next.",
       "4": "In this example, Brian's gift will not be combined wrapped with the Silver wrapping paper. Eliminate this option by marking it with an X (click once on the corresponding box).",
       "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
       "6": "In this example, Amy will receive the Necklace. Select this option by marking it with an O (click twice on the corresponding box).",
@@ -84,7 +85,8 @@
     },
     "Task Reminder": {
       "1": "The task will now begin.",
-      "2": "Reminder: The purpose of the task is to assign each person a project role, office location, and amount of weekly project hours."
+      "2": "The grid provided to the left can be used to mark the options.",
+      "3": "Reminder: The purpose of the task is to assign each person a project role, office location, and amount of weekly project hours."
     },
     "Clue_Ins": {
       "1": "Consider the following 5 major pieces of information:"
@@ -113,7 +115,7 @@
     "Tutorial": {
       "1": "First things first. Let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid.",
       "2": "Imagine you are deciding which gift to give to 5 friends. You also want to wrap each gift in the friend's favorite color. Each gift should be special so no one can receive the same gift or the same color of wrapping paper.",
-      "3": "The grid for this example is located in the panel to the right. You may want to practice on this grid as we go through the example together.",
+      "3": "The grid for this example is displayed along with the tutorial. Let us go through the example together.",
       "4": "Brian hates the color Silver so you shouldn't wrap his gift in this color. Please eliminate this option by marking it with an X (click once on the corresponding box).",
       "5": "Your grid should look like this: <br /><img src='../static/images/tutorial/img1.png' class='grid'></img>",
       "6": "Amy loves jewelry so you decide to give her the Necklace. Please select this option by marking it with an O (click twice on the corresponding box).",
@@ -126,7 +128,8 @@
     },
     "Task Reminder": {
       "1": "Let's get started!",
-      "2": "And remember, your goal is to assign each candidate a project role, office location, and weekly project hours."
+      "2": "You can use the grid provided to the left to mark your options as you progress",
+      "3": "And remember, your goal is to assign each candidate a project role, office location, and weekly project hours."
     },
     "Clue_Ins": {
       "1": "Here are 5 major pieces of information that you might want to consider."
@@ -156,7 +159,7 @@
     "Tutorial": {
       "1": "First things first. Let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid.",
       "2": "Imagine you are deciding which gift to give to 5 friends. You also want to wrap each gift in the friend's favorite color. Each gift should be special so no one can receive the same gift or the same color of wrapping paper.",
-      "3": "The grid for this example is located in the panel to the right. You may want to practice on this grid as we go through the example together.",
+      "3": "The grid for this example is displayed along with the tutorial. Let us go through the example together.",
       "4": "Brian hates the color Silver so you shouldn't wrap his gift in this color. Please eliminate this option by marking it with an X (click once on the corresponding box).",
       "5": "Your grid should look like this: <br /><img src='../static/images/tutorial/img1.png' class='grid'></img>",
       "6": "Amy loves jewelry so you decide to give her the Necklace. Please select this option by marking it with an O (click twice on the corresponding box).",
@@ -190,7 +193,8 @@
     },
     "Task Reminder": {
       "1": "Let's get started!",
-      "2": "And remember, your goal is to assign each candidate a project role, office location, and weekly project hours."
+      "2": "You can use the grid provided to the left to mark your options as you progress",
+      "3": "And remember, your goal is to assign each candidate a project role, office location, and weekly project hours."
     },
     "Clue_Ins": {
       "1": "Here are 5 major pieces of information that you might want to consider."
@@ -219,7 +223,7 @@
     "Tutorial": {
       "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
       "2": "Example Scenario: 5 people will each be given a gift. Each gift needs to be wrapped in each person's favorite color. No one can receive the same gift or the same color of wrapping paper.",
-      "3": "The grid for this example is provided in the panel to the right. Markings should be placed on the grid as instructed throughout the tutorial.",
+      "3": "The grid for this example is displayed along with the tutorial. Go through the example by clicking next.",
       "4": "In this example, Brian's gift will not be combined wrapped with the Silver wrapping paper. Eliminate this option by marking it with an X (click once on the corresponding box).",
       "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
       "6": "In this example, Amy will receive the Necklace. Select this option by marking it with an O (click twice on the corresponding box).",
@@ -232,7 +236,8 @@
     },
     "Task Reminder": {
       "1": "The task will now begin.",
-      "2": "Reminder: The purpose of the task is to assign each person a project role, office location, and amount of weekly project hours."
+      "2": "The grid provided to the left can be used to mark the options.",
+      "3": "Reminder: The purpose of the task is to assign each person a project role, office location, and amount of weekly project hours."
     },
     "Clue_Ins": {
       "1": "Consider the following 5 major pieces of information:"
@@ -243,9 +248,8 @@
     "Redundant_Ins": {
       "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
       "2": "Additional - but redundant - information may now be requested for specific people, roles, or office locations.",
-      "3": "Note: The available information is redundant because it has already been provided by the 5 clues above. However, the information will be worded differently to address only the specific information that has been requested.",
-      "4": "Is additional information requested?",
-      "5": "Reminder: Final decisions may be made at any time by entering assignments in the table and clicking 'Submit Answer'"
+      "3": "Is additional information requested?",
+      "4": "Reminder: Final decisions may be made at any time by entering assignments in the table and clicking 'Submit Answer'"
     },
     "Submit": {
       "1": "Status: All available information has been provided. Final decisions may be submitted.",
@@ -266,7 +270,7 @@
     "Tutorial": {
       "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
       "2": "Example Scenario: 5 people will each be given a gift. Each gift needs to be wrapped in each person's favorite color. No one can receive the same gift or the same color of wrapping paper.",
-      "3": "The grid for this example is provided in the panel to the right. Markings should be placed on the grid as instructed throughout the tutorial.",
+      "3": "The grid for this example is displayed along with the tutorial. Go through the example by clicking next.",
       "4": "In this example, Brian's gift will not be combined wrapped with the Silver wrapping paper. Eliminate this option by marking it with an X (click once on the corresponding box).",
       "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
       "6": "In this example, Amy will receive the Necklace. Select this option by marking it with an O (click twice on the corresponding box).",
@@ -301,7 +305,8 @@
     },
     "Task Reminder": {
       "1": "The task will now begin.",
-      "2": "Reminder: The purpose of the task is to assign each person a project role, office location, and amount of weekly project hours."
+      "2": "The grid provided to the left can be used to mark the options.",
+      "3": "Reminder: The purpose of the task is to assign each person a project role, office location, and amount of weekly project hours."
     },
     "Clue_Ins": {
       "1": "Consider the following 5 major pieces of information:"
@@ -312,9 +317,8 @@
     "Redundant_Ins": {
       "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
       "2": "Additional - but redundant - information may now be requested for specific people, roles, or office locations.",
-      "3": "Note: The available information is redundant because it has already been provided by the 5 clues above. However, the information will be worded differently to address only the specific information that has been requested.",
-      "4": "Is additional information requested?",
-      "5": "Reminder: Final decisions may be made at any time by entering assignments in the table and clicking 'Submit Answer'"
+      "3": "Is additional information requested?",
+      "4": "Reminder: Final decisions may be made at any time by entering assignments in the table and clicking 'Submit Answer'"
     },
     "Submit": {
       "1": "Status: All available information has been provided. Final decisions may be submitted.",
@@ -336,7 +340,7 @@
     "Tutorial": {
       "1": "First things first. Let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid.",
       "2": "Imagine you are deciding which gift to give to 5 friends. You also want to wrap each gift in the friend's favorite color. Each gift should be special so no one can receive the same gift or the same color of wrapping paper.",
-      "3": "The grid for this example is located in the panel to the right. You may want to practice on this grid as we go through the example together.",
+      "3": "The grid for this example is displayed along with the tutorial. Let us go through the example together.",
       "4": "Brian hates the color Silver so you shouldn't wrap his gift in this color. Please eliminate this option by marking it with an X (click once on the corresponding box).",
       "5": "Your grid should look like this: <br /><img src='../static/images/tutorial/img1.png' class='grid'></img>",
       "6": "Amy loves jewelry so you decide to give her the Necklace. Please select this option by marking it with an O (click twice on the corresponding box).",
@@ -349,7 +353,8 @@
     },
     "Task Reminder": {
       "1": "Let's get started!",
-      "2": "And remember, your goal is to assign each candidate a project role, office location, and weekly project hours."
+      "2": "You can use the grid provided to the left to mark your options as you progress",
+      "3": "And remember, your goal is to assign each candidate a project role, office location, and weekly project hours."
     },
     "Clue_Ins": {
       "1": "Here are 5 major pieces of information that you might want to consider."
@@ -360,9 +365,8 @@
     "Redundant_Ins": {
       "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
       "2": "You can now request additional - but redundant - information for specific people, roles, or office locations.",
-      "3": "Note: The available information is redundant because it has already been provided by the 5 clues above. However, the information will be worded differently to address only the specific information that has been requested.",
-      "4": "Would you like to request more information?",
-      "5": "Okay, sounds good. If you change your mind and wamy to make your final decisions, you can do so at any time by selecting your chosen assignments in the table and then clicking 'Submit Answer'"
+      "3": "Would you like to request more information?",
+      "4": "Okay, sounds good. If you change your mind and wamy to make your final decisions, you can do so at any time by selecting your chosen assignments in the table and then clicking 'Submit Answer'"
     },
     "Submit": {
       "1": "Okay, now that you've seen all the information I have, it's time to submit your final decisions!",
@@ -385,7 +389,7 @@
     "Tutorial": {
       "1": "First things first. Let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid.",
       "2": "Imagine you are deciding which gift to give to 5 friends. You also want to wrap each gift in the friend's favorite color. Each gift should be special so no one can receive the same gift or the same color of wrapping paper.",
-      "3": "The grid for this example is located in the panel to the right. You may want to practice on this grid as we go through the example together.",
+      "3": "The grid for this example is displayed along with the tutorial. Let us go through the example together.",
       "4": "Brian hates the color Silver so you shouldn't wrap his gift in this color. Please eliminate this option by marking it with an X (click once on the corresponding box).",
       "5": "Your grid should look like this: <br /><img src='../static/images/tutorial/img1.png' class='grid'></img>",
       "6": "Amy loves jewelry so you decide to give her the Necklace. Please select this option by marking it with an O (click twice on the corresponding box).",
@@ -419,7 +423,8 @@
     },
     "Task Reminder": {
       "1": "Let's get started!",
-      "2": "And remember, your goal is to assign each candidate a project role, office location, and weekly project hours."
+      "2": "You can use the grid provided to the left to mark your options as you progress",
+      "3": "And remember, your goal is to assign each candidate a project role, office location, and weekly project hours."
     },
     "Clue_Ins": {
       "1": "Here are 5 major pieces of information that you might want to consider."
@@ -430,9 +435,8 @@
     "Redundant_Ins": {
       "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
       "2": "You can now request additional - but redundant - information for specific people, roles, or office locations.",
-      "3": "Note: The available information is redundant because it has already been provided by the 5 clues above. However, the information will be worded differently to address only the specific information that has been requested.",
-      "4": "Would you like to request more information?",
-      "5": "Okay, sounds good. If you change your mind and wamy to make your final decisions, you can do so at any time by selecting your chosen assignments in the table and then clicking 'Submit Answer'"
+      "3": "Would you like to request more information?",
+      "4": "Okay, sounds good. If you change your mind and wamy to make your final decisions, you can do so at any time by selecting your chosen assignments in the table and then clicking 'Submit Answer'"
     },
     "Submit": {
       "1": "Okay, now that you've seen all the information I have, it's time to submit your final decisions!",
