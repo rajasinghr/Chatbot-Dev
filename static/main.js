@@ -859,14 +859,14 @@ $(document).ready(function () {
                 }
             }
             else if (e.key === 'Enter' ) {
-                if ($('#userMessage').val().length > 0) {
+                if ($('#userMessage').val().trim().length > 0) {
                     triggerEnterKeyEvent = false;
 
                     getDataEvent();
                 }
             }
 
-            if ($('#userMessage').val().length > 0) {
+            if ($('#userMessage').val().trim().length > 0) {
                 $("#nextButton").attr("disabled", false);
                 istriggerEnterKeyEventActive = true
                 $('#userMessage').css('border-color', '#80bdff');

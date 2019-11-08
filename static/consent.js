@@ -1,6 +1,19 @@
 
 $(document).ready(function () {
 
+    //$('input[type=radio][name=optradio]').change(function () {
+    //    if (this.value == 'yes') {
+    //        $("participantFullName").prop('disabled', false);
+    //        $("participantUid").prop('disabled', false);
+    //    }
+    //    else if (this.value == 'no') {
+    //        alert("no");
+    //        $("#uidValidError").hide()
+    //        $("#nameError").hide()
+    //        $("participantFullName").prop('disabled', true);
+    //        $("participantUid").prop('disabled', true);
+    //    }
+    //});
 
     $("#participantFullName").keyup(function (e) {
         if ($('#participantFullName').val().length > 0) {
