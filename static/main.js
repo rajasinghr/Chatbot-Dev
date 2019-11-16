@@ -6,7 +6,10 @@ var sessionDictData = {}
 var currentClue = {}
 $(document).ready(function () {
     //alert(localStorage.getItem("sessionId"))
-    
+
+    //window.onbeforeunload = function (event) {
+    //    return confirm("Confirm refresh");
+    //};
 
     ////console.log(window.location.href.split('/').pop())
 

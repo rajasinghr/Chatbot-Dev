@@ -81,7 +81,7 @@ class Chatbot:
 
         return (topic,index,data)
 
-    def insertConsent(self,sessionId,fullname,uid):
+    def insertConsent(self,sessionId,fullname,uid,conditionId):
         server = 'mumachatserver.database.windows.net'
         database = 'mumachatdb'
         username = 'mumaadmin'
@@ -97,9 +97,9 @@ class Chatbot:
             elif sessionId == 0:
                 sessionId = 1
             
-            insertValues = (sessionId,fullname,uid)
+            insertValues = (sessionId,conditionId,fullname,uid)
             #print(insertValues)
-            cursor.execute('''INSERT INTO ParticipantConsent (sessionId,fullname,unumber)  VALUES (?,?,?)''',insertValues)
+            cursor.execute('''INSERT INTO ParticipantConsent (sessionId,conditionId,fullname,unumber)  VALUES (?,?,?,?)''',insertValues)
             conn.commit()
             conn.close()
         except:
@@ -120,8 +120,9 @@ class Chatbot:
         cursor = conn.cursor()
         try:
             if sessionId == None or sessionId == '':
-                cursor.execute('''SELECT MAX(sessionId) FROM Transactions''')
-                sessionId = cursor.fetchone()[0]+1
+                #cursor.execute('''SELECT MAX(sessionId) FROM Transactions''')
+                #sessionId = cursor.fetchone()[0]+1
+                sessionId = 9999
             elif sessionId == 0:
                 sessionId = 1
             
@@ -200,7 +201,7 @@ def getSession():
         randomCondition = random.choice(availableConditions)
         currentLimit = allowedLimit[randomCondition]
     allowedLimit[randomCondition] = currentLimit-1
-    sessionId = chatbot.insertConsent(None,name,uid)
+    sessionId = chatbot.insertConsent(None,name,uid,randomCondition)
     with open(fileName, 'w') as outfile:
         json.dump(allowedLimit, outfile)
     return jsonify({"condition":randomCondition,"sessionId":sessionId})
