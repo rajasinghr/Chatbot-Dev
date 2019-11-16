@@ -9,8 +9,14 @@ $(document).ready(function () {
     
 
     ////console.log(window.location.href.split('/').pop())
+
+    if (localStorage.getItem("sessionId") == "" || localStorage.getItem("sessionId") == null) {
+        window.location.replace(window.location.origin)
+    }
+    else {
+        initialDataSetup();
+    }
     
-    initialDataSetup();
     
 
     function onloadSetup() {
@@ -1183,6 +1189,7 @@ $(document).ready(function () {
             //alert("Task Completed. Click OK. Page will refresh in 3 seconds")
             //window.setTimeout(function () { location.reload() }, 3000)
             window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_80LHjIFlXjQlfWl")
+            localStorage.clear()
         }
 
         

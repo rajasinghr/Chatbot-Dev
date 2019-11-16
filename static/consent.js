@@ -99,7 +99,8 @@ $(document).ready(function () {
             }
         }
         else {
-            alert("Thank you for your visit")
+            alert("Thank you for your visit");
+            location.reload(true);
         }
 
         if (isAllValid) {
