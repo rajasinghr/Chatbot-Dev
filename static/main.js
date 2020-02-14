@@ -20,7 +20,25 @@ $(document).ready(function () {
         initialDataSetup();
     }
     
-    
+    function initialDataSetup() {
+
+        var conditionDict = {
+            1: "LLL",
+            2: "LLH",
+            3: "LHL",
+            4: "LHH",
+            5: "HLL",
+            6: "HLH",
+            7: "HHL",
+            8: "HHH"
+        }
+        ////console.log(window.location.href.split('/'))
+        var condition = window.location.href.split('/').pop()
+        ////console.log(conditionDict[condition])
+        $('#condition').val(conditionDict[condition])
+        onloadSetup();
+    }
+
 
     function onloadSetup() {
         if (!$.trim($('#chatDiv').html()).length) {
@@ -101,15 +119,15 @@ $(document).ready(function () {
                 
             });
             
-            $(document.body).on("click", '.showClueExplanation', function () {
-                var message = getButtonText('showClueExplanation')
-                var element = document.getElementById("chatDiv");
-                element.removeChild(element.childNodes[element.childNodes.length - 1]);
+            //$(document.body).on("click", '.showClueExplanation', function () {
+            //    var message = getButtonText('showClueExplanation')
+            //    var element = document.getElementById("chatDiv");
+            //    element.removeChild(element.childNodes[element.childNodes.length - 1]);
                 
-                addMessage('user', $("#condition").val(), message)
+            //    addMessage('user', $("#condition").val(), message)
 
-                redundantMessage(currentClue['explanation'], true, true)
-            });
+            //    redundantMessage(currentClue['explanation'], true, true)
+            //});
 
             $(document.body).on('click', '.showMatrixGrid', function (event) {
                 var message = getButtonText('showMatrixGrid')
@@ -607,26 +625,26 @@ $(document).ready(function () {
                 }
             });
 
-            $(document.body).on('click', '.locations', function (event) {
-                var message = getButtonText('locations')
+            $(document.body).on('click', '.hours', function (event) {
+                var message = getButtonText('hours')
                 var element = document.getElementById("chatDiv");
                 element.removeChild(element.childNodes[element.childNodes.length - 1]);
                 addMessage('user', $("#condition").val(), message)
-                addMessage('bot', $("#condition").val(), 'Specific information for 4 of the office locations is available. Select the branch for which information is requested.');
+                addMessage('bot', $("#condition").val(), 'Specific information for 4 of the Number of hours is available. Select the branch for which information is requested.');
                 var navItems = []
-                navItems = ["Boston", "Chicago", "Seattle", "Los Angeles"]
-                userActionBlock = buildUserActionButtonGroup(navItems, condition, 'locations')
+                navItems = ["6", "8", "10", "12"]
+                userActionBlock = buildUserActionButtonGroup(navItems, condition, 'hours')
                 addActionBlock(userActionBlock)
             });
 
-            $(document.body).on('click', '.boston', function (event) {
-                var message = getButtonText('boston')
+            $(document.body).on('click', '.six', function (event) {
+                var message = getButtonText('six')
                 var element = document.getElementById("chatDiv");
                 element.removeChild(element.childNodes[element.childNodes.length - 1]);
                 addMessage('user', $("#condition").val(), message)
-                var dataList = sessionDictData['Boston'];
+                var dataList = sessionDictData['Six'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific offices.',true,true);
+                    redundantMessage('There is no more information available regarding specific hours.',true,true);
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -658,7 +676,7 @@ $(document).ready(function () {
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
                             ////console.log(sessionDictData)
-                            sessionDictData['Boston'] = dataList
+                            sessionDictData['Six'] = dataList
                             isUsed = true
                         }
                         else {
@@ -668,21 +686,21 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific offices.',true,true);
+                                redundantMessage('There is no more information available regarding specific hours.',true,true);
                             }
                         }
                     }
                 }
             });
 
-            $(document.body).on('click', '.chicago', function (event) {
-                var message = getButtonText('chicago')
+            $(document.body).on('click', '.eight', function (event) {
+                var message = getButtonText('eight')
                 var element = document.getElementById("chatDiv");
                 element.removeChild(element.childNodes[element.childNodes.length - 1]);
                 addMessage('user', $("#condition").val(), message)
-                var dataList = sessionDictData['Chicago'];
+                var dataList = sessionDictData['Eight'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific offices.',true,true);
+                    redundantMessage('There is no more information available regarding specific hours.',true,true);
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -714,7 +732,7 @@ $(document).ready(function () {
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
                             ////console.log(sessionDictData)
-                            sessionDictData['Chicago'] = dataList
+                            sessionDictData['Eight'] = dataList
                             isUsed = true
                         }
                         else {
@@ -724,21 +742,21 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific offices.',true,true);
+                                redundantMessage('There is no more information available regarding specific hours.',true,true);
                             }
                         }
                     }
                 }
             });
 
-            $(document.body).on('click', '.seattle', function (event) {
-                var message = getButtonText('seattle')
+            $(document.body).on('click', '.ten', function (event) {
+                var message = getButtonText('ten')
                 var element = document.getElementById("chatDiv");
                 element.removeChild(element.childNodes[element.childNodes.length - 1]);
                 addMessage('user', $("#condition").val(), message)
-                var dataList = sessionDictData['Seattle'];
+                var dataList = sessionDictData['Ten'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific offices.',true,true);
+                    redundantMessage('There is no more information available regarding specific hours.',true,true);
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -771,7 +789,7 @@ $(document).ready(function () {
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
                             ////console.log(sessionDictData)
-                            sessionDictData['Seattle'] = dataList
+                            sessionDictData['Ten'] = dataList
                             isUsed = true
                         }
                         else {
@@ -781,21 +799,21 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific offices.',true,true);
+                                redundantMessage('There is no more information available regarding specific hours.',true,true);
                             }
                         }
                     }
                 }
             });
 
-            $(document.body).on('click', '.losAngeles', function (event) {
-                var message = getButtonText('losAngeles')
+            $(document.body).on('click', '.twelve', function (event) {
+                var message = getButtonText('twelve')
                 var element = document.getElementById("chatDiv");
                 element.removeChild(element.childNodes[element.childNodes.length - 1]);
                 addMessage('user', $("#condition").val(), message)
-                var dataList = sessionDictData['Los Angeles'];
+                var dataList = sessionDictData['Twelve'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific offices.',true,true);
+                    redundantMessage('There is no more information available regarding specific hours.',true,true);
                     
                 }
                 //else if (sessionDictData['All'].length == 0) {
@@ -830,7 +848,7 @@ $(document).ready(function () {
                             allList.splice(allList.indexOf(id), 1)
                             sessionDictData['All'] = allList
                             ////console.log(sessionDictData)
-                            sessionDictData['Los Angeles'] = dataList
+                            sessionDictData['Twelve'] = dataList
                             isUsed = true
                             
                         }
@@ -841,7 +859,7 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific offices.',true,true);
+                                redundantMessage('There is no more information available regarding specific hours.',true,true);
                             }
                         }
                     }
@@ -905,6 +923,8 @@ $(document).ready(function () {
     }
 
     function redundantMessage(message, isRepeat, explanationBlock = false) {
+        //Made it false because in new mode there is no explanation block
+        explanationBlock = false 
         addThinking('bot', $('#condition').val())
         $("#nextButton").attr("disabled", true);
         setTimeout(function () {
@@ -919,12 +939,13 @@ $(document).ready(function () {
                     addMessage('bot', $('#condition').val(), 'Is more information required ?')
                 }
                 var navItems = []
-                if ($('#condition').val()[2] != 'H') {
-                    navItems = ["Yes, I would like <br /> to request specific information.", "No, I'm ready to make <br /> my final decisions."]
-                }
-                else {
-                    navItems = ["Yes, I would like <br /> to request specific information.", "Explain the rationale <br /> for this information." ,"No, I'm ready to make <br /> my final decisions."]
-                }
+                navItems = ["Yes, I would like <br /> to request specific information.", "No, I'm ready to make <br /> my final decisions."]
+                //if ($('#condition').val()[2] != 'H') {
+                //    navItems = ["Yes, I would like <br /> to request specific information.", "No, I'm ready to make <br /> my final decisions."]
+                //}
+                //else {
+                //    navItems = ["Yes, I would like <br /> to request specific information.", "Explain the rationale <br /> for this information." ,"No, I'm ready to make <br /> my final decisions."]
+                //}
                 if (explanationBlock) {
                     navItems = ["Yes, I would like <br /> to request specific information.", "No, I'm ready to make <br /> my final decisions."]
                 }
@@ -946,24 +967,6 @@ $(document).ready(function () {
         
     }
 
-    function initialDataSetup() {
-        
-        var conditionDict = {
-            1:"LLL",
-            2:"LLH",
-            3:"LHL",
-            4:"LHH",
-            5:"HLL",
-            6:"HLH",
-            7:"HHL",
-            8:"HHH"
-        }
-        ////console.log(window.location.href.split('/'))
-        var condition = window.location.href.split('/').pop()
-        ////console.log(conditionDict[condition])
-        $('#condition').val(conditionDict[condition])
-        onloadSetup();
-    }
     
     function getDataEvent() {
         istriggerEnterKeyEventActive = true
@@ -1022,17 +1025,18 @@ $(document).ready(function () {
             var clues = []
             var explanations = []
             for (var key in response_dict) {
-                message = '<b>Clue ' + key.toString() + '</b><br/>';
-                message += '<b>Clue: </b>' + response_dict[key]['clue'] + '<br/>';
-                if (response['condition'][2] == 'H') {
-                    message += '<b>Explanation: </b>' + response_dict[key]['explanation'] + '<br/>';
-                }
+                
+                message += '<b>Clue ' + key.toString() + '</b><br>' + response_dict[key]['clue'] + '<br/>';
+                //if (response['condition'][2] == 'H') {
+                //    message += '<b>Explanation: </b>' + response_dict[key]['explanation'] + '<br/>';
+                //}
                 message += '<br/>'
                 clues.push(response_dict[key]['clue']);
-                explanations.push(response_dict[key]['explanation']);
+                //explanations.push(response_dict[key]['explanation']);
 
-                addMessage('bot', response["condition"], message);
+                
             }
+            addMessage('bot', response["condition"], message);
         }
         else if (response['topic'] == 'Redundant') {
             response_dict = response["botResponse"][0]
@@ -1041,61 +1045,66 @@ $(document).ready(function () {
             for (var key in response_dict) {
 
                 clues.push(response_dict[key]['clue']);
-                explanations.push(response_dict[key]['explanation']);
+                //explanations.push(response_dict[key]['explanation']);
             }
 
             message = '';
             for (var i = 0; i < 5; i++) {
-                message += '<b>Clue ' + (i + 1).toString() + '</b><br/>';
-                message += '<b>Clue: </b>' + clues[i] + '<br/>';
-                if (response['condition'][2] == 'H') {
-                    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
-                }
+                message += '<b>Hint ' + (i + 1).toString() + '</b><br>' + clues[i] + '<br/>';
+                //if (response['condition'][2] == 'H') {
+                //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
+                //}
                 message += '<br/>'
             }
             addMessage('bot', response["condition"], message);
 
             message = '';
             for (var i = 5; i < 10; i++) {
-                message += '<b>Clue ' + (i + 1).toString() + '</b><br/>';
-                message += '<b>Clue: </b>' + clues[i] + '<br/>';
-                if (response['condition'][2] == 'H') {
-                    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
-                }
+                message += '<b>Hint ' + (i + 1).toString() + '</b><br>' + clues[i] + '<br/>';
+                //if (response['condition'][2] == 'H') {
+                //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
+                //}
                 message += '<br/>'
             }
             addMessage('bot', response["condition"], message);
 
             message = '';
             for (var i = 10; i < 15; i++) {
-                message += '<b>Clue ' + (i + 1).toString() + '</b><br/>';
-                message += '<b>Clue: </b>' + clues[i] + '<br/>';
-                if (response['condition'][2] == 'H') {
-                    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
-                }
+                message += '<b>Hint ' + (i + 1).toString() + '</b><br>' + clues[i] + '<br/>';
+                //if (response['condition'][2] == 'H') {
+                //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
+                //}
                 message += '<br/>'
             }
             addMessage('bot', response["condition"], message);
 
             message = '';
             for (var i = 15; i < 20; i++) {
-                message += '<b>Clue ' + (i + 1).toString() + '</b><br/>';
-                message += '<b>Clue: </b>' + clues[i] + '<br/>';
-                if (response['condition'][2] == 'H') {
-                    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
-                }
+                message += '<b>Hint ' + (i + 1).toString() + '</b><br>' + clues[i] + '<br/>';
+                //if (response['condition'][2] == 'H') {
+                //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
+                //}
                 message += '<br/>'
             }
             addMessage('bot', response["condition"], message);
 
 
             message = '';
-            for (var i = 20; i < 22; i++) {
-                message += '<b>Clue ' + (i + 1).toString() + '</b><br/>';
-                message += '<b>Clue: </b>' + clues[i] + '<br/>';
-                if (response['condition'][2] == 'H') {
-                    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
-                }
+            for (var i = 20; i < 25; i++) {
+                message += '<b>Hint ' + (i + 1).toString() + '</b><br>' + clues[i] + '<br/>';
+                //if (response['condition'][2] == 'H') {
+                //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
+                //}
+                message += '<br/>'
+            }
+            addMessage('bot', response["condition"], message);
+
+            message = '';
+            for (var i = 25; i < 27; i++) {
+                message += '<b>Hint ' + (i + 1).toString() + '</b><br>' + clues[i] + '<br/>';
+                //if (response['condition'][2] == 'H') {
+                //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
+                //}
                 message += '<br/>'
             }
             addMessage('bot', response["condition"], message);
@@ -1139,7 +1148,7 @@ $(document).ready(function () {
 
         }
 
-        if ((response['topic'] == 'Conclusion' && response['index'] == "3" && response['condition'][1] == 'H')
+        if ((response['topic'] == 'Conclusion' && response['index'] == "4" && response['condition'][1] == 'H')
             || (response['topic'] == 'Conclusion' && response['index'] == "2" && response['condition'][1] == 'L')) {
             $("#submitButton").hide();
             $("#nextButton").hide();
@@ -1166,7 +1175,7 @@ $(document).ready(function () {
             $('#userInputType').val("");
         }
         else if (($('#condition').val() == 'LHL') && response["topic"] == 'Tutorial' && response["index"] == "12"
-            || ($('#condition').val() == 'LHH') && response["topic"] == 'Tutorial' && response["index"] == "33"
+            || ($('#condition').val() == 'LHH') && response["topic"] == 'Tutorial' && response["index"] == "18"
             || ($('#condition').val() == 'LHL') && response["topic"] == 'Conclusion' && response["index"] == "1"
             || ($('#condition').val() == 'LHH') && response["topic"] == 'Conclusion' && response["index"] == "1") {
             var msgs = message.split("[Name]");
@@ -1191,7 +1200,7 @@ $(document).ready(function () {
 
             //alert("Task Completed. Click OK. Page will refresh in 3 seconds")
             //window.setTimeout(function () { location.reload() }, 3000)
-            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_80LHjIFlXjQlfWl")
+            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_3khoFXLSN8CbFJj")
             localStorage.clear()
         }
 
@@ -1202,22 +1211,37 @@ $(document).ready(function () {
         $('#bot_thinking').remove();
         var message = '';
         var userActionBlock = ''
+        
+        //if (response['topic'] == 'Clue') {
+        //    console.log(response["botResponse"])
+        //    var navItems = []
+
+        //    triggerEnterKeyEvent = false
+        //    $("#nextButton").attr("disabled", true);
+        //    $("#nextButton").hide()
+        //    navItems = ["Yes, I would <br /> like more information.", "No, I'm ready to make <br /> my final decisions."]
+        //    //if (response['condition'][2] != 'H') {
+        //    //    navItems = ["Yes, I would <br /> like more information.", "No, I'm ready to make <br /> my final decisions."]
+        //    //}
+        //    //else {
+        //    //    navItems = ["Yes, I would <br /> like more information.", "I need more explanation <br /> for this information.", "No, I'm ready to make <br /> my final decisions."]
+        //    //}
+        //    userActionBlock = buildUserActionButtonGroup(navItems, response['condition'], 'clueSelection')
+        //    message = response["botResponse"][0]['clue'];
+        //    currentClue = response["botResponse"][0]
+
+        //}
         if (response['topic'] == 'Clue') {
-            var navItems = []
+            //console.log(response["botResponse"])
+            response_dict = response["botResponse"][0]
+            for (var key in response_dict) {
 
-            triggerEnterKeyEvent = false
-            $("#nextButton").attr("disabled", true);
-            $("#nextButton").hide()
-            if (response['condition'][2] == 'H') {
-                navItems = ["Yes, I would <br /> like more information.", "I need more explanation <br /> for this information.", "No, I'm ready to make <br /> my final decisions."]
+                message += '<b>Clue ' + key.toString() + '</b><br>' + response_dict[key]['clue'] + '<br/>';
+                message += '<br/>'
             }
-            else {
-                navItems = ["Yes, I would <br /> like more information.", "No, I'm ready to make <br /> my final decisions."]
-            }
-            userActionBlock = buildUserActionButtonGroup(navItems, response['condition'], 'clueSelection')
-            message = response["botResponse"][0]['clue'];
-            currentClue = response["botResponse"][0]
-
+            //addMessage('bot', response["condition"], message);
+            $('#index').val('5');
+            triggerEnterKeyEvent = true
         }
         else if (response['topic'] == 'Clue_End_Ins') {
             triggerEnterKeyEvent = true
@@ -1233,6 +1257,7 @@ $(document).ready(function () {
             triggerEnterKeyEvent = false
             $("#nextButton").attr("disabled", true);
             $("#nextButton").hide()
+            istriggerEnterKeyEventActive = false
         }
         else if ((response['topic'] == 'Redundant_Ins' && response['index'] == '4') ) {
             sessionDictData = redundantDictData();
@@ -1274,7 +1299,7 @@ $(document).ready(function () {
 
         }
 
-        if ((response['topic'] == 'Conclusion' && response['index'] == "3" && response['condition'][1] == 'H')
+        if ((response['topic'] == 'Conclusion' && response['index'] == "4" && response['condition'][1] == 'H')
             || (response['topic'] == 'Conclusion' && response['index'] == "2" && response['condition'][1] == 'L')) {
             $("#submitButton").hide();
             $("#nextButton").hide();
@@ -1301,7 +1326,7 @@ $(document).ready(function () {
             $('#userInputType').val("");
         }
         else if (($('#condition').val() == 'HHL') && response["topic"] == 'Tutorial' && response["index"] == "12"
-            || ($('#condition').val() == 'HHH') && response["topic"] == 'Tutorial' && response["index"] == "33"
+            || ($('#condition').val() == 'HHH') && response["topic"] == 'Tutorial' && response["index"] == "18"
             || ($('#condition').val() == 'HHL') && response["topic"] == 'Conclusion' && response["index"] == "1"
             || ($('#condition').val() == 'HHH') && response["topic"] == 'Conclusion' && response["index"] == "1") {
             var msgs = message.split("[Name]");
@@ -1317,14 +1342,14 @@ $(document).ready(function () {
             addMessage('bot', response["condition"], message);
         }
 
-        if (response['topic'] == 'Clue') {
-            if (response['condition'][1] == 'H') {
-                addMessage('bot', $('#condition').val(), 'Do you want more information?')
-            }
-            else {
-                addMessage('bot', $('#condition').val(), 'Is more information required ?')
-            }
-        }
+        //if (response['topic'] == 'Clue') {
+        //    if (response['condition'][1] == 'H') {
+        //        addMessage('bot', $('#condition').val(), 'Do you want more information?')
+        //    }
+        //    else {
+        //        addMessage('bot', $('#condition').val(), 'Is more information required ?')
+        //    }
+        //}
 
         if (response['condition'][0] == 'H') {
             addActionBlock(userActionBlock)
@@ -1353,7 +1378,7 @@ $(document).ready(function () {
 
             //alert("Task Completed. Click OK. Page will refresh in 3 seconds")
             //window.setTimeout(function () { location.reload() }, 3000)
-            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_80LHjIFlXjQlfWl")
+            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_3khoFXLSN8CbFJj")
         }
 
 
@@ -1362,7 +1387,7 @@ $(document).ready(function () {
     function redundantBlock(condition) {
         addMessage('bot', condition, 'Select a category to obtain information.');
         var navItems = []
-        navItems = ["Person", "Roles", "Locations"]
+        navItems = ["Person", "Roles", "Hours"]
         userActionBlock = buildUserActionButtonGroup(navItems, condition, 'category')
         addActionBlock(userActionBlock)
 
@@ -1371,19 +1396,19 @@ $(document).ready(function () {
 
     function redundantDictData() {
         var data = {
-            "All": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
-            "Alex": [20, 21],
-            "Leon": [14, 15],
-            "Rachel": [7, 9, 11],
-            "Tina": [1, 2, 3, 8],
-            "Network Architect": [20, 22],
-            "Systems Analyst": [2, 4, 5],
-            "Cybersecurity Specialist": [17, 18],
-            "Database Administrator": [9, 10, 13],
-            "Boston": [17, 19],
-            "Chicago": [14, 16],
-            "Seattle": [1, 4, 6],
-            "Los Angeles": [7, 8, 10, 12]
+            "All": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+            "Alex": [1, 2],
+            "Leon": [3, 4],
+            "Rachel": [5, 6, 7],
+            "Tina": [8, 9],
+            "Network Architect": [13, 14, 15],
+            "Systems Analyst": [16, 17, 18],
+            "Cybersecurity Specialist": [10],
+            "Database Administrator": [11, 12],
+            "Six": [19, 20, 21],
+            "Eight": [22, 23],
+            "Ten": [24, 25],
+            "Twelve": [26, 27]
         }
         return data
     }
@@ -1397,26 +1422,32 @@ $(document).ready(function () {
         for (var i = 0; i < content.length; i++) {
             html += `<div class="btn-group btn-group-sm mr-2" role="group" aria-label="First group">`
             if (type == 'clueSelection') {
-                if (condition[2] == 'H') {
-                    if (i == 0) {
-                        html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
-                    }
-                    else if (i == 1) {
-                        html += `<button type="button" class="btn btn-secondary showClueExplanation" style="font-size:10px">`
-                    }
-                    else if (i == 2) {
-                        html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
-                    }
+                if (i == 0) {
+                    html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
                 }
-                else {
-                    if (i == 0) {
-                        html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
-                    }
-                    else if (i == 1) {
-                        html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
-                    }
+                else if (i == 1) {
+                    html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
+                }
+                //if (condition[2] == 'H') {
+                //    if (i == 0) {
+                //        html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
+                //    }
+                //    else if (i == 1) {
+                //        html += `<button type="button" class="btn btn-secondary showClueExplanation" style="font-size:10px">`
+                //    }
+                //    else if (i == 2) {
+                //        html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
+                //    }
+                //}
+                //else {
+                //    if (i == 0) {
+                //        html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
+                //    }
+                //    else if (i == 1) {
+                //        html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
+                //    }
                     
-                }
+                //}
                 
             }
             else if (type == 'redundantConfirmation') {
@@ -1437,25 +1468,31 @@ $(document).ready(function () {
                 }
             }
             else if (type == 'askRedundant') {
-                if (condition[2] == 'H') {
-                    if (i == 0) {
-                        html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
-                    }
-                    else if (i == 1) {
-                        html += `<button type="button" class="btn btn-secondary showClueExplanation" style="font-size:10px">`
-                    }
-                    else if (i == 2) {
-                        html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
-                    }
+                if (i == 0) {
+                    html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
                 }
-                else {
-                    if (i == 0) {
-                        html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
-                    }
-                    else if (i == 1) {
-                        html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
-                    }
+                else if (i == 1) {
+                    html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
                 }
+                //if (condition[2] == 'H') {
+                //    if (i == 0) {
+                //        html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
+                //    }
+                //    else if (i == 1) {
+                //        html += `<button type="button" class="btn btn-secondary showClueExplanation" style="font-size:10px">`
+                //    }
+                //    else if (i == 2) {
+                //        html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
+                //    }
+                //}
+                //else {
+                //    if (i == 0) {
+                //        html += `<button type="button" class="btn btn-secondary showNextClue" style="font-size:10px">`
+                //    }
+                //    else if (i == 1) {
+                //        html += `<button type="button" class="btn btn-secondary showMatrixGrid" style="font-size:10px">`
+                //    }
+                //}
                 
 
             }
@@ -1468,7 +1505,7 @@ $(document).ready(function () {
                     html += `<button type="button" class="btn btn-secondary roles" style="font-size:10px">`
                 }
                 else if (i == 2) {
-                    html += `<button type="button" class="btn btn-secondary locations" style="font-size:10px">`
+                    html += `<button type="button" class="btn btn-secondary hours" style="font-size:10px">`
                 }
                 
             }
@@ -1500,18 +1537,18 @@ $(document).ready(function () {
                     html += `<button type="button" class="btn btn-secondary databaseAdmin" style="font-size:10px">`
                 }
             }
-            else if (type == 'locations') {
+            else if (type == 'hours') {
                 if (i == 0) {
-                    html += `<button type="button" class="btn btn-secondary boston" style="font-size:10px">`
+                    html += `<button type="button" class="btn btn-secondary six" style="font-size:10px">`
                 }
                 else if (i == 1) {
-                    html += `<button type="button" class="btn btn-secondary chicago" style="font-size:10px">`
+                    html += `<button type="button" class="btn btn-secondary eight" style="font-size:10px">`
                 }
                 else if (i == 2) {
-                    html += `<button type="button" class="btn btn-secondary seattle" style="font-size:10px">`
+                    html += `<button type="button" class="btn btn-secondary ten" style="font-size:10px">`
                 }
                 else if (i == 3) {
-                    html += `<button type="button" class="btn btn-secondary losAngeles" style="font-size:10px">`
+                    html += `<button type="button" class="btn btn-secondary twelve" style="font-size:10px">`
                 }
             }
             
@@ -1534,7 +1571,6 @@ $(document).ready(function () {
                         <th scope='col'>Team Member</th>
                         <th scope='col'>Role</th>
                         <th scope='col'>Pjt hrs/wk</th>
-                        <th scope='col'>Location</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1545,30 +1581,18 @@ $(document).ready(function () {
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
                                 <option value='1'>Network Architect</option>
-                                <option value='2'>Quality Assurance Engineer</option>
-                                <option value='3'>Systems Analyst</option>
-                                <option value='4'>Cyber Security Specalist</option>
-                                <option value='5'>Database Administrator</option>
+                                <option value='2'>Systems Analyst</option>
+                                <option value='3'>Cyber Security Specalist</option>
+                                <option value='4'>Database Administrator</option>
                             </select>
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
-                                <option value='1'>4</option>
-                                <option value='2'>6</option>
-                                <option value='3'>8</option>
-                                <option value='4'>10</option>
-                                <option value='5'>12</option>
-                            </select>
-                        </td>
-                        <td>
-                            <select class='form-control form-control-sm'>
-                                <option value='0'>Select</option>
-                                <option value='1'>New York</option>
-                                <option value='2'>Boston</option>
-                                <option value='3'>Chicago</option>
-                                <option value='4'>Seattle</option>
-                                <option value='5'>Los Angeles</option>
+                                <option value='1'>6</option>
+                                <option value='2'>8</option>
+                                <option value='3'>10</option>
+                                <option value='4'>12</option>
                             </select>
                         </td>
                     </tr>
@@ -1578,63 +1602,18 @@ $(document).ready(function () {
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
                                 <option value='1'>Network Architect</option>
-                                <option value='2'>Quality Assurance Engineer</option>
-                                <option value='3'>Systems Analyst</option>
-                                <option value='4'>Cyber Security Specalist</option>
-                                <option value='5'>Database Administrator</option>
+                                <option value='2'>Systems Analyst</option>
+                                <option value='3'>Cyber Security Specalist</option>
+                                <option value='4'>Database Administrator</option>
                             </select>
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
-                                <option value='1'>4</option>
-                                <option value='2'>6</option>
-                                <option value='3'>8</option>
-                                <option value='4'>10</option>
-                                <option value='5'>12</option>
-                            </select>
-                        </td>
-                        <td>
-                            <select class='form-control form-control-sm'>
-                                <option value='0'>Select</option>
-                                <option value='1'>New York</option>
-                                <option value='2'>Boston</option>
-                                <option value='3'>Chicago</option>
-                                <option value='4'>Seattle</option>
-                                <option value='5'>Los Angeles</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style='font-size: 14px;font-weight:bold;'>Michael</td>
-                        <td>
-                            <select class='form-control form-control-sm'>
-                                <option value='0'>Select</option>
-                                <option value='1'>Network Architect</option>
-                                <option value='2'>Quality Assurance Engineer</option>
-                                <option value='3'>Systems Analyst</option>
-                                <option value='4'>Cyber Security Specalist</option>
-                                <option value='5'>Database Administrator</option>
-                            </select>
-                        </td>
-                        <td>
-                            <select class='form-control form-control-sm'>
-                                <option value='0'>Select</option>
-                                <option value='1'>4</option>
-                                <option value='2'>6</option>
-                                <option value='3'>8</option>
-                                <option value='4'>10</option>
-                                <option value='5'>12</option>
-                            </select>
-                        </td>
-                        <td>
-                            <select class='form-control form-control-sm'>
-                                <option value='0'>Select</option>
-                                <option value='1'>New York</option>
-                                <option value='2'>Boston</option>
-                                <option value='3'>Chicago</option>
-                                <option value='4'>Seattle</option>
-                                <option value='5'>Los Angeles</option>
+                                <option value='1'>6</option>
+                                <option value='2'>8</option>
+                                <option value='3'>10</option>
+                                <option value='4'>12</option>
                             </select>
                         </td>
                     </tr>
@@ -1644,30 +1623,18 @@ $(document).ready(function () {
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
                                 <option value='1'>Network Architect</option>
-                                <option value='2'>Quality Assurance Engineer</option>
-                                <option value='3'>Systems Analyst</option>
-                                <option value='4'>Cyber Security Specalist</option>
-                                <option value='5'>Database Administrator</option>
+                                <option value='2'>Systems Analyst</option>
+                                <option value='3'>Cyber Security Specalist</option>
+                                <option value='4'>Database Administrator</option>
                             </select>
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
-                                <option value='1'>4</option>
-                                <option value='2'>6</option>
-                                <option value='3'>8</option>
-                                <option value='4'>10</option>
-                                <option value='5'>12</option>
-                            </select>
-                        </td>
-                        <td>
-                            <select class='form-control form-control-sm'>
-                                <option value='0'>Select</option>
-                                <option value='1'>New York</option>
-                                <option value='2'>Boston</option>
-                                <option value='3'>Chicago</option>
-                                <option value='4'>Seattle</option>
-                                <option value='5'>Los Angeles</option>
+                                <option value='1'>6</option>
+                                <option value='2'>8</option>
+                                <option value='3'>10</option>
+                                <option value='4'>12</option>
                             </select>
                         </td>
                     </tr>
@@ -1677,30 +1644,18 @@ $(document).ready(function () {
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
                                 <option value='1'>Network Architect</option>
-                                <option value='2'>Quality Assurance Engineer</option>
-                                <option value='3'>Systems Analyst</option>
-                                <option value='4'>Cyber Security Specalist</option>
-                                <option value='5'>Database Administrator</option>
+                                <option value='2'>Systems Analyst</option>
+                                <option value='3'>Cyber Security Specalist</option>
+                                <option value='4'>Database Administrator</option>
                             </select>
                         </td>
                         <td>
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
-                                <option value='1'>4</option>
-                                <option value='2'>6</option>
-                                <option value='3'>8</option>
-                                <option value='4'>10</option>
-                                <option value='5'>12</option>
-                            </select>
-                        </td>
-                        <td>
-                            <select class='form-control form-control-sm'>
-                                <option value='0'>Select</option>
-                                <option value='1'>New York</option>
-                                <option value='2'>Boston</option>
-                                <option value='3'>Chicago</option>
-                                <option value='4'>Seattle</option>
-                                <option value='5'>Los Angeles</option>
+                                <option value='1'>6</option>
+                                <option value='2'>8</option>
+                                <option value='3'>10</option>
+                                <option value='4'>12</option>
                             </select>
                         </td>
                     </tr>
@@ -1773,16 +1728,14 @@ $(document).ready(function () {
             for (var row = 0; row < rows.length; row++) {
                 var role = rows[row].getElementsByTagName('td')[1].getElementsByTagName('select')[0].value
                 var projectHours = rows[row].getElementsByTagName('td')[2].getElementsByTagName('select')[0].value
-                var location = rows[row].getElementsByTagName('td')[3].getElementsByTagName('select')[0].value
-                if (role == "0" || projectHours == "0" || location == "0") {
+                if (role == "0" || projectHours == "0" ) {
                     $('#matrixResult div span').css('display', 'inline-block');
                     isValid = false
                     break
                 }
                 result[row+1] = {
                     "role": role,
-                    "projectHours": projectHours,
-                    "location": location
+                    "projectHours": projectHours
                 }
                 
             }
@@ -1859,10 +1812,6 @@ $(document).ready(function () {
                     }
                 }
                 $("#gridAction").val('(' + row.toString() + ',' + col.toString() +')')
-
-
-
-
                 //}
             }
             ////console.log(col, row, className)

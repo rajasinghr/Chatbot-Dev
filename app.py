@@ -72,7 +72,7 @@ class Chatbot:
 
             index = str(int(index)+1)
             if(topic == 'Clue'):
-                data = [self.clueData['main'][index]]
+                data = [self.clueData['main']]
             elif(topic == 'Redundant'):
                 data = [self.clueData['redundant'][index]]
             else:
