@@ -12,24 +12,71 @@
 
 </head>
 
-<body>
-    <div class="container" style="height:100vh;width:100%">
-        <br />
-        <div class="row" style="height:95vh">
-            <div  class="column" style=" width: 54%;overflow: auto;">
-                <div id="clickableGrid" >
+<body style="background-color:#006747">
+    <div class="container" style="height:100vh;width:100%; ">
+        <div class="row" style="height:5vh; background-color:#CFC493">
+            <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#bgStorySetupModal" style="background-color:#4CAF50">Show Story</button>
+        </div>
+        <div class="row" style="height:90vh;background-color:white">
+            <div  class="column" style=" width: 54%;overflow: auto;background-color:white;border-radius:10px;border-right:20px !important">
+                <div id="clickableGrid" style="display:none">
                     <div>
-                        <p style="font-size:12px !important">
+                        <p style="font-size:15px !important">
                             Use this grid to note which combinations have been eliminated or selected.
-                             Click the box once to place an <img src='../static/images/cross.png' alt='Avatar' style='width:12px;' />. Click the same box again to place an <img src='../static/images/circle.png' alt='Avatar' style='width:12px;' />.  Click the same box a third time to remove the <img src='../static/images/circle.png' alt='Avatar' style='width:12px;' />.
+                            Click the box once to place an <img src='../static/images/cross.png' alt='Avatar' style='width:12px;' />. Click the same box again to place an <img src='../static/images/circle.png' alt='Avatar' style='width:12px;' />.  Click the same box a third time to remove the <img src='../static/images/circle.png' alt='Avatar' style='width:12px;' />.
                         </p>
                     </div>
-                    <table class="table  table-sm" style="height:75%; max-height:75%">
+
+                    <table id="demoTable"  class="table  table-sm" style="height:75%; max-height:75%;display:none">
                         <thead>
                             <tr>
                                 <th class="border" colspan="2" rowspan="2"></th>
-                                <th class="border" colspan="4" align="center"><div style="font-size: 8px;text-align:center">Role</div></th>
-                                <th class="border" colspan="4" align="center"><div style="font-size: 8px;text-align:center">Candidate</div></th>
+                                <th class="border" colspan="4" align="center"><div style="font-size: 12px;text-align:center">Name</div></th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border" colspan="2"></td>
+
+                                <td class="border"><div class="vertical">James</div></td>
+                                <td class="border"><div class="vertical">Louise</div></td>
+                                <td class="border"><div class="vertical">Ali</div></td>
+                                <td class="border"><div class="vertical">Maya</div></td>
+                            </tr>
+                            <tr>
+                                <td class="border" rowspan="3"><div style="font-size: 12px;text-align:center;writing-mode: vertical-rl;transform: rotate(180deg);font-weight: bold;height: 140px; margin:auto">Gift</div></td>
+                                <td class="border"><div class="horizontal">Necklace</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">Skateboard</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">Videogame</div></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                                <td class="click"></td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                    <table id="mainTable" style="display:none" class="table  table-sm" style="height:75%; max-height:75%">
+                        <thead>
+                            <tr>
+                                <th class="border" colspan="2" rowspan="2"></th>
+                                <th class="border" colspan="4" align="center"><div style="font-size: 12px;text-align:center">Role</div></th>
+                                <th class="border" colspan="4" align="center"><div style="font-size: 12px;text-align:center">Candidate</div></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -47,7 +94,7 @@
                                 <td class="border"><div class="vertical">Tina</div></td>
                             </tr>
                             <tr>
-                                <td class="border" rowspan="4"><div style="font-size: 8px;text-align:center;writing-mode: vertical-rl;transform: rotate(180deg);font-weight: bold;height: 140px;">Number of Hours</div></td>
+                                <td class="border" rowspan="4"><div style="font-size: 12px;text-align:center;writing-mode: vertical-rl;transform: rotate(180deg);font-weight: bold;height: 140px; margin:auto">Number of Hours</div></td>
                                 <td class="border"><div class="horizontal">6</div></td>
                                 <td class="click"></td>
                                 <td class="click"></td>
@@ -93,7 +140,7 @@
                             </tr>
                             <tr>
                                 <td class="border" rowspan="4">
-                                    <div class="vertical" style="font-size: 8px;text-align:center;writing-mode: vertical-rl;transform: rotate(180deg);font-weight: bold;height: 140px;">Candidate</div>
+                                    <div class="vertical" style="font-size: 12px;text-align:center;writing-mode: vertical-rl;transform: rotate(180deg);font-weight: bold;height: 140px; margin:auto">Candidate</div>
                                 </td>
                                 <td class="border"><div class="horizontal">Alex</div></td>
                                 <td class="click"></td>
@@ -142,173 +189,10 @@
                         </tbody>
                     </table>
 
-                    <!--<table class="table table-sm">
-                        <thead>
-                            <tr>
-                                <th scope="col">Team Member</th>
-                                <th scope="col">Role</th>
-                                <th scope="col"># Project hours/week</th>
-                                <th scope="col">Office Location</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            <tr>
-                                <td>Alex</td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Leon</td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Michael</td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Rachel</td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Tina</td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select class="form-control form-control-sm">
-                                        <option>Role 1</option>
-                                        <option>Role 2</option>
-                                        <option>Role 3</option>
-                                        <option>Role 4</option>
-                                        <option>Role 5</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>-->
                 </div>
 
             </div>
-            <div class="column" style="width: 46%;border:solid #808080 0.5px;height: 95vh;">
+            <div class="column" style="width: 46%;border:solid #CFC493 3px;border-top:0px !important; height: 93vh;background-color:white; border-bottom-left-radius:10px">
                 <div id="chatDiv" style="height:80vh;overflow:auto">
 
                 </div>
@@ -338,55 +222,146 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="conditionSetupModal" role="dialog">
-        <div class="modal-dialog">
+    <div class="modal fade" id="bgStorySetupModal" role="dialog">
+        <div class="modal-dialog modal-lg">
 
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header" style="display:block !important">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Pick Condition</h4>
+                    <h4 class="modal-title">Overall Task Description</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h6>Autonomy</h6>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="radio-inline">
-                                <input type="radio" value="L" name="autonomyOption" checked>Low
-                            </label>
-                            <label class="radio-inline" style="padding-left:10px">
-                                <input type="radio" value="H" name="autonomyOption">High
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h6>Relatedness</h6>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="radio-inline">
-                                <input type="radio" value="L" name="relatednessOption" checked>Low
-                            </label>
-                            <label class="radio-inline" style="padding-left:10px">
-                                <input type="radio" value="H" name="relatednessOption">High
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h6>Competency</h6>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="radio-inline">
-                                <input type="radio" value="L" name="competencyOption" checked>Low
-                            </label>
-                            <label class="radio-inline" style="padding-left:10px">
-                                <input type="radio" value="H" name="competencyOption">High
-                            </label>
-                        </div>
-                    </div>
+
+                    <p>
+                        <u>Background Story:</u> Teams are often a preferred choice to complete complex projects. The success of such teams depends on the right combination of factors such as team member personalities, roles, location where the teams meet, and how long they work among other things. Therefore, it is critical for project managers and hiring managers to consider these issues while hiring. However, since there is a lot of complex information that needs to be processed, it is difficult for one person to consider all issues and make the right choice on their own. To resolve this challenge, organizations are utilizing artificial intelligence (AI) chat bots to provide them with relevant information and helping them process this information in order to make effective decisions.
+                        <br />
+                        In this scenario, you will work with one such AI chat bots, which will help you determine the composition of a project team. In this task, a chat bot will provide you with relevant information needed to make a decision regarding the team composition. Using AI, the chat bot will adapt to your needs and respond to requests you make for more information. With the assistance of the AI chat bot, your task is to decide each candidate’s role in the project and how many hours they will need to work on the project every week.
+                        <br />
+
+                        <br />
+                        You can use the grid provided below to help you make your decision.
+                        <br />
+                    </p>
+
+                    <table  class="table  table-sm" style="height:75%; max-height:75%">
+                        <thead>
+                            <tr>
+                                <th class="border" colspan="2" rowspan="2"></th>
+                                <th class="border" colspan="4" align="center"><div style="font-size: 12px;text-align:center">Role</div></th>
+                                <th class="border" colspan="4" align="center"><div style="font-size: 12px;text-align:center">Candidate</div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border" colspan="2"></td>
+
+                                <td class="border"><div class="vertical ">Network Architect</div></td>
+                                <td class="border"><div class="vertical ">Systems Analyst</div></td>
+                                <td class="border"><div class="vertical ">Cyber Security Specalist</div></td>
+                                <td class="border"><div class="vertical ">Database Administrator</div></td>
+
+                                <td class="border"><div class="vertical">Alex</div></td>
+                                <td class="border"><div class="vertical">Leon</div></td>
+                                <td class="border"><div class="vertical">Rachel</div></td>
+                                <td class="border"><div class="vertical">Tina</div></td>
+                            </tr>
+                            <tr>
+                                <td class="border" rowspan="4"><div style="font-size: 12px;text-align:center;writing-mode: vertical-rl;transform: rotate(180deg);font-weight: bold;height: 140px; margin:auto">Number of Hours</div></td>
+                                <td class="border"><div class="horizontal">6</div></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">8</div></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">10</div></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">12</div></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                            </tr>
+                            <tr>
+                                <td class="border" rowspan="4">
+                                    <div class="vertical" style="font-size: 12px;text-align:center;writing-mode: vertical-rl;transform: rotate(180deg);font-weight: bold;height: 140px; margin:auto">Candidate</div>
+                                </td>
+                                <td class="border"><div class="horizontal">Alex</div></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">Leon</div></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">Rachel</div></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+                            <tr>
+                                <td class="border"><div class="horizontal">Tina</div></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td class="border"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                                <td style="border-top: 1px solid #ffffff !important"></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

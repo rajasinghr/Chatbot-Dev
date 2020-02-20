@@ -191,20 +191,22 @@ div.vertical {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     text-align: center;
-    width: 18px;
+    /*width: 18px;*/
     height: 70px;
-    font-size: 8px;
+    font-size: 10px;
     font-weight:bold;
     margin: 0px 2px 0px 0px;
+    margin: auto !important
 }
 
 div.horizontal {
     text-align: center;
-    font-size: 8px;
+    font-size: 10px;
     font-weight: bold;
-    width: 70px;
-    height: 18px;
+    /*width: 70px;
+    height: 18px;*/
 }
+
 
 .next-button {
     background-color: #4CAF50;
@@ -273,12 +275,14 @@ div.horizontal {
     /*background-color: red;*/
     background-image: url("../static/images/cross.png");
     background-size: contain;
+    background-position: center;
 }
 
 .circle {
     /*background-color: green;*/
     background-image: url("../static/images/circle.png");
     background-size: contain;
+    background-position: center;
 }
 
 .empty {

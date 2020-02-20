@@ -3,20 +3,20 @@
     "Introduction": {
       "1": "Status: Information bot is online.",
       "2": "The information bot will query the database to provide relevant information.",
-      "3": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and locations based on a set of information. You can use the logic grid on the left to help make your decisions."
+      "3": "This is a project  management simulation. The role of the user as project manager is to assign  employees to the appropriate projects and locations based on a set of information. The interactive logic grid on the left can be used to understand how to use the information to make a decision."
     },
     "Tutorial": {
       "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
-      "2": "Example Scenario: 4 people will each be given a gift. No two people can receive the same gift and one person cannot get more than one gift",
-      "3": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
-      "4": "In this example, James will not get the videogame. This option will be eliminated by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
-      "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
-      "6": "In this example, Ali will receive the skateboard. Select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
-      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
-      "8": "Other combinations will need to be eliminated based on previous decisions. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
-      "9": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
+      "2": "Example Scenario: Four people will each be given a gift. No two people can receive the same gift and one person cannot get more than one gift",
+      "3": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
+      "4": "In this example, James does not like videogames. This option will be eliminated by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
+      "5": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
+      "6": "In this example, Ali will receive the skateboard. User will select  this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
+      "7": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
+      "8": "Other combinations will need to be eliminated based on previous decisions. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. User  needs to place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
+      "9": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
       "10": "Thus, the information grid is used to note which combinations have been eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
-      "11": "Note: The grid should only be marked if it is certain that an option should be eliminated or selected. To remove a marking, click on the selected box a third time.",
+      "11": "The grid should only be marked if it is certain that an option should be eliminated or selected. To remove a marking, click on the selected box a third time.",
       "12": "Status: Tutorial completed."
     },
     "Task Reminder": {
@@ -27,8 +27,102 @@
       "1": "Consider the following 5 major pieces of information:"
     },
     "Redundant_Ins": {
-      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
-      "2": "Additional, but redundant information will be provided below. This information has already been described above, but will be stated in different wording."
+      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments."
+    },
+    "Redundant": {
+      "1": {
+        "1": {
+          "clue": "Alex does not work for 6 hours a week."
+        },
+        "2": {
+          "clue": "Alex should be assigned as the Network Architect."
+        },
+        "3": {
+          "clue": "Leon does not work for 6 hours a week."
+        },
+        "4": {
+          "clue": "Leon does not work for 8 hours a week."
+        },
+        "5": {
+          "clue": "Rachel does not work for 12 hours a week."
+        }
+      },
+      "2": {
+        "6": {
+          "clue": "Rachel should be assigned as the Database Administrator."
+        },
+        "7": {
+          "clue": "Rachel should not be assigned as the Systems Analyst."
+        },
+        "8": {
+          "clue": "Tina is the Cybersecurity Specialist."
+        },
+        "9": {
+          "clue": "Tina should not be assigned as the Database Administrator."
+        },
+        "10": {
+          "clue": "The Cybersecurity Specialist works for 12 hours a week."
+        }
+      },
+      "3": {
+        "11": {
+          "clue": "The Database Administrator does not work for 10 hours a week."
+        },
+        "12": {
+          "clue": "The Database Administrator does not work for 12 hours a week."
+        },
+        "13": {
+          "clue": "The Network Architect does not work for 10 hours a week."
+        },
+        "14": {
+          "clue": "The Network Architect is not Leon."
+        },
+        "15": {
+          "clue": "The Network Architect is not Rachel."
+        }
+      },
+      "4": {
+        "16": {
+          "clue": "The Systems Analyst does not work for 6 hours a week."
+        },
+        "17": {
+          "clue": "The Systems Analyst does not work for 8 hours a week."
+        },
+        "18": {
+          "clue": "The Systems Analyst is Leon."
+        },
+        "19": {
+          "clue": "6 hours a week of work is not required of the Network Architect."
+        },
+        "20": {
+          "clue": "6 hours a week of work is required of the Database administrator."
+        }
+      },
+      "5": {
+        "21": {
+          "clue": "6 hours a week of work is required of Tina."
+        },
+        "22": {
+          "clue": "8 hours a week of work is required of Alex."
+        },
+        "23": {
+          "clue": "8 hours a week of work is required of the Network Architect."
+        },
+        "24": {
+          "clue": "10 hours a week of work is required of Leon."
+        },
+        "25": {
+          "clue": "10 hours a week of work is required of the Systems Analyst."
+        }
+      },
+      "6": {
+        "26": {
+          "clue": "12 hours a week of work is required of the Network Architect."
+        },
+        "27": {
+          "clue": "12 hours a week of work is required of Tina."
+        }
+      }
     },
     "Submit": {
       "1": "Status: All available information has been provided. Final decisions may be submitted.",
@@ -37,32 +131,33 @@
     },
     "Conclusion": {
       "1": "Project assignments have been recorded.",
-      "2": "You will be redirected to Qualtrics shortly"
+      "2": "Status: Task Completed",
+      "3": "You will be redirected to Qualtrics shortly"
     }
   },
   "LLH": {
     "Introduction": {
       "1": "Status: Information bot is online.",
       "2": "The information bot will query the database to provide relevant information.",
-      "3": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and locations based on a set of information. You can use the logic grid on the left to help make your decisions."
+      "3": "This is a project management simulation. The role of the user as project manager is to assign  employees to the appropriate projects and locations based on a set of information. The interactive logic grid on the left can be used to understand how to use the information to make a decision."
     },
     "Tutorial": {
       "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
-      "2": "Example Scenario 1: 4 people will each be given a gift. No two people can receive the same gift and one person cannot get more than one gift",
+      "2": "Example Scenario: Four people will each be given a gift. No two people can receive the same gift and one person cannot get more than one gift",
       "3": "The grid for this example is provided in the panel to the right. Markings should be placed on the grid as instructed throughout the tutorial.",
-      "4": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
+      "4": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
       "5": "In this example, James will not get the videogame. This option will be eliminated by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
-      "6": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
+      "6": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
       "7": "In this example, Ali will receive the skateboard. Select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
-      "8": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
+      "8": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
       "9": "Other combinations will need to be eliminated based on previous decisions. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
-      "10": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
+      "10": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
       "11": "Tutorial 2 will now begin.  The previous example will be continued. Instructions on how to use the grid to identify logical shortcuts and errors will be provided.",
-      "12": "Consider the following piece of information: Louise does not like gifts. Based on the given information, the following assumption can be made: Louise does not receive any gifts.",
-      "13": "Mark the grid to reflect the new information. ",
-      "14": "Louise does not receive any gifts: <br/> <img class='grid' src='../static/images/tutorial/img5.png' ></img>",
-      "15": "All required information is present to make final decisions. Since James does not get the videogame, it goes to Maya and James gets the necklace. Mark these options on the grid to complete it.",
-      "16": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img6.png'></img>",
+      "12": "If Louise does not like gifts. The following assumption is logical: Louise does not receive any gifts.",
+      "13": "User to mark the grid to reflect the new information.",
+      "14": "Louise does not receive any gifts. The grid is to look like this: <br/> <img class='grid' src='../static/images/tutorial/img5.png' ></img>",
+      "15": "All required information is present to make final decisions. Since James does not get the videogame, it goes to Maya and James gets the necklace. User to mark these options on the grid to complete it.",
+      "16": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img6.png'></img>",
       "17": "Status: Tutorial 2 completed."
     },
     "Task Reminder": {
@@ -73,8 +168,102 @@
       "1": "Consider the following 5 major pieces of information:"
     },
     "Redundant_Ins": {
-      "1": "The information above is deemed sufficient to reach an appropriate decision.",
-      "2": "However, additional information will be provided for ease of decision making."
+      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments."
+    },
+    "Redundant": {
+      "1": {
+        "1": {
+          "clue": "Alex does not work for 6 hours a week."
+        },
+        "2": {
+          "clue": "Alex should be assigned as the Network Architect."
+        },
+        "3": {
+          "clue": "Leon does not work for 6 hours a week."
+        },
+        "4": {
+          "clue": "Leon does not work for 8 hours a week."
+        },
+        "5": {
+          "clue": "Rachel does not work for 12 hours a week."
+        }
+      },
+      "2": {
+        "6": {
+          "clue": "Rachel should be assigned as the Database Administrator."
+        },
+        "7": {
+          "clue": "Rachel should not be assigned as the Systems Analyst."
+        },
+        "8": {
+          "clue": "Tina is the Cybersecurity Specialist."
+        },
+        "9": {
+          "clue": "Tina should not be assigned as the Database Administrator."
+        },
+        "10": {
+          "clue": "The Cybersecurity Specialist works for 12 hours a week."
+        }
+      },
+      "3": {
+        "11": {
+          "clue": "The Database Administrator does not work for 10 hours a week."
+        },
+        "12": {
+          "clue": "The Database Administrator does not work for 12 hours a week."
+        },
+        "13": {
+          "clue": "The Network Architect does not work for 10 hours a week."
+        },
+        "14": {
+          "clue": "The Network Architect is not Leon."
+        },
+        "15": {
+          "clue": "The Network Architect is not Rachel."
+        }
+      },
+      "4": {
+        "16": {
+          "clue": "The Systems Analyst does not work for 6 hours a week."
+        },
+        "17": {
+          "clue": "The Systems Analyst does not work for 8 hours a week."
+        },
+        "18": {
+          "clue": "The Systems Analyst is Leon."
+        },
+        "19": {
+          "clue": "6 hours a week of work is not required of the Network Architect."
+        },
+        "20": {
+          "clue": "6 hours a week of work is required of the Database administrator."
+        }
+      },
+      "5": {
+        "21": {
+          "clue": "6 hours a week of work is required of Tina."
+        },
+        "22": {
+          "clue": "8 hours a week of work is required of Alex."
+        },
+        "23": {
+          "clue": "8 hours a week of work is required of the Network Architect."
+        },
+        "24": {
+          "clue": "10 hours a week of work is required of Leon."
+        },
+        "25": {
+          "clue": "10 hours a week of work is required of the Systems Analyst."
+        }
+      },
+      "6": {
+        "26": {
+          "clue": "12 hours a week of work is required of the Network Architect."
+        },
+        "27": {
+          "clue": "12 hours a week of work is required of Tina."
+        }
+      }
     },
     "Submit": {
       "1": "Status: All available information has been provided. Final decisions may be submitted.",
@@ -83,40 +272,138 @@
     },
     "Conclusion": {
       "1": "Project assignments have been recorded.",
-      "2": "You will be redirected to Qualtrics shortly."
+      "2": "Status: Task completed",
+      "3": "You will be redirected to Qualtrics shortly."
     }
   },
   "LHL": {
     "Introduction": {
       "1": "Hello! My name is Rocky.",
-      "2": "What is you name?",
+      "2": "What would you like to be called?",
       "3": "It's nice to meet you,",
-      "4": "I'm here to help by providing the information that you need to make the right decision."
+      "4": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and locations based on a set of information. Your job is to assign the correct people to correct roles and locations based on the constraints."
     },
     "Tutorial": {
-      "1": "First things first. Let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid.",
-      "2": "Imagine you are deciding which gift to give to four of your friends. Each gift should be special so no two people can receive the same gift. Also, you only have one of each item so each person cannot get more than one gift.",
-      "3": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
-      "4": "In this example, let's say James does not like videogames so you shouldn't get him any. Please eliminate this option by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
-      "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
-      "6": "You also know that Ali really enjoys skating so you should get him a skateboard. Please select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
-      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
-      "8": "You can go ahead and eliminate other options based on previous decisions. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Please place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
-      "9": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
-      "10": "As you can see, the information grid is used to note which combinations you have eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
-      "11": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
-      "12": "Okay, [Name]! That concludes the basic training on how to use the grid. I think you're ready for the task."
+      "1": "I'm here to help by providing the information that you need to make the right decision.",
+      "2": "In order to help you understand how to complete the assignment,.let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid. ",
+      "3": "Imagine you are deciding which gift to give to four of your friends. Each gift should be special so no two people can receive the same gift. Also, you only have one of each item so each person cannot get more than one gift.",
+      "4": "The grid for this example is located in the panel to the side. It is an interactive grid. So, you can click on the grid as I show you what do in order to record your options.",
+      "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
+      "6": "In this example, let's say James does not like videogames so you shouldn't get him any. Please eliminate this option by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
+      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
+      "8": "Go ahead. Click on the interactive grid to try!",
+      "9": "You also know that Ali really enjoys skating so you should get him a skateboard. Please select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
+      "10": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
+      "11": "Go ahead and eliminate other options based on previous decisions on the interactive grid. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Please place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
+      "12": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
+      "13": "As you can see, the information grid is used to note which combinations you have eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
+      "14": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
+      "15": "Okay, [Name]! That concludes the basic training on how to use the grid. I think you're ready for the task."
     },
     "Task Reminder": {
       "1": "Let's get started!",
-      "2": "Reminder: The purpose of the task is to assign each person a project role and amount of weekly project hours."
+      "2": "And remember, your goal is to assign each candidate a project role and amount of weekly project hours."
     },
     "Clue_Ins": {
       "1": "Here are 5 major pieces of information that you might want to consider."
     },
     "Redundant_Ins": {
-      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
-      "2": "Additional, but redundant information will be provided below. This information has already been described above, but will be stated in different wording."
+      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments."
+    },
+    "Redundant": {
+      "1": {
+        "1": {
+          "clue": "Alex does not work for 6 hours a week."
+        },
+        "2": {
+          "clue": "Alex should be assigned as the Network Architect."
+        },
+        "3": {
+          "clue": "Leon does not work for 6 hours a week."
+        },
+        "4": {
+          "clue": "Leon does not work for 8 hours a week."
+        },
+        "5": {
+          "clue": "Rachel does not work for 12 hours a week."
+        }
+      },
+      "2": {
+        "6": {
+          "clue": "Rachel should be assigned as the Database Administrator."
+        },
+        "7": {
+          "clue": "Rachel should not be assigned as the Systems Analyst."
+        },
+        "8": {
+          "clue": "Tina is the Cybersecurity Specialist."
+        },
+        "9": {
+          "clue": "Tina should not be assigned as the Database Administrator."
+        },
+        "10": {
+          "clue": "The Cybersecurity Specialist works for 12 hours a week."
+        }
+      },
+      "3": {
+        "11": {
+          "clue": "The Database Administrator does not work for 10 hours a week."
+        },
+        "12": {
+          "clue": "The Database Administrator does not work for 12 hours a week."
+        },
+        "13": {
+          "clue": "The Network Architect does not work for 10 hours a week."
+        },
+        "14": {
+          "clue": "The Network Architect is not Leon."
+        },
+        "15": {
+          "clue": "The Network Architect is not Rachel."
+        }
+      },
+      "4": {
+        "16": {
+          "clue": "The Systems Analyst does not work for 6 hours a week."
+        },
+        "17": {
+          "clue": "The Systems Analyst does not work for 8 hours a week."
+        },
+        "18": {
+          "clue": "The Systems Analyst is Leon."
+        },
+        "19": {
+          "clue": "6 hours a week of work is not required of the Network Architect."
+        },
+        "20": {
+          "clue": "6 hours a week of work is required of the Database administrator."
+        }
+      },
+      "5": {
+        "21": {
+          "clue": "6 hours a week of work is required of Tina."
+        },
+        "22": {
+          "clue": "8 hours a week of work is required of Alex."
+        },
+        "23": {
+          "clue": "8 hours a week of work is required of the Network Architect."
+        },
+        "24": {
+          "clue": "10 hours a week of work is required of Leon."
+        },
+        "25": {
+          "clue": "10 hours a week of work is required of the Systems Analyst."
+        }
+      },
+      "6": {
+        "26": {
+          "clue": "12 hours a week of work is required of the Network Architect."
+        },
+        "27": {
+          "clue": "12 hours a week of work is required of Tina."
+        }
+      }
     },
     "Submit": {
       "1": "Okay, now that you've seen all the information I have, it's time to submit your final decisions!",
@@ -127,46 +414,143 @@
       "1": "Thanks, [Name]! I appreciate all your hard work.",
       "2": "Great job! You've completed the task. ",
       "3": "It's been a pleasure working with you. ",
-      "4": "Please click 'Next' below to proceed to answer a brief set of questions."
+      "4": "Please click 'Next' below to proceed to answer a brief set of questions.",
+      "5": "You will be redirected to Qualtrics shortly."
     }
   },
   "LHH": {
     "Introduction": {
       "1": "Hello! My name is Rocky.",
-      "2": "What is you name?",
+      "2": "What would you like to be called?",
       "3": "It's nice to meet you,",
-      "4": "I'm here to help by providing the information that you need to make the right decision."
+      "4": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and locations based on a set of information. Your job is to assign the correct people to correct roles and locations based on the constraints"
     },
     "Tutorial": {
-      "1": "First things first. Let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid.",
-      "2": "Imagine you are deciding which gift to give to four of your friends. Each gift should be special so no two people can receive the same gift. Also, you only have one of each item so each person cannot get more than one gift.",
-      "3": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
-      "4": "In this example, let's say James does not like videogames so you shouldn't get him any. Please eliminate this option by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
-      "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
-      "6": "You also know that Ali really enjoys skating so you should get him a skateboard. Please select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
-      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
-      "8": "You can go ahead and eliminate other options based on previous decisions. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Please place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
-      "9": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
-      "10": "As you can see, the information grid is used to note which combinations you have eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
-      "11": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
-      "12": "Let's move on and go over some useful tricks. We'll continue working on this example. I'll teach you how to use the grid to identify logical shortcuts and errors.",
-      "13": "Now let's say that Louise has told you that she really does not like material gifts. Based on the given information, you can make the following assumption: You should not give Louise a gift.",
-      "14": "Let's mark the grid to reflect this new information.",
-      "15": "You should not give Louise a gift: <br/> <img class='grid' src='../static/images/tutorial/img5.png' ></img>",
-      "16": "All required information is present to make final decisions. Since James does not get the videogame, it goes to Maya and James gets the necklace. Mark these options on the grid to complete it.",
-      "17": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img6.png'></img>",
-      "18": "Okay, [Name]! That concludes the basic training on how to use the grid. I think you're ready for the task."
+      "1": "I'm here to help by providing the information that you need to make the right decision.",
+      "2": "In order to help you understand how to complete the assignment,.let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid. ",
+      "3": "Imagine you are deciding which gift to give to four of your friends. Each gift should be special so no two people can receive the same gift. Also, you only have one of each item so each person cannot get more than one gift.",
+      "4": "The grid for this example is located in the panel to the side. It is an interactive grid. So, you can click on the grid as I show you what do in order to record your options.",
+      "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
+      "6": "In this example, let's say James does not like videogames so you shouldn't get him any. Please eliminate this option by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
+      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
+      "8": "Go ahead. Click on the interactive grid to try!",
+      "9": "You also know that Ali really enjoys skating so you should get him a skateboard. Please select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
+      "10": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
+      "11": "Go ahead and eliminate other options based on previous decisions on the interactive grid. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Please place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
+      "12": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
+      "13": "As you can see, the information grid is used to note which combinations you have eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
+      "14": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
+      "15": "Let's move on and go over some useful tricks. We'll continue working on this example. I'll teach you how to use the grid to identify logical shortcuts and errors. <br/> Now let's say that Louise has told you that she really does not like material gifts. Based on the given information, you can make the following assumption: You should not give Louise a gift.",
+      "16": "Let's mark the grid to reflect this new information.",
+      "17": "You should not give Louise a gift: <br /><img class='grid' src='/static/images/tutorial/img5.png'></img>",
+      "18": "All required information is present to make final decisions. Since James does not get the videogame, it goes to Maya and James gets the necklace. Mark these options on the grid to complete it. ",
+      "19": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img6.png'></img>",
+      "20": "Okay, [Name]! That concludes the tutorial. I think you're ready for the task."
     },
     "Task Reminder": {
       "1": "Let's get started!",
-      "2": "Reminder: The purpose of the task is to assign each person a project role and amount of weekly project hours."
+      "2": "And remember, your goal is to assign each candidate a project role and amount of weekly project hours."
     },
     "Clue_Ins": {
       "1": "Consider the following 5 major pieces of information."
     },
     "Redundant_Ins": {
-      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
-      "2": "Additional, but redundant information will be provided below. This information has already been described above, but will be stated in different wording."
+      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments."
+    },
+    "Redundant": {
+      "1": {
+        "1": {
+          "clue": "Alex does not work for 6 hours a week."
+        },
+        "2": {
+          "clue": "Alex should be assigned as the Network Architect."
+        },
+        "3": {
+          "clue": "Leon does not work for 6 hours a week."
+        },
+        "4": {
+          "clue": "Leon does not work for 8 hours a week."
+        },
+        "5": {
+          "clue": "Rachel does not work for 12 hours a week."
+        }
+      },
+      "2": {
+        "6": {
+          "clue": "Rachel should be assigned as the Database Administrator."
+        },
+        "7": {
+          "clue": "Rachel should not be assigned as the Systems Analyst."
+        },
+        "8": {
+          "clue": "Tina is the Cybersecurity Specialist."
+        },
+        "9": {
+          "clue": "Tina should not be assigned as the Database Administrator."
+        },
+        "10": {
+          "clue": "The Cybersecurity Specialist works for 12 hours a week."
+        }
+      },
+      "3": {
+        "11": {
+          "clue": "The Database Administrator does not work for 10 hours a week."
+        },
+        "12": {
+          "clue": "The Database Administrator does not work for 12 hours a week."
+        },
+        "13": {
+          "clue": "The Network Architect does not work for 10 hours a week."
+        },
+        "14": {
+          "clue": "The Network Architect is not Leon."
+        },
+        "15": {
+          "clue": "The Network Architect is not Rachel."
+        }
+      },
+      "4": {
+        "16": {
+          "clue": "The Systems Analyst does not work for 6 hours a week."
+        },
+        "17": {
+          "clue": "The Systems Analyst does not work for 8 hours a week."
+        },
+        "18": {
+          "clue": "The Systems Analyst is Leon."
+        },
+        "19": {
+          "clue": "6 hours a week of work is not required of the Network Architect."
+        },
+        "20": {
+          "clue": "6 hours a week of work is required of the Database administrator."
+        }
+      },
+      "5": {
+        "21": {
+          "clue": "6 hours a week of work is required of Tina."
+        },
+        "22": {
+          "clue": "8 hours a week of work is required of Alex."
+        },
+        "23": {
+          "clue": "8 hours a week of work is required of the Network Architect."
+        },
+        "24": {
+          "clue": "10 hours a week of work is required of Leon."
+        },
+        "25": {
+          "clue": "10 hours a week of work is required of the Systems Analyst."
+        }
+      },
+      "6": {
+        "26": {
+          "clue": "12 hours a week of work is required of the Network Architect."
+        },
+        "27": {
+          "clue": "12 hours a week of work is required of Tina."
+        }
+      }
     },
     "Submit": {
       "1": "Okay, now that you've seen all the information I have, it's time to submit your final decisions!",
@@ -177,26 +561,28 @@
       "1": "Thanks, [Name]! I appreciate all your hard work.",
       "2": "Great job! You've completed the task. ",
       "3": "It's been a pleasure working with you. ",
-      "4": "Please click 'Next' below to proceed to answer a brief set of questions."
+      "4": "Please click 'Next' below to proceed to answer a brief set of questions.",
+      "5": "You will be redirected to Qualtrics shortly."
     }
   },
   "HLL": {
     "Introduction": {
       "1": "Status: Information bot is online.",
-      "2": "The information bot will query the database to provide relevant information."
+      "2": "The information bot will query the database to provide relevant information.",
+      "3": "This is a project management simulation. The role of the user as project manager is to assign  employees to the appropriate projects and locations based on a set of information. The interactive logic grid on the left can be used to understand how to use the information to make a decision."
     },
     "Tutorial": {
       "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
-      "2": "Example Scenario: 4 people will each be given a gift. No two people can receive the same gift and one person cannot get more than one gift",
-      "3": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
-      "4": "In this example, James will not get the videogame. This option will be eliminated by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
-      "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
-      "6": "In this example, Ali will receive the skateboard. Select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
-      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
+      "2": "Example Scenario: Four people will each be given a gift. No two people can receive the same gift and one person cannot get more than one gift",
+      "3": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
+      "4": "In this example, James does not like videogames. This option will be eliminated by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
+      "5": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
+      "6": "In this example, Ali will receive the skateboard. User will select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
+      "7": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
       "8": "Other combinations will need to be eliminated based on previous decisions. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
-      "9": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
+      "9": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
       "10": "Thus, the information grid is used to note which combinations have been eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
-      "11": "Note: The grid should only be marked if it is certain that an option should be eliminated or selected. To remove a marking, click on the selected box a third time.",
+      "11": "The grid should only be marked if it is certain that an option should be eliminated or selected. To remove a marking, click on the selected box a third time.",
       "12": "Status: Tutorial completed."
     },
     "Task Reminder": {
@@ -211,42 +597,44 @@
     },
     "Redundant_Ins": {
       "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
-      "2": "Note: The available information is redundant because it has already been provided by the 5 clues above. However, the information will be worded differently to address only the specific information that has been requested.",
+      "2": "Additional information may now be requested for specific people, roles or number of hours.",
       "3": "Is additional information requested?",
       "4": "Reminder: Final decisions may be made at any time by entering assignments in the table and clicking 'Submit Answer'"
     },
     "Submit": {
-      "1": "Status: All available information has been provided. Final decisions may be submitted.",
+      "1": "Status: All available information has been provided.",
       "2": "Select the team assignments for each project member using the table:",
       "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments. This will conclude the task."
     },
     "Conclusion": {
       "1": "Project assignments have been recorded.",
-      "2": "You will be redirected to Qualtrics shortly"
+      "2": "Status: Task completed.",
+      "3": "You will be redirected to Qualtrics shortly"
     }
   },
   "HLH": {
     "Introduction": {
       "1": "Status: Information bot is online.",
-      "2": "The information bot will query the database to provide relevant information."
+      "2": "The information bot will query the database to provide relevant information.",
+      "3": "This is a project management simulation. The role of the user as project manager is to assign  employees to the appropriate projects and locations based on a set of information. The interactive logic grid on the left can be used to understand how to use the information to make a decision."
     },
     "Tutorial": {
       "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
-      "2": "Example Scenario 1: 4 people will each be given a gift. No two people can receive the same gift and one person cannot get more than one gift",
+      "2": "Example Scenario: Four people will each be given a gift. No two people can receive the same gift and one person cannot get more than one gift",
       "3": "The grid for this example is provided in the panel to the right. Markings should be placed on the grid as instructed throughout the tutorial.",
-      "4": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
+      "4": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
       "5": "In this example, James will not get the videogame. This option will be eliminated by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
-      "6": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
-      "7": "In this example, Ali will receive the skateboard. Select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
-      "8": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
+      "6": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
+      "7": "In this example, Ali will receive the skateboard. User to select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
+      "8": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
       "9": "Other combinations will need to be eliminated based on previous decisions. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
-      "10": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
+      "10": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
       "11": "Tutorial 2 will now begin.  The previous example will be continued. Instructions on how to use the grid to identify logical shortcuts and errors will be provided.",
-      "12": "Consider the following piece of information: Louise does not like gifts. Based on the given information, the following assumption can be made: Louise does not receive any gifts.",
-      "13": "Mark the grid to reflect the new information. ",
-      "14": "Louise does not receive any gifts: <br/> <img class='grid' src='../static/images/tutorial/img5.png' ></img>",
-      "15": "All required information is present to make final decisions. Since James does not get the videogame, it goes to Maya and James gets the necklace. Mark these options on the grid to complete it.",
-      "16": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img6.png'></img>",
+      "12": "If Louise does not like gifts. The following assumption is logical: Louise does not receive any gifts.",
+      "13": "User to mark the grid to reflect the new information. ",
+      "14": "Louise does not receive any gifts. The grid is to look like this: <br/> <img class='grid' src='../static/images/tutorial/img5.png' ></img>",
+      "15": "All required information is present to make final decisions. Since James does not get the videogame, it goes to Maya and James gets the necklace. User to mark these options on the grid to complete it.",
+      "16": "The grid is to look like this: <br /><img class='grid' src='/static/images/tutorial/img6.png'></img>",
       "17": "Status: Tutorial 2 completed."
     },
     "Task Reminder": {
@@ -261,40 +649,44 @@
     },
     "Redundant_Ins": {
       "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
-      "2": "Note: The available information is redundant because it has already been provided by the 5 clues above. However, the information will be worded differently to address only the specific information that has been requested.",
+      "2": "Additional information may now be requested for specific people, roles, or number of hours.",
       "3": "Is additional information requested?",
       "4": "Reminder: Final decisions may be made at any time by entering assignments in the table and clicking 'Submit Answer'"
     },
     "Submit": {
-      "1": "Status: All available information has been provided. Final decisions may be submitted.",
+      "1": "Status: All available information has been provided.",
       "2": "Select the team assignments for each project member using the table:",
       "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments. This will conclude the task"
     },
     "Conclusion": {
       "1": "Project assignments have been recorded.",
-      "2": "You will be redirected to Qualtrics shortly."
+      "2": "Status completed.",
+      "3": "You will be redirected to Qualtrics shortly."
     }
   },
   "HHL": {
     "Introduction": {
       "1": "Hello! My name is Rocky.",
-      "2": "What is you name?",
+      "2": "What would you like to be called?",
       "3": "It's nice to meet you,",
-      "4": "I'm here to help by providing the information that you need to make the right decision."
+      "4": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and locations based on a set of information. Your job is to assign the correct people to correct roles and locations based on the constraints."
     },
     "Tutorial": {
-      "1": "First things first. Let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid.",
-      "2": "Imagine you are deciding which gift to give to four of your friends. Each gift should be special so no two people can receive the same gift. Also, you only have one of each item so each person cannot get more than one gift.",
-      "3": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
-      "4": "In this example, let's say James does not like videogames so you shouldn't get him any. Please eliminate this option by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
-      "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
-      "6": "You also know that Ali really enjoys skating so you should get him a skateboard. Please select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
-      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
-      "8": "You can go ahead and eliminate other options based on previous decisions. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Please place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
-      "9": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
-      "10": "As you can see, the information grid is used to note which combinations you have eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
-      "11": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
-      "12": "Okay, [Name]! That concludes the basic training on how to use the grid. I think you're ready for the task."
+      "1": "I'm here to help by providing the information that you need to make the right decision.",
+      "2": "In order to help you understand how to complete the assignment,.let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid. ",
+      "3": "Imagine you are deciding which gift to give to four of your friends. Each gift should be special so no two people can receive the same gift. Also, you only have one of each item so each person cannot get more than one gift.",
+      "4": "The grid for this example is located in the panel to the side. It is an interactive grid. So, you can click on the grid as I show you what do in order to record your options.",
+      "5": "The empty grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
+      "6": "In this example, let's say James does not like videogames so you shouldn't get him any. Please eliminate this option by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
+      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
+      "8": "Go ahead. Click on the interactive grid to try!",
+      "9": "You also know that Ali really enjoys skating so you should get him a skateboard. Please select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
+      "10": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
+      "11": "Go ahead and eliminate other options based on previous decisions on the interactive grid. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Please place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
+      "12": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
+      "13": "As you can see, the information grid is used to note which combinations you have eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
+      "14": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
+      "15": "Okay, [Name]! That concludes the basic training on how to use the grid. I think you're ready for the task."
     },
     "Task Reminder": {
       "1": "Let's get started!",
@@ -308,7 +700,7 @@
     },
     "Redundant_Ins": {
       "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
-      "2": "Note: The available information is redundant because it has already been provided by the 5 clues above. However, the information will be worded differently to address only the specific information that has been requested.",
+      "2": "You can now request additional information for specific people, roles, or number of hours.",
       "3": "Would you like to request more information?",
       "4": "Okay, sounds good. If you change your mind and wamy to make your final decisions, you can do so at any time by selecting your chosen assignments in the table and then clicking 'Submit Answer'"
     },
@@ -321,39 +713,43 @@
       "1": "Thanks, [Name]! I appreciate all your hard work.",
       "2": "Great job! You've completed the task. ",
       "3": "It's been a pleasure working with you. ",
-      "4": "Please click 'Next' below to proceed to answer a brief set of questions."
+      "4": "Please click 'Next' below to proceed to answer a brief set of questions.",
+      "5": "You will be redirected to Qualtrics shortly."
     }
   },
   "HHH": {
     "Introduction": {
       "1": "Hello! My name is Rocky.",
-      "2": "What is you name?",
+      "2": "What would you like to be called?",
       "3": "It's nice to meet you,",
-      "4": "I'm here to help by providing the information that you need to make the right decision."
+      "4": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and locations based on a set of information. Your job is to assign the correct people to correct roles and locations based on the constraints."
     },
     "Tutorial": {
-      "1": "First things first. Let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid.",
-      "2": "Imagine you are deciding which gift to give to four of your friends. Each gift should be special so no two people can receive the same gift. Also, you only have one of each item so each person cannot get more than one gift.",
-      "3": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
-      "4": "In this example, let's say James does not like videogames so you shouldn't get him any. Please eliminate this option by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
-      "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
-      "6": "You also know that Ali really enjoys skating so you should get him a skateboard. Please select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
-      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
-      "8": "You can go ahead and eliminate other options based on previous decisions. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Please place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
-      "9": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
-      "10": "As you can see, the information grid is used to note which combinations you have eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
-      "11": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
-      "12": "Let's move on and go over some useful tricks. We'll continue working on this example. I'll teach you how to use the grid to identify logical shortcuts and errors.",
-      "13": "Now let's say that Louise has told you that she really does not like material gifts. Based on the given information, you can make the following assumption: You should not give Louise a gift.",
-      "14": "Let's mark the grid to reflect this new information.",
-      "15": "You should not give Louise a gift: <br/> <img class='grid' src='../static/images/tutorial/img5.png' ></img>",
-      "16": "All required information is present to make final decisions. Since James does not get the videogame, it goes to Maya and James gets the necklace. Mark these options on the grid to complete it.",
-      "17": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img6.png'></img>",
-      "18": "Okay, [Name]! That concludes the basic training on how to use the grid. I think you're ready for the task."
+      "1": "I'm here to help by providing the information that you need to make the right decision.",
+      "2": "In order to help you understand how to complete the assignment,.let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid. ",
+      "3": "Imagine you are deciding which gift to give to four of your friends. Each gift should be special so no two people can receive the same gift. Also, you only have one of each item so each person cannot get more than one gift.",
+      "4": "The grid for this example is located in the panel to the side. It is an interactive grid. So, you can click on the grid as I show you what do in order to record your options.",
+      "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
+      "6": "In this example, let's say James does not like videogames so you shouldn't get him any. Please eliminate this option by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
+      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
+      "8": "Go ahead. Click on the interactive grid to try!",
+      "9": "You also know that Ali really enjoys skating so you should get him a skateboard. Please select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
+      "10": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
+      "11": "Go ahead and eliminate other options based on previous decisions on the interactive grid. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Please place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
+      "12": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
+      "13": "As you can see, the information grid is used to note which combinations you have eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
+      "14": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
+      "15": "Let's move on and go over some useful tricks. We'll continue working on this example. I'll teach you how to use the grid to identify logical shortcuts and errors. You can continue working on the interactive grid to gain mastery over the grid.",
+      "16": "Now let's say that Louise has told you that she really does not like material gifts. Based on the given information, you can make the following assumption: You should not give Louise a gift.",
+      "17": "Let's mark the grid to reflect this new information.",
+      "18": "You should not give Louise a gift: <br /><img class='grid' src='/static/images/tutorial/img5.png'></img>",
+      "19": "All required information is present to make final decisions. Since James does not get the videogame, it goes to Maya and James gets the necklace. Mark these options on the grid to complete it. ",
+      "20": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img6.png'></img>",
+      "21": "Okay, [Name]! That concludes the tutorial. I think you're ready for the task."
     },
     "Task Reminder": {
       "1": "Let's get started!",
-      "2": "Reminder: The purpose of the task is to assign each person a project role and amount of weekly project hours."
+      "2": "And remember, your goal is to assign each candidate a project role and amount of weekly project hours."
     },
     "Clue_Ins": {
       "1": "Here are 5 major pieces of information that you might want to consider."
@@ -363,20 +759,21 @@
     },
     "Redundant_Ins": {
       "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
-      "2": "Note: The available information is redundant because it has already been provided by the 5 clues above. However, the information will be worded differently to address only the specific information that has been requested.",
+      "2": "You can now request additional information for specific people, roles, or number of hours.",
       "3": "Would you like to request more information?",
       "4": "Okay, sounds good. If you change your mind and wamy to make your final decisions, you can do so at any time by selecting your chosen assignments in the table and then clicking 'Submit Answer'"
     },
     "Submit": {
       "1": "Okay, now that you've seen all the information I have, it's time to submit your final decisions!",
       "2": "Please show me the team assignments for each person using the table:",
-      "3": "When you're happy with the final decisions, please click the 'Submit' button to  enter the team assignments. This will conclude the task."
+      "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments. This will conclude the task."
     },
     "Conclusion": {
       "1": "Thanks, [Name]! I appreciate all your hard work.",
       "2": "Great job! You've completed the task. ",
       "3": "It's been a pleasure working with you. ",
-      "4": "Please click 'Next' below to proceed to answer a brief set of questions."
+      "4": "Please click 'Next' below to proceed to answer a brief set of questions.",
+      "5": "You will be redirected to Qualtrics shortly."
     }
   }
 }

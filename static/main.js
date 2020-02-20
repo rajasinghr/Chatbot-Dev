@@ -17,6 +17,7 @@ $(document).ready(function () {
         window.location.replace(window.location.origin)
     }
     else {
+        $("#bgStorySetupModal").modal()
         initialDataSetup();
     }
     
@@ -933,7 +934,7 @@ $(document).ready(function () {
             if (isRepeat) {
                 //addMessage('bot', $('#condition').val(), 'Indicate if additional information is requested.')
                 if ($('#condition').val()[1] == 'H') {
-                    addMessage('bot', $('#condition').val(), 'Do you want more information?')
+                    addMessage('bot', $('#condition').val(), 'Would you like to request information about something else?')
                 }
                 else {
                     addMessage('bot', $('#condition').val(), 'Is more information required ?')
@@ -999,6 +1000,17 @@ $(document).ready(function () {
                 addThinking('bot', response["condition"])
                 //$("#nextButton").attr("disabled", true);
                 setTimeout(function () {
+                    if (response['condition'][1] == 'H') {
+                        if (response['topic'] == 'Tutorial' && response['index'] == '2') {
+                            $('#clickableGrid').show()
+                            $('#demoTable').show()
+                        }
+                    }
+                    if (response['topic'] == 'Task Reminder' && response['index'] == '1') {
+                        $('#clickableGrid').show()
+                        $('#demoTable').hide()
+                        $('#mainTable').show()
+                    }
                     if (response['condition'][0] == 'L') {
                         fillLowConditionContent(response, istriggerEnterKeyEventActive, isTaskCompleted);
                     }
@@ -1026,7 +1038,7 @@ $(document).ready(function () {
             var explanations = []
             for (var key in response_dict) {
                 
-                message += '<b>Clue ' + key.toString() + '</b><br>' + response_dict[key]['clue'] + '<br/>';
+                message += '<b>' + key.toString() + '. </b>' + response_dict[key]['clue'];
                 //if (response['condition'][2] == 'H') {
                 //    message += '<b>Explanation: </b>' + response_dict[key]['explanation'] + '<br/>';
                 //}
@@ -1049,8 +1061,8 @@ $(document).ready(function () {
             }
 
             message = '';
-            for (var i = 0; i < 5; i++) {
-                message += '<b>Hint ' + (i + 1).toString() + '</b><br>' + clues[i] + '<br/>';
+            for (var clue in clues) {
+                message += '<span style="font - weight: 900;">&bull; </span>' + clues[clue];
                 //if (response['condition'][2] == 'H') {
                 //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
                 //}
@@ -1058,56 +1070,56 @@ $(document).ready(function () {
             }
             addMessage('bot', response["condition"], message);
 
-            message = '';
-            for (var i = 5; i < 10; i++) {
-                message += '<b>Hint ' + (i + 1).toString() + '</b><br>' + clues[i] + '<br/>';
-                //if (response['condition'][2] == 'H') {
-                //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
-                //}
-                message += '<br/>'
-            }
-            addMessage('bot', response["condition"], message);
+            //message = '';
+            //for (var i = 5; i < 10; i++) {
+            //    message += '<span style="font - weight: 900;">&bull; </span>' + clues[i];
+            //    //if (response['condition'][2] == 'H') {
+            //    //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
+            //    //}
+            //    message += '<br/>'
+            //}
+            //addMessage('bot', response["condition"], message);
 
-            message = '';
-            for (var i = 10; i < 15; i++) {
-                message += '<b>Hint ' + (i + 1).toString() + '</b><br>' + clues[i] + '<br/>';
-                //if (response['condition'][2] == 'H') {
-                //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
-                //}
-                message += '<br/>'
-            }
-            addMessage('bot', response["condition"], message);
+            //message = '';
+            //for (var i = 10; i < 15; i++) {
+            //    message += '<span style="font - weight: 900;">&bull; </span>' + clues[i];
+            //    //if (response['condition'][2] == 'H') {
+            //    //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
+            //    //}
+            //    message += '<br/>'
+            //}
+            //addMessage('bot', response["condition"], message);
 
-            message = '';
-            for (var i = 15; i < 20; i++) {
-                message += '<b>Hint ' + (i + 1).toString() + '</b><br>' + clues[i] + '<br/>';
-                //if (response['condition'][2] == 'H') {
-                //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
-                //}
-                message += '<br/>'
-            }
-            addMessage('bot', response["condition"], message);
+            //message = '';
+            //for (var i = 15; i < 20; i++) {
+            //    message += '<span style="font - weight: 900;">&bull; </span>' + clues[i];
+            //    //if (response['condition'][2] == 'H') {
+            //    //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
+            //    //}
+            //    message += '<br/>'
+            //}
+            //addMessage('bot', response["condition"], message);
 
 
-            message = '';
-            for (var i = 20; i < 25; i++) {
-                message += '<b>Hint ' + (i + 1).toString() + '</b><br>' + clues[i] + '<br/>';
-                //if (response['condition'][2] == 'H') {
-                //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
-                //}
-                message += '<br/>'
-            }
-            addMessage('bot', response["condition"], message);
+            //message = '';
+            //for (var i = 20; i < 25; i++) {
+            //    message += '<span style="font - weight: 900;">&bull; </span>' + clues[i];
+            //    //if (response['condition'][2] == 'H') {
+            //    //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
+            //    //}
+            //    message += '<br/>'
+            //}
+            //addMessage('bot', response["condition"], message);
 
-            message = '';
-            for (var i = 25; i < 27; i++) {
-                message += '<b>Hint ' + (i + 1).toString() + '</b><br>' + clues[i] + '<br/>';
-                //if (response['condition'][2] == 'H') {
-                //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
-                //}
-                message += '<br/>'
-            }
-            addMessage('bot', response["condition"], message);
+            //message = '';
+            //for (var i = 25; i < 27; i++) {
+            //    message += '<span style="font - weight: 900;">&bull; </span>' + clues[i];
+            //    //if (response['condition'][2] == 'H') {
+            //    //    message += '<b>Explanation: </b>' + explanations[i] + '<br/>';
+            //    //}
+            //    message += '<br/>'
+            //}
+            //addMessage('bot', response["condition"], message);
 
             message = '';
         }
@@ -1148,8 +1160,8 @@ $(document).ready(function () {
 
         }
 
-        if ((response['topic'] == 'Conclusion' && response['index'] == "4" && response['condition'][1] == 'H')
-            || (response['topic'] == 'Conclusion' && response['index'] == "2" && response['condition'][1] == 'L')) {
+        if ((response['topic'] == 'Conclusion' && response['index'] == "5" && response['condition'][1] == 'H')
+            || (response['topic'] == 'Conclusion' && response['index'] == "3" && response['condition'][1] == 'L')) {
             $("#submitButton").hide();
             $("#nextButton").hide();
             $("#nextButton").attr("disabled", true);
@@ -1174,8 +1186,8 @@ $(document).ready(function () {
             $("#userMessage").hide();
             $('#userInputType').val("");
         }
-        else if (($('#condition').val() == 'LHL') && response["topic"] == 'Tutorial' && response["index"] == "12"
-            || ($('#condition').val() == 'LHH') && response["topic"] == 'Tutorial' && response["index"] == "18"
+        else if (($('#condition').val() == 'LHL') && response["topic"] == 'Tutorial' && response["index"] == "15"
+            || ($('#condition').val() == 'LHH') && response["topic"] == 'Tutorial' && response["index"] == "20"
             || ($('#condition').val() == 'LHL') && response["topic"] == 'Conclusion' && response["index"] == "1"
             || ($('#condition').val() == 'LHH') && response["topic"] == 'Conclusion' && response["index"] == "1") {
             var msgs = message.split("[Name]");
@@ -1236,7 +1248,7 @@ $(document).ready(function () {
             response_dict = response["botResponse"][0]
             for (var key in response_dict) {
 
-                message += '<b>Clue ' + key.toString() + '</b><br>' + response_dict[key]['clue'] + '<br/>';
+                message += '<b>' + key.toString() + '. </b>' + response_dict[key]['clue'];
                 message += '<br/>'
             }
             //addMessage('bot', response["condition"], message);
@@ -1299,8 +1311,8 @@ $(document).ready(function () {
 
         }
 
-        if ((response['topic'] == 'Conclusion' && response['index'] == "4" && response['condition'][1] == 'H')
-            || (response['topic'] == 'Conclusion' && response['index'] == "2" && response['condition'][1] == 'L')) {
+        if ((response['topic'] == 'Conclusion' && response['index'] == "5" && response['condition'][1] == 'H')
+            || (response['topic'] == 'Conclusion' && response['index'] == "3" && response['condition'][1] == 'L')) {
             $("#submitButton").hide();
             $("#nextButton").hide();
             $("#nextButton").attr("disabled", true);
@@ -1325,8 +1337,8 @@ $(document).ready(function () {
             $("#userMessage").hide();
             $('#userInputType').val("");
         }
-        else if (($('#condition').val() == 'HHL') && response["topic"] == 'Tutorial' && response["index"] == "12"
-            || ($('#condition').val() == 'HHH') && response["topic"] == 'Tutorial' && response["index"] == "18"
+        else if (($('#condition').val() == 'HHL') && response["topic"] == 'Tutorial' && response["index"] == "15"
+            || ($('#condition').val() == 'HHH') && response["topic"] == 'Tutorial' && response["index"] == "21"
             || ($('#condition').val() == 'HHL') && response["topic"] == 'Conclusion' && response["index"] == "1"
             || ($('#condition').val() == 'HHH') && response["topic"] == 'Conclusion' && response["index"] == "1") {
             var msgs = message.split("[Name]");
@@ -1691,19 +1703,19 @@ $(document).ready(function () {
         }
         else if (type == 'bot') {
             if (condition[1] == 'H') {
-                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/pic1.jpg' alt='Avatar' style='width:100%;border-radius: 70%;'></div><div class='bot_msg_main_div'><div class='bot_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
+                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/pic1.jpg' alt='Avatar' style='width:100%;border-radius: 70%;'></div><div class='bot_msg_main_div'><div class='bot_msg_inner_div'><p style='word-wrap: break-word;background: #f0ecda'>" + message + "</p></div></div></div>"
             }
             else {
-                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/bot3.jpg' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='bot_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
+                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/bot3.jpg' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='bot_msg_inner_div'><p style='word-wrap: break-word;background: #f0ecda'>" + message + "</p></div></div></div>"
             }
             
         }
         else {
             if (condition[1] == 'H') {
-                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/pic1.jpg' alt='Avatar' style='width:100%;border-radius: 70%;'></div><div class='bot_msg_main_div'><div class='submit_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
+                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/pic1.jpg' alt='Avatar' style='width:100%;border-radius: 70%;'></div><div class='bot_msg_main_div'><div class='submit_msg_inner_div'><p style='word-wrap: break-word;background: #f0ecda'>" + message + "</p></div></div></div>"
             }
             else {
-                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/bot3.jpg' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='submit_msg_inner_div'><p style='word-wrap: break-word'>" + message + "</p></div></div></div>"
+                html = "<div class='bot_msg_div'><div class='bot_msg_img'><img src='../static/images/bot3.jpg' alt='Avatar' style='width:100%;'></div><div class='bot_msg_main_div'><div class='submit_msg_inner_div'><p style='word-wrap: break-word;background: #f0ecda'>" + message + "</p></div></div></div>"
             }
         }
         $('#chatDiv').append(html)
