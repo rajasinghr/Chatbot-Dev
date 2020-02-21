@@ -1000,7 +1000,7 @@ $(document).ready(function () {
                 addThinking('bot', response["condition"])
                 //$("#nextButton").attr("disabled", true);
                 setTimeout(function () {
-                    if (response['condition'][1] == 'H') {
+                    if (response['condition'][2] == 'H') {
                         if (response['topic'] == 'Tutorial' && response['index'] == '2') {
                             $('#clickableGrid').show()
                             $('#demoTable').show()
@@ -1186,8 +1186,8 @@ $(document).ready(function () {
             $("#userMessage").hide();
             $('#userInputType').val("");
         }
-        else if (($('#condition').val() == 'LHL') && response["topic"] == 'Tutorial' && response["index"] == "15"
-            || ($('#condition').val() == 'LHH') && response["topic"] == 'Tutorial' && response["index"] == "20"
+        else if (($('#condition').val() == 'LHL') && response["topic"] == 'Tutorial' && response["index"] == "13"
+            || ($('#condition').val() == 'LHH') && response["topic"] == 'Tutorial' && response["index"] == "21"
             || ($('#condition').val() == 'LHL') && response["topic"] == 'Conclusion' && response["index"] == "1"
             || ($('#condition').val() == 'LHH') && response["topic"] == 'Conclusion' && response["index"] == "1") {
             var msgs = message.split("[Name]");
@@ -1337,7 +1337,7 @@ $(document).ready(function () {
             $("#userMessage").hide();
             $('#userInputType').val("");
         }
-        else if (($('#condition').val() == 'HHL') && response["topic"] == 'Tutorial' && response["index"] == "15"
+        else if (($('#condition').val() == 'HHL') && response["topic"] == 'Tutorial' && response["index"] == "13"
             || ($('#condition').val() == 'HHH') && response["topic"] == 'Tutorial' && response["index"] == "21"
             || ($('#condition').val() == 'HHL') && response["topic"] == 'Conclusion' && response["index"] == "1"
             || ($('#condition').val() == 'HHH') && response["topic"] == 'Conclusion' && response["index"] == "1") {
