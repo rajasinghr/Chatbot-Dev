@@ -287,18 +287,16 @@
       "1": "I'm here to help by providing the information that you need to make the right decision.",
       "2": "In order to help you understand how to complete the assignment,.let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid. ",
       "3": "Imagine you are deciding which gift to give to four of your friends. Each gift should be special so no two people can receive the same gift. Also, you only have one of each item so each person cannot get more than one gift.",
-      "4": "The grid for this example is located in the panel to the side. It is an interactive grid. So, you can click on the grid as I show you what do in order to record your options.",
-      "5": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
-      "6": "In this example, let's say James does not like videogames so you shouldn't get him any. Please eliminate this option by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
-      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
-      "8": "Go ahead. Click on the interactive grid to try!",
-      "9": "You also know that Ali really enjoys skating so you should get him a skateboard. Please select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
-      "10": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
-      "11": "Go ahead and eliminate other options based on previous decisions on the interactive grid. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Please place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
-      "12": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
-      "13": "As you can see, the information grid is used to note which combinations you have eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
-      "14": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
-      "15": "Okay, [Name]! That concludes the basic training on how to use the grid. I think you're ready for the task."
+      "4": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
+      "5": "In this example, let's say James does not like videogames so you shouldn't get him any. Please eliminate this option by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
+      "6": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
+      "7": "You also know that Ali really enjoys skating so you should get him a skateboard. Please select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
+      "8": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
+      "9": "You can go ahead and eliminate other options based on previous decisions. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Please place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
+      "10": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
+      "11": "As you can see, the information grid is used to note which combinations you have eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
+      "12": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
+      "13": "Okay, [Name]! That concludes the basic training on how to use the grid. I think you're ready for the task."
     },
     "Task Reminder": {
       "1": "Let's get started!",
@@ -675,18 +673,16 @@
       "1": "I'm here to help by providing the information that you need to make the right decision.",
       "2": "In order to help you understand how to complete the assignment,.let's go over how to use the information grid. I'll use a running example to teach you how to use the information grid. ",
       "3": "Imagine you are deciding which gift to give to four of your friends. Each gift should be special so no two people can receive the same gift. Also, you only have one of each item so each person cannot get more than one gift.",
-      "4": "The grid for this example is located in the panel to the side. It is an interactive grid. So, you can click on the grid as I show you what do in order to record your options.",
-      "5": "The empty grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
-      "6": "In this example, let's say James does not like videogames so you shouldn't get him any. Please eliminate this option by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
-      "7": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
-      "8": "Go ahead. Click on the interactive grid to try!",
-      "9": "You also know that Ali really enjoys skating so you should get him a skateboard. Please select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
-      "10": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
-      "11": "Go ahead and eliminate other options based on previous decisions on the interactive grid. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Please place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
-      "12": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
-      "13": "As you can see, the information grid is used to note which combinations you have eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
-      "14": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
-      "15": "Okay, [Name]! That concludes the basic training on how to use the grid. I think you're ready for the task."
+      "4": "The empty grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img1.png'></img>",
+      "5": "In this example, let's say James does not like videogames so you shouldn't get him any. Please eliminate this option by marking it with an <span style='color:red;font-weight: bold;'>X</span> (click once on the corresponding box).",
+      "6": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img2.png'></img>",
+      "7": "You also know that Ali really enjoys skating so you should get him a skateboard. Please select this option by marking it with an <span style='color:darkgreen;font-weight: bold;'>O</span> (click twice on the corresponding box).",
+      "8": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img3.png'></img>",
+      "9": "You can go ahead and eliminate other options based on previous decisions. Since Ali will be given the skateboard (and no one else can have the same gift), the skateboard options should be eliminated for everyone else. Please place <span style='color:red;font-weight: bold;'>X</span>'s for the skateboard options for everyone else and for all the other gift options for Ali.",
+      "10": "The grid should look like this: <br /><img class='grid' src='/static/images/tutorial/img4.png'></img>",
+      "11": "As you can see, the information grid is used to note which combinations you have eliminated (<span style='color:red;font-weight: bold;'>X</span>) or selected (<span style='color:darkgreen;font-weight: bold;'>O</span>).",
+      "12": "And please be careful - only mark the grid if you're certain that an option should be eliminated or selected. If you want to remove a marking, click on the selected box a third time.",
+      "13": "Okay, [Name]! That concludes the basic training on how to use the grid. I think you're ready for the task."
     },
     "Task Reminder": {
       "1": "Let's get started!",
@@ -755,7 +751,7 @@
       "1": "Here are 5 major pieces of information that you might want to consider."
     },
     "Clue_End_Ins": {
-      "1": "Status: All 5 major clues have been provided."
+      "1": "All 5 major clues have been provided."
     },
     "Redundant_Ins": {
       "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
