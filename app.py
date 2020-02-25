@@ -156,9 +156,11 @@ class Chatbot:
             if timeTaken=='NaN':
                 timeTaken=0
             insertValues = (sessionId,conditionId,matrixDict,timeTaken,workGrid,usedHints)
+            print(insertValues)
             cursor.execute('''INSERT INTO MatrixResult (sessionId,conditionId,matrixDict,timetaken,workGrid,usedHints) VALUES (?,?,?,?,?,?)''',insertValues)
             conn.commit()
             conn.close()
+            print("success")
         except:
             print('error')
             conn.close()
