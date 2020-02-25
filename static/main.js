@@ -1768,7 +1768,7 @@ $(document).ready(function () {
                     'workGrid': $('#mainTable')[0].innerHTML,
                     'usedHints': sessionDictData
                 }
-                //console.log(ajaxData)
+                console.log(ajaxData)
                 $.ajax({
                     url: '/storeMatrixResult',
                     data: ajaxData,
