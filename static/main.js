@@ -1273,6 +1273,7 @@ $(document).ready(function () {
         }
         else if ((response['topic'] == 'Redundant_Ins' && response['index'] == '4') ) {
             sessionDictData = redundantDictData();
+            console.log(sessionDictData)
             message = response["botResponse"][0]
             triggerEnterKeyEvent = true
             $("#nextButton").attr("disabled", false);
@@ -1731,6 +1732,17 @@ $(document).ready(function () {
        
     }
 
+    //To check if dict is empty
+    function isEmptyObj(object) {
+        var result = true
+        for (var key in object) {
+            if (object.hasOwnProperty(key)) {
+                result = false;
+            }
+        }
+        return result
+    }
+
     function gridSubmit() {
         $('#submitButton').click(function () {
             var rows = document.querySelector('#matrixResult').getElementsByTagName('table')[0].getElementsByTagName('tbody')[0].getElementsByTagName('tr');
@@ -1760,15 +1772,23 @@ $(document).ready(function () {
                 var seconds = new Date().getTime() / 1000;
                 timeTaken = seconds - parseInt($('#clueStartTimestamp').val());
 
+                usedHints = ''
+                if(isEmptyObj(sessionDictData)) {
+                    usedHints = ''
+                }
+                else {
+                    usedHints = sessionDictData['All'].toString()
+                }
+
                 var ajaxData = {
                     'sessionId': $('#sessionId').val(),
                     'timeTaken': timeTaken,
                     'condition': $('#condition').val(),
                     'matrixDict': JSON.stringify(result),
                     'workGrid': $('#mainTable')[0].innerHTML,
-                    'usedHints': sessionDictData
+                    'usedHints': usedHints
                 }
-                console.log(ajaxData)
+                //console.log(ajaxData)
                 $.ajax({
                     url: '/storeMatrixResult',
                     data: ajaxData,
