@@ -1764,7 +1764,9 @@ $(document).ready(function () {
                     'sessionId': $('#sessionId').val(),
                     'timeTaken': timeTaken,
                     'condition': $('#condition').val(),
-                    'matrixDict': JSON.stringify(result)
+                    'matrixDict': JSON.stringify(result),
+                    'workGrid': $('#mainTable')[0].innerHTML,
+                    'usedHints': sessionDictData
                 }
                 //console.log(ajaxData)
                 $.ajax({

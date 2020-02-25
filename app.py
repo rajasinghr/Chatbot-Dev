@@ -132,7 +132,7 @@ class Chatbot:
             conn.commit()
             conn.close()
         except:
-            print(error)
+            print('error')
             conn.close()
         return sessionId
 
@@ -142,7 +142,7 @@ class Chatbot:
         return self.clueData['redundant'][clueId]
        
 
-    def insertMatrixResult(self,sessionId,conditionId,matrixDict,timeTaken):
+    def insertMatrixResult(self,sessionId,conditionId,matrixDict,timeTaken,workGrid,usedHints):
         #print("Transaction")
         server = 'mumachatserver.database.windows.net'
         database = 'mumachatdb'
@@ -155,9 +155,9 @@ class Chatbot:
         try:
             if timeTaken=='NaN':
                 timeTaken=0
-            insertValues = (sessionId,conditionId,matrixDict,timeTaken)
+            insertValues = (sessionId,conditionId,matrixDict,timeTaken,workGrid,usedHints)
             #print(insertValues)
-            cursor.execute('''INSERT INTO MatrixResult (sessionId,conditionId,matrixDict,timetaken) VALUES (?,?,?,?)''',insertValues)
+            cursor.execute('''INSERT INTO MatrixResult (sessionId,conditionId,matrixDict,timetaken,workGrid,usedHints) VALUES (?,?,?,?)''',insertValues)
             conn.commit()
             conn.close()
         except:
@@ -244,9 +244,9 @@ def getResponse():
         gridAction = request.args['gridAction']
         #print(gridAction)
 
-    if(topic == 'Clue'):
+    #if(topic in ['Clue','Redundant_Ins','Redundant','Submit']):
         #print("Insert Data")
-        sessionId = chatbot.insertTransaction(sessionId,chatbot.conditionData[condition],index,response,timeTaken,gridAction)
+        #sessionId = chatbot.insertTransaction(sessionId,chatbot.conditionData[condition],index,response,timeTaken,gridAction)
         #print(sessionId)
     topic,index,data = chatbot.getData(condition,topic,index)
     
@@ -259,6 +259,8 @@ def storeMatrixResult():
     sessionId = ''
     matrixDict = ''
     timeTaken = ''
+    usedHints = ''
+    workGrid = ''
     
     if 'sessionId' in request.args:
         sessionId = request.args['sessionId']
@@ -272,8 +274,14 @@ def storeMatrixResult():
     if 'matrixDict' in request.args:
         matrixDict = request.args['matrixDict']
         #print(matrixDict)
+    if 'workGrid' in request.args:
+        workGrid = request.args['workGrid']
+        #print(timeTaken)
+    if 'usedHints' in request.args:
+        usedHints = request.args['usedHints']
+        #print(matrixDict)
 
-    chatbot.insertMatrixResult(sessionId,chatbot.conditionData[condition],matrixDict,timeTaken)
+    chatbot.insertMatrixResult(sessionId,chatbot.conditionData[condition],matrixDict,timeTaken,workGrid,usedHints)
     #print("Store matrix:"+matrixDict)
     return jsonify({"result":"success"});
     
