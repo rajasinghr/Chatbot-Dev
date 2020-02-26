@@ -143,7 +143,7 @@ class Chatbot:
        
 
     def insertMatrixResult(self,sessionId,conditionId,matrixDict,timeTaken,workGrid,usedHints):
-        #print("Transaction")
+        print("Matrix Result")
         server = 'mumachatserver.database.windows.net'
         database = 'mumachatdb'
         username = 'mumaadmin'
@@ -265,25 +265,25 @@ def storeMatrixResult():
     
     if 'sessionId' in request.args:
         sessionId = request.args['sessionId']
-        #print(sessionId)
+        print(sessionId)
     if 'condition' in request.args:
         condition = request.args['condition']
-        #print(condition)
+        print(condition)
     if 'timeTaken' in request.args:
         timeTaken = request.args['timeTaken']
-        #print(timeTaken)
+        print(timeTaken)
     if 'matrixDict' in request.args:
         matrixDict = request.args['matrixDict']
-        #print(matrixDict)
+        print(matrixDict)
     if 'workGrid' in request.args:
         workGrid = request.args['workGrid']
-        #print(timeTaken)
+        print(workGrid)
     if 'usedHints' in request.args:
         usedHints = request.args['usedHints']
-        #print(matrixDict)
+        print(usedHints)
 
     chatbot.insertMatrixResult(sessionId,chatbot.conditionData[condition],matrixDict,timeTaken,workGrid,usedHints)
-    #print("Store matrix:"+matrixDict)
+    print("Store matrix:")
     return jsonify({"result":"success"});
     
 @app.route('/getRedundantClueById',methods=['GET'])

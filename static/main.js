@@ -1788,13 +1788,13 @@ $(document).ready(function () {
                     'workGrid': $('#mainTable')[0].innerHTML,
                     'usedHints': usedHints
                 }
-                //console.log(ajaxData)
+                console.log(ajaxData)
                 $.ajax({
                     url: '/storeMatrixResult',
                     data: ajaxData,
                     type: 'GET',
                     success: function (response) {
-                        //console.log(response)
+                        console.log(response)
                     }
                 });
                 ////console.log(result)
