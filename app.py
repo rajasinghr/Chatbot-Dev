@@ -315,12 +315,9 @@ def updateMatrixResult():
     sessionId = ''
     workGrid = ''
     
-    if 'sessionId' in request.args:
-        sessionId = request.args['sessionId']
-        print(sessionId)
-    if 'workGrid' in request.args:
-        workGrid = request.args['workGrid']
-        print(workGrid)
+    req_data = request.get_data
+    sessionId = request.form.get("sessionId")
+    workGrid = request.form.get("workGrid")
     
     chatbot.updateMatrixResult(sessionId,workGrid)
     print("Update matrix:")
