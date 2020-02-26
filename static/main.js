@@ -1800,7 +1800,7 @@ $(document).ready(function () {
 
                 var ajaxData = {
                     'sessionId': $('#sessionId').val(),
-                    'workGrid': $('#mainTable')[0].innerHTML,
+                    'workGrid': $('#mainTableBody')[0].innerHTML,
                 }
                 console.log(ajaxData)
                 $.ajax({
