@@ -1785,7 +1785,7 @@ $(document).ready(function () {
                     'timeTaken': timeTaken,
                     'condition': $('#condition').val(),
                     'matrixDict': JSON.stringify(result),
-                    'workGrid': $('#mainTable')[0].innerHTML,
+                    'workGrid': '',
                     'usedHints': usedHints
                 }
                 console.log(ajaxData)
@@ -1797,6 +1797,21 @@ $(document).ready(function () {
                         console.log(response)
                     }
                 });
+
+                var ajaxData = {
+                    'sessionId': $('#sessionId').val(),
+                    'workGrid': $('#mainTable')[0].innerHTML,
+                }
+                console.log(ajaxData)
+                $.ajax({
+                    url: '/updateMatrixResult',
+                    data: ajaxData,
+                    type: 'GET',
+                    success: function (response) {
+                        console.log(response)
+                    }
+                });
+
                 ////console.log(result)
                 $("#submitButton").hide();
                 $("#nextButton").show();

@@ -107,6 +107,27 @@ class Chatbot:
             conn.close()
         return sessionId
 
+    def updateMatrixResult(self,sessionId,workGrid):
+        server = 'mumachatserver.database.windows.net'
+        database = 'mumachatdb'
+        username = 'mumaadmin'
+        password = 'Mum@ch@t'
+        driver= '{ODBC Driver 17 for SQL Server}'
+        conn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
+        cursor = conn.cursor()
+        try:
+            
+            updateValues = (workGrid,sessionId)
+            query = """UPDATE MatrixResult SET workGrid = ?  where sessionId = ?"""
+            #print(insertValues)
+            cursor.execute(query,updateValues)
+            conn.commit()
+            conn.close()
+        except:
+            print(error)
+            conn.close()
+        return sessionId
+
 
     def insertTransaction(self,sessionId,conditionId,clueId,Response,timeTaken,gridAction):
         #print("Transaction")
@@ -265,25 +286,44 @@ def storeMatrixResult():
     
     if 'sessionId' in request.args:
         sessionId = request.args['sessionId']
-        print(sessionId)
+        #print(sessionId)
     if 'condition' in request.args:
         condition = request.args['condition']
-        print(condition)
+        #print(condition)
     if 'timeTaken' in request.args:
         timeTaken = request.args['timeTaken']
-        print(timeTaken)
+        #print(timeTaken)
     if 'matrixDict' in request.args:
         matrixDict = request.args['matrixDict']
-        print(matrixDict)
+        #print(matrixDict)
     if 'workGrid' in request.args:
         workGrid = request.args['workGrid']
-        print(workGrid)
+        #print(workGrid)
     if 'usedHints' in request.args:
         usedHints = request.args['usedHints']
-        print(usedHints)
+        #print(usedHints)
 
     chatbot.insertMatrixResult(sessionId,chatbot.conditionData[condition],matrixDict,timeTaken,workGrid,usedHints)
     print("Store matrix:")
+    return jsonify({"result":"success"});
+
+
+
+
+@app.route('/updateMatrixResult',methods=['GET'])
+def updateMatrixResult():
+    sessionId = ''
+    workGrid = ''
+    
+    if 'sessionId' in request.args:
+        sessionId = request.args['sessionId']
+        print(sessionId)
+    if 'workGrid' in request.args:
+        workGrid = request.args['workGrid']
+        print(workGrid)
+    
+    chatbot.updateMatrixResult(sessionId,workGrid)
+    print("Update matrix:")
     return jsonify({"result":"success"});
     
 @app.route('/getRedundantClueById',methods=['GET'])
