@@ -310,7 +310,7 @@ def storeMatrixResult():
 
 
 
-@app.route('/updateMatrixResult',methods=['GET'])
+@app.route('/updateMatrixResult',methods=['POST'])
 def updateMatrixResult():
     sessionId = ''
     workGrid = ''

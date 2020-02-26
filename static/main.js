@@ -1806,7 +1806,7 @@ $(document).ready(function () {
                 $.ajax({
                     url: '/updateMatrixResult',
                     data: ajaxData,
-                    type: 'GET',
+                    type: 'POST',
                     success: function (response) {
                         console.log(response)
                     }
