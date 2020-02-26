@@ -132,7 +132,8 @@
     "Conclusion": {
       "1": "Project assignments have been recorded.",
       "2": "Status: Task Completed",
-      "3": "You will be redirected to Qualtrics shortly"
+      "3": "Click Next, you will be redirected to Qualtrics shortly",
+      "4": "Thank you"
     }
   },
   "LLH": {
@@ -273,7 +274,8 @@
     "Conclusion": {
       "1": "Project assignments have been recorded.",
       "2": "Status: Task completed",
-      "3": "You will be redirected to Qualtrics shortly."
+      "3": "Click Next, you will be redirected to Qualtrics shortly",
+      "4": "Thank you"
     }
   },
   "LHL": {
@@ -412,8 +414,8 @@
       "1": "Thanks, [Name]! I appreciate all your hard work.",
       "2": "Great job! You've completed the task. ",
       "3": "It's been a pleasure working with you. ",
-      "4": "Please click 'Next' below to proceed to answer a brief set of questions.",
-      "5": "You will be redirected to Qualtrics shortly."
+      "4": "Please click 'Next' below to proceed to answer a brief set of questions. You will be redirected to Qualtrics shortly",
+      "5": "Thank you"
     }
   },
   "LHH": {
@@ -560,8 +562,8 @@
       "1": "Thanks, [Name]! I appreciate all your hard work.",
       "2": "Great job! You've completed the task. ",
       "3": "It's been a pleasure working with you. ",
-      "4": "Please click 'Next' below to proceed to answer a brief set of questions.",
-      "5": "You will be redirected to Qualtrics shortly."
+      "4": "Please click 'Next' below to proceed to answer a brief set of questions. You will be redirected to Qualtrics shortly",
+      "5": "Thank you"
     }
   },
   "HLL": {
@@ -608,7 +610,8 @@
     "Conclusion": {
       "1": "Project assignments have been recorded.",
       "2": "Status: Task completed.",
-      "3": "You will be redirected to Qualtrics shortly"
+      "3": "Click Next, you will be redirected to Qualtrics shortly",
+      "4": "Thank you"
     }
   },
   "HLH": {
@@ -660,7 +663,8 @@
     "Conclusion": {
       "1": "Project assignments have been recorded.",
       "2": "Status completed.",
-      "3": "You will be redirected to Qualtrics shortly."
+      "3": "Click Next, you will be redirected to Qualtrics shortly",
+      "4": "Thank you"
     }
   },
   "HHL": {
@@ -710,8 +714,8 @@
       "1": "Thanks, [Name]! I appreciate all your hard work.",
       "2": "Great job! You've completed the task. ",
       "3": "It's been a pleasure working with you. ",
-      "4": "Please click 'Next' below to proceed to answer a brief set of questions.",
-      "5": "You will be redirected to Qualtrics shortly."
+      "4": "Please click 'Next' below to proceed to answer a brief set of questions. You will be redirected to Qualtrics shortly",
+      "5": "Thank you"
     }
   },
   "HHH": {
@@ -769,8 +773,8 @@
       "1": "Thanks, [Name]! I appreciate all your hard work.",
       "2": "Great job! You've completed the task. ",
       "3": "It's been a pleasure working with you. ",
-      "4": "Please click 'Next' below to proceed to answer a brief set of questions.",
-      "5": "You will be redirected to Qualtrics shortly."
+      "4": "Please click 'Next' below to proceed to answer a brief set of questions. You will be redirected to Qualtrics shortly",
+      "5": "Thank you"
     }
   }
 }

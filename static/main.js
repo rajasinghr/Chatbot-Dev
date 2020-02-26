@@ -1139,7 +1139,7 @@ $(document).ready(function () {
         }
         //console.log(response)
         if (response['topic'] == 'Clue' && response['index'] == "0") {
-
+            $('#infoClue').show()
             var seconds = new Date().getTime() / 1000;
             $('#clueStartTimestamp').val(seconds);
         }
@@ -1161,7 +1161,7 @@ $(document).ready(function () {
         }
 
         if ((response['topic'] == 'Conclusion' && response['index'] == "5" && response['condition'][1] == 'H')
-            || (response['topic'] == 'Conclusion' && response['index'] == "3" && response['condition'][1] == 'L')) {
+            || (response['topic'] == 'Conclusion' && response['index'] == "4" && response['condition'][1] == 'L')) {
             $("#submitButton").hide();
             $("#nextButton").hide();
             $("#nextButton").attr("disabled", true);
@@ -1293,7 +1293,7 @@ $(document).ready(function () {
         }
 
         if (response['topic'] == 'Clue' && response['index'] == "1") {
-            
+            $('#infoClue').show()
             var seconds = new Date().getTime() / 1000;
             $('#clueStartTimestamp').val(seconds);
         }
@@ -1313,7 +1313,7 @@ $(document).ready(function () {
         }
 
         if ((response['topic'] == 'Conclusion' && response['index'] == "5" && response['condition'][1] == 'H')
-            || (response['topic'] == 'Conclusion' && response['index'] == "3" && response['condition'][1] == 'L')) {
+            || (response['topic'] == 'Conclusion' && response['index'] == "4" && response['condition'][1] == 'L')) {
             $("#submitButton").hide();
             $("#nextButton").hide();
             $("#nextButton").attr("disabled", true);
