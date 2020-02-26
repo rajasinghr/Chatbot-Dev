@@ -1273,7 +1273,7 @@ $(document).ready(function () {
         }
         else if ((response['topic'] == 'Redundant_Ins' && response['index'] == '4') ) {
             sessionDictData = redundantDictData();
-            console.log(sessionDictData)
+            //console.log(sessionDictData)
             message = response["botResponse"][0]
             triggerEnterKeyEvent = true
             $("#nextButton").attr("disabled", false);
@@ -1398,6 +1398,16 @@ $(document).ready(function () {
     }
 
     function redundantBlock(condition) {
+
+        //addThinking('bot', response["condition"])
+        //$("#nextButton").attr("disabled", true);
+        //setTimeout(function () {
+        //    $('#bot_thinking').remove();
+        //    addMessage('bot', response["condition"], message)
+        //}, 1000);
+
+        //$("#nextButton").attr("disabled", false);
+
         addMessage('bot', condition, 'Select a category to obtain information.');
         var navItems = []
         navItems = ["Person", "Roles", "Hours"]
@@ -1593,7 +1603,7 @@ $(document).ready(function () {
                         <td>
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
-                                <option value='1' selected>Network Architect</option>
+                                <option value='1' >Network Architect</option>
                                 <option value='2'>Systems Analyst</option>
                                 <option value='3'>Cyber Security Specalist</option>
                                 <option value='4'>Database Administrator</option>
@@ -1602,7 +1612,7 @@ $(document).ready(function () {
                         <td>
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
-                                <option value='1' selected>6</option>
+                                <option value='1' >6</option>
                                 <option value='2'>8</option>
                                 <option value='3'>10</option>
                                 <option value='4'>12</option>
@@ -1614,7 +1624,7 @@ $(document).ready(function () {
                         <td>
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
-                                <option value='1' selected>Network Architect</option>
+                                <option value='1' >Network Architect</option>
                                 <option value='2'>Systems Analyst</option>
                                 <option value='3'>Cyber Security Specalist</option>
                                 <option value='4'>Database Administrator</option>
@@ -1623,7 +1633,7 @@ $(document).ready(function () {
                         <td>
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
-                                <option value='1' selected>6</option>
+                                <option value='1' >6</option>
                                 <option value='2'>8</option>
                                 <option value='3'>10</option>
                                 <option value='4'>12</option>
@@ -1635,7 +1645,7 @@ $(document).ready(function () {
                         <td>
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
-                                <option value='1' selected>Network Architect</option>
+                                <option value='1' >Network Architect</option>
                                 <option value='2'>Systems Analyst</option>
                                 <option value='3'>Cyber Security Specalist</option>
                                 <option value='4'>Database Administrator</option>
@@ -1644,7 +1654,7 @@ $(document).ready(function () {
                         <td>
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
-                                <option value='1' selected>6</option>
+                                <option value='1' >6</option>
                                 <option value='2'>8</option>
                                 <option value='3'>10</option>
                                 <option value='4'>12</option>
@@ -1656,7 +1666,7 @@ $(document).ready(function () {
                         <td>
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
-                                <option value='1' selected>Network Architect</option>
+                                <option value='1' >Network Architect</option>
                                 <option value='2'>Systems Analyst</option>
                                 <option value='3'>Cyber Security Specalist</option>
                                 <option value='4'>Database Administrator</option>
@@ -1665,7 +1675,7 @@ $(document).ready(function () {
                         <td>
                             <select class='form-control form-control-sm'>
                                 <option value='0'>Select</option>
-                                <option value='1' selected>6</option>
+                                <option value='1' >6</option>
                                 <option value='2'>8</option>
                                 <option value='3'>10</option>
                                 <option value='4'>12</option>
@@ -1788,7 +1798,7 @@ $(document).ready(function () {
                     'workGrid':'',
                     'usedHints': usedHints
                 }
-                console.log(ajaxData)
+                //console.log(ajaxData)
                 $.ajax({
                     url: '/storeMatrixResult',
                     data: ajaxData,
@@ -1796,18 +1806,18 @@ $(document).ready(function () {
                     dataType: 'json',
                     contentType: 'application/json',
                     success: function (response) {
-                        console.log(response)
+                        //console.log(response)
                         var ajaxData1 = {
                             'sessionId': $('#sessionId').val(),
-                            'workGrid': $('#mainTableBody')[0].innerHTML,
+                            'workGrid': $('#mainTable')[0].innerHTML,
                         }
-                        console.log(ajaxData1)
+                        //console.log(ajaxData1)
                         $.ajax({
                             url: '/updateMatrixResult',
                             data: ajaxData1,
                             type: 'POST',
                             success: function (response) {
-                                console.log(response)
+                                //console.log(response)
                             }
                         });
                     }

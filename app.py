@@ -164,7 +164,7 @@ class Chatbot:
        
 
     def insertMatrixResult(self,sessionId,conditionId,matrixDict,timeTaken,workGrid,usedHints):
-        print("Matrix Result")
+        #print("Matrix Result")
         server = 'mumachatserver.database.windows.net'
         database = 'mumachatdb'
         username = 'mumaadmin'
@@ -177,7 +177,7 @@ class Chatbot:
             if timeTaken=='NaN':
                 timeTaken=0
             insertValues = (sessionId,conditionId,matrixDict,timeTaken,workGrid,usedHints)
-            print(insertValues)
+            #print(insertValues)
             cursor.execute('''INSERT INTO MatrixResult (sessionId,conditionId,matrixDict,timetaken,workGrid,usedHints) VALUES (?,?,?,?,?,?)''',insertValues)
             conn.commit()
             conn.close()
@@ -320,7 +320,7 @@ def updateMatrixResult():
     workGrid = request.form.get("workGrid")
     
     chatbot.updateMatrixResult(sessionId,workGrid)
-    print("Update matrix:")
+    #print("Update matrix:")
     return jsonify({"result":"success"});
     
 @app.route('/getRedundantClueById',methods=['GET'])
