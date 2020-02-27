@@ -165,7 +165,7 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Alex'];
                 if (dataList.length == 0) {
-                    if (response['condition'][1] == 'H') {
+                    if ($('#condition').val()[1] == 'H') {
                         redundantMessage('I do not have any more information regarding that specific person.', true, true);
                     }
                     else {
@@ -216,7 +216,7 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                if (response['condition'][1] == 'H') {
+                                if ($('#condition').val()[1] == 'H') {
                                     redundantMessage('I do not have any more information regarding that specific person.', true, true);
                                 }
                                 else {
@@ -237,7 +237,7 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Leon'];
                 if (dataList.length == 0) {
-                    if (response['condition'][1] == 'H') {
+                    if ($('#condition').val()[1] == 'H') {
                         redundantMessage('I do not have any more information regarding that specific person.', true, true);
                     }
                     else {
@@ -284,7 +284,7 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                if (response['condition'][1] == 'H') {
+                                if ($('#condition').val()[1] == 'H') {
                                     redundantMessage('I do not have any more information regarding that specific person.', true, true);
                                 }
                                 else {
@@ -303,7 +303,7 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Rachel'];
                 if (dataList.length == 0) {
-                    if (response['condition'][1] == 'H') {
+                    if ($('#condition').val()[1] == 'H') {
                         redundantMessage('I do not have any more information regarding that specific person.', true, true);
                     }
                     else {
@@ -350,7 +350,7 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                if (response['condition'][1] == 'H') {
+                                if ($('#condition').val()[1] == 'H') {
                                     redundantMessage('I do not have any more information regarding that specific person.', true, true);
                                 }
                                 else {
@@ -369,7 +369,7 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Tina'];
                 if (dataList.length == 0) {
-                    if (response['condition'][1] == 'H') {
+                    if ($('#condition').val()[1] == 'H') {
                         redundantMessage('I do not have any more information regarding that specific person.', true, true);
                     }
                     else {
@@ -416,7 +416,7 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                if (response['condition'][1] == 'H') {
+                                if ($('#condition').val()[1] == 'H') {
                                     redundantMessage('I do not have any more information regarding that specific person.', true, true);
                                 }
                                 else {
@@ -447,7 +447,7 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Network Architect'];
                 if (dataList.length == 0) {
-                    if (response['condition'][1] == 'H') {
+                    if ($('#condition').val()[1] == 'H') {
                         redundantMessage('I do not have any more information regarding that specific role.', true, true);
                     }
                     else {
@@ -494,7 +494,7 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                if (response['condition'][1] == 'H') {
+                                if ($('#condition').val()[1] == 'H') {
                                     redundantMessage('I do not have any more information regarding that specific role.', true, true);
                                 }
                                 else {
@@ -513,7 +513,7 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Systems Analyst'];
                 if (dataList.length == 0) {
-                    if (response['condition'][1] == 'H') {
+                    if ($('#condition').val()[1] == 'H') {
                         redundantMessage('I do not have any more information regarding that specific role.', true, true);
                     }
                     else {
@@ -560,7 +560,7 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                if (response['condition'][1] == 'H') {
+                                if ($('#condition').val()[1] == 'H') {
                                     redundantMessage('I do not have any more information regarding that specific role.', true, true);
                                 }
                                 else {
@@ -579,7 +579,7 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Cybersecurity Specialist'];
                 if (dataList.length == 0) {
-                    if (response['condition'][1] == 'H') {
+                    if ($('#condition').val()[1] == 'H') {
                         redundantMessage('I do not have any more information regarding that specific role.', true, true);
                     }
                     else {
@@ -626,7 +626,7 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                if (response['condition'][1] == 'H') {
+                                if ($('#condition').val()[1] == 'H') {
                                     redundantMessage('I do not have any more information regarding that specific role.', true, true);
                                 }
                                 else {
@@ -646,7 +646,7 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Database Administrator'];
                 if (dataList.length == 0) {
-                    if (response['condition'][1] == 'H') {
+                    if ($('#condition').val()[1] == 'H') {
                         redundantMessage('I do not have any more information regarding that specific role.', true, true);
                     }
                     else {
@@ -693,7 +693,7 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                if (response['condition'][1] == 'H') {
+                                if ($('#condition').val()[1] == 'H') {
                                     redundantMessage('I do not have any more information regarding that specific role.', true, true);
                                 }
                                 else {
@@ -724,7 +724,7 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Six'];
                 if (dataList.length == 0) {
-                    if (response['condition'][1] == 'H') {
+                    if ($('#condition').val()[1] == 'H') {
                         redundantMessage('I do not have any more information regarding that specific hour.', true, true);
                     }
                     else {
@@ -771,7 +771,7 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                if (response['condition'][1] == 'H') {
+                                if ($('#condition').val()[1] == 'H') {
                                     redundantMessage('I do not have any more information regarding that specific hour.', true, true);
                                 }
                                 else {
@@ -790,7 +790,7 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Eight'];
                 if (dataList.length == 0) {
-                    if (response['condition'][1] == 'H') {
+                    if ($('#condition').val()[1] == 'H') {
                         redundantMessage('I do not have any more information regarding that specific hour.', true, true);
                     }
                     else {
@@ -837,7 +837,7 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                if (response['condition'][1] == 'H') {
+                                if ($('#condition').val()[1] == 'H') {
                                     redundantMessage('I do not have any more information regarding that specific hour.', true, true);
                                 }
                                 else {
@@ -856,7 +856,7 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Ten'];
                 if (dataList.length == 0) {
-                    if (response['condition'][1] == 'H') {
+                    if ($('#condition').val()[1] == 'H') {
                         redundantMessage('I do not have any more information regarding that specific hour.', true, true);
                     }
                     else {
@@ -904,7 +904,7 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                if (response['condition'][1] == 'H') {
+                                if ($('#condition').val()[1] == 'H') {
                                     redundantMessage('I do not have any more information regarding that specific hour.', true, true);
                                 }
                                 else {
@@ -923,7 +923,7 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Twelve'];
                 if (dataList.length == 0) {
-                    if (response['condition'][1] == 'H') {
+                    if ($('#condition').val()[1] == 'H') {
                         redundantMessage('I do not have any more information regarding that specific hour.', true, true);
                     }
                     else {
@@ -973,7 +973,7 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                if (response['condition'][1] == 'H') {
+                                if ($('#condition').val()[1] == 'H') {
                                     redundantMessage('I do not have any more information regarding that specific hour.', true, true);
                                 }
                                 else {
