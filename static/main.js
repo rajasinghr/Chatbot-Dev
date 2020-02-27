@@ -165,7 +165,12 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Alex'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific personnel.',true,true);
+                    if (response['condition'][1] == 'H') {
+                        redundantMessage('I do not have any more information regarding that specific person.', true, true);
+                    }
+                    else {
+                        redundantMessage('There is no more information available regarding specific personnel.', true, true);
+                    }
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -211,7 +216,12 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific personnel.',true,true);
+                                if (response['condition'][1] == 'H') {
+                                    redundantMessage('I do not have any more information regarding that specific person.', true, true);
+                                }
+                                else {
+                                    redundantMessage('There is no more information available regarding specific personnel.', true, true);
+                                }
                             }
                         }
                     }
@@ -227,7 +237,12 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Leon'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific personnel.',true,true);
+                    if (response['condition'][1] == 'H') {
+                        redundantMessage('I do not have any more information regarding that specific person.', true, true);
+                    }
+                    else {
+                        redundantMessage('There is no more information available regarding specific personnel.', true, true);
+                    }
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -269,7 +284,12 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific personnel.',true,true);
+                                if (response['condition'][1] == 'H') {
+                                    redundantMessage('I do not have any more information regarding that specific person.', true, true);
+                                }
+                                else {
+                                    redundantMessage('There is no more information available regarding specific personnel.', true, true);
+                                }
                             }
                         }
                     }
@@ -283,7 +303,12 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Rachel'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific personnel.',true,true);
+                    if (response['condition'][1] == 'H') {
+                        redundantMessage('I do not have any more information regarding that specific person.', true, true);
+                    }
+                    else {
+                        redundantMessage('There is no more information available regarding specific personnel.', true, true);
+                    }
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -325,7 +350,12 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific personnel.',true,true);
+                                if (response['condition'][1] == 'H') {
+                                    redundantMessage('I do not have any more information regarding that specific person.', true, true);
+                                }
+                                else {
+                                    redundantMessage('There is no more information available regarding specific personnel.', true, true);
+                                }
                             }
                         }
                     }
@@ -339,7 +369,12 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Tina'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific personnel.',true,true);
+                    if (response['condition'][1] == 'H') {
+                        redundantMessage('I do not have any more information regarding that specific person.', true, true);
+                    }
+                    else {
+                        redundantMessage('There is no more information available regarding specific personnel.', true, true);
+                    }
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -381,7 +416,12 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific personnel.',true,true);
+                                if (response['condition'][1] == 'H') {
+                                    redundantMessage('I do not have any more information regarding that specific person.', true, true);
+                                }
+                                else {
+                                    redundantMessage('There is no more information available regarding specific personnel.', true, true);
+                                }
                             }
                         }
                     }
@@ -407,7 +447,12 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Network Architect'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific roles.',true,true);
+                    if (response['condition'][1] == 'H') {
+                        redundantMessage('I do not have any more information regarding that specific role.', true, true);
+                    }
+                    else {
+                        redundantMessage('There is no more information available regarding specific role.', true, true);
+                    }
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -449,7 +494,12 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific roles.',true,true);
+                                if (response['condition'][1] == 'H') {
+                                    redundantMessage('I do not have any more information regarding that specific role.', true, true);
+                                }
+                                else {
+                                    redundantMessage('There is no more information available regarding specific role.', true, true);
+                                }
                             }
                         }
                     }
@@ -463,7 +513,12 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Systems Analyst'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific roles.',true,true);
+                    if (response['condition'][1] == 'H') {
+                        redundantMessage('I do not have any more information regarding that specific role.', true, true);
+                    }
+                    else {
+                        redundantMessage('There is no more information available regarding specific role.', true, true);
+                    }
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -505,7 +560,12 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific roles.',true,true);
+                                if (response['condition'][1] == 'H') {
+                                    redundantMessage('I do not have any more information regarding that specific role.', true, true);
+                                }
+                                else {
+                                    redundantMessage('There is no more information available regarding specific role.', true, true);
+                                }
                             }
                         }
                     }
@@ -519,7 +579,12 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Cybersecurity Specialist'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific roles.',true,true);
+                    if (response['condition'][1] == 'H') {
+                        redundantMessage('I do not have any more information regarding that specific role.', true, true);
+                    }
+                    else {
+                        redundantMessage('There is no more information available regarding specific role.', true, true);
+                    }
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -561,7 +626,12 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific roles.',true,true);
+                                if (response['condition'][1] == 'H') {
+                                    redundantMessage('I do not have any more information regarding that specific role.', true, true);
+                                }
+                                else {
+                                    redundantMessage('There is no more information available regarding specific role.', true, true);
+                                }
                             }
                         }
                     }
@@ -576,8 +646,12 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Database Administrator'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific roles.',true,true);
-                    
+                    if (response['condition'][1] == 'H') {
+                        redundantMessage('I do not have any more information regarding that specific role.', true, true);
+                    }
+                    else {
+                        redundantMessage('There is no more information available regarding specific role.', true, true);
+                    }
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -619,7 +693,12 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific roles.',true,true);
+                                if (response['condition'][1] == 'H') {
+                                    redundantMessage('I do not have any more information regarding that specific role.', true, true);
+                                }
+                                else {
+                                    redundantMessage('There is no more information available regarding specific role.', true, true);
+                                }
                             }
                         }
                     }
@@ -645,7 +724,12 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Six'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific hours.',true,true);
+                    if (response['condition'][1] == 'H') {
+                        redundantMessage('I do not have any more information regarding that specific hour.', true, true);
+                    }
+                    else {
+                        redundantMessage('There is no more information available regarding specific hour.', true, true);
+                    }
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -687,7 +771,12 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific hours.',true,true);
+                                if (response['condition'][1] == 'H') {
+                                    redundantMessage('I do not have any more information regarding that specific hour.', true, true);
+                                }
+                                else {
+                                    redundantMessage('There is no more information available regarding specific hour.', true, true);
+                                }
                             }
                         }
                     }
@@ -701,7 +790,12 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Eight'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific hours.',true,true);
+                    if (response['condition'][1] == 'H') {
+                        redundantMessage('I do not have any more information regarding that specific hour.', true, true);
+                    }
+                    else {
+                        redundantMessage('There is no more information available regarding specific hour.', true, true);
+                    }
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -743,7 +837,12 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific hours.',true,true);
+                                if (response['condition'][1] == 'H') {
+                                    redundantMessage('I do not have any more information regarding that specific hour.', true, true);
+                                }
+                                else {
+                                    redundantMessage('There is no more information available regarding specific hour.', true, true);
+                                }
                             }
                         }
                     }
@@ -757,7 +856,12 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Ten'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific hours.',true,true);
+                    if (response['condition'][1] == 'H') {
+                        redundantMessage('I do not have any more information regarding that specific hour.', true, true);
+                    }
+                    else {
+                        redundantMessage('There is no more information available regarding specific hour.', true, true);
+                    }
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -800,7 +904,12 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific hours.',true,true);
+                                if (response['condition'][1] == 'H') {
+                                    redundantMessage('I do not have any more information regarding that specific hour.', true, true);
+                                }
+                                else {
+                                    redundantMessage('There is no more information available regarding specific hour.', true, true);
+                                }
                             }
                         }
                     }
@@ -814,8 +923,12 @@ $(document).ready(function () {
                 addMessage('user', $("#condition").val(), message)
                 var dataList = sessionDictData['Twelve'];
                 if (dataList.length == 0) {
-                    redundantMessage('There is no more information available regarding specific hours.',true,true);
-                    
+                    if (response['condition'][1] == 'H') {
+                        redundantMessage('I do not have any more information regarding that specific hour.', true, true);
+                    }
+                    else {
+                        redundantMessage('There is no more information available regarding specific hour.', true, true);
+                    }
                 }
                 //else if (sessionDictData['All'].length == 0) {
                 //    redundantMessage('Status: All available information has been provided',true);
@@ -860,7 +973,12 @@ $(document).ready(function () {
                             }
                             else {
                                 isused = true
-                                redundantMessage('There is no more information available regarding specific hours.',true,true);
+                                if (response['condition'][1] == 'H') {
+                                    redundantMessage('I do not have any more information regarding that specific hour.', true, true);
+                                }
+                                else {
+                                    redundantMessage('There is no more information available regarding specific hour.', true, true);
+                                }
                             }
                         }
                     }
@@ -1139,7 +1257,8 @@ $(document).ready(function () {
         }
         //console.log(response)
         if (response['topic'] == 'Clue' && response['index'] == "0") {
-            $('#infoClue').show()
+            
+            $('#infoClueButton').show()
             var seconds = new Date().getTime() / 1000;
             $('#clueStartTimestamp').val(seconds);
         }
@@ -1261,6 +1380,24 @@ $(document).ready(function () {
             $("#nextButton").show()
             message = response["botResponse"][0];
         }
+        else if (response['topic'] == 'Redundant_Ins' && response['index'] == '2' && response['condition'][1] == 'H') {
+            var navItems = []
+            navItems = ["Yes, I would like <br /> to request specific information.", "No, I'm ready to make <br /> my final decisions."]
+            userActionBlock = buildUserActionButtonGroup(navItems, response['condition'], 'redundantConfirmation')
+            message = response["botResponse"][0]
+            triggerEnterKeyEvent = false
+            $("#nextButton").attr("disabled", true);
+            $("#nextButton").hide()
+            istriggerEnterKeyEventActive = false
+        }
+        else if ((response['topic'] == 'Redundant_Ins' && response['index'] == '3' && response['condition'][1] == 'H')) {
+            sessionDictData = redundantDictData();
+            //console.log(sessionDictData)
+            message = response["botResponse"][0]
+            triggerEnterKeyEvent = true
+            $("#nextButton").attr("disabled", false);
+            $("#nextButton").show()
+        }
         else if (response['topic'] == 'Redundant_Ins' && response['index'] == '3') {
             var navItems = []
             navItems = ["Yes, I would like <br /> to request specific information.", "No, I'm ready to make <br /> my final decisions."]            
@@ -1293,7 +1430,8 @@ $(document).ready(function () {
         }
 
         if (response['topic'] == 'Clue' && response['index'] == "1") {
-            $('#infoClue').show()
+            
+            $('#infoClueButton').show()
             var seconds = new Date().getTime() / 1000;
             $('#clueStartTimestamp').val(seconds);
         }
@@ -1367,8 +1505,16 @@ $(document).ready(function () {
         if (response['condition'][0] == 'H') {
             addActionBlock(userActionBlock)
         }
-        if ((response['topic'] == 'Redundant_Ins' && response['index'] == '4')) {
-            
+        
+        if ((response['topic'] == 'Redundant_Ins' && response['index'] == '3' && response['condition'][1]=='H')) {
+            redundantBlock(response['condition'])
+            $('#topic').val('Redundant')
+            triggerEnterKeyEvent = false
+            $("#nextButton").attr("disabled", true);
+            $("#nextButton").hide()
+        }
+        else if ((response['topic'] == 'Redundant_Ins' && response['index'] == '4')) {
+
             redundantBlock(response['condition'])
             $('#topic').val('Redundant')
             triggerEnterKeyEvent = false
