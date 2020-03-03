@@ -8,21 +8,23 @@ $(document).ready(function () {
     //alert(localStorage.getItem("sessionId"))
 
     //window.onbeforeunload = function (event) {
-    //    return confirm("Confirm refresh");
+    //    return confirm("Confirm refresh");    
     //};
 
-    ////console.log(window.location.href.split('/').pop())
+    //console.log(window.location.href.split('/').pop())
 
-    if (localStorage.getItem("sessionId") == "" || localStorage.getItem("sessionId") == null) {
+    if (localStorage.getItem("sessionId") == "" || localStorage.getItem("sessionId") == null ||
+        localStorage.getItem("condition") == "" || localStorage.getItem("condition") == null
+        || localStorage.getItem("condition") != window.location.href.split('/').pop()) {
         window.location.replace(window.location.origin)
     }
     else {
+        
         $("#bgStorySetupModal").modal()
         initialDataSetup();
     }
     
     function initialDataSetup() {
-
         var conditionDict = {
             1: "LLL",
             2: "LLH",
@@ -108,7 +110,12 @@ $(document).ready(function () {
                 }
                 else {
                     if (sessionDictData['All'].length == 0) {
-                        redundantMessage('Status: All available information has been provided',false);
+                        if ($('#condition').val()[1] == 'H') {
+                            redundantMessage('That is all of the information I am able to provide about the project assignments', false);
+                        }
+                        else {
+                            redundantMessage('Status: All available information has been provided', false);
+                        }
                         
                     }
                     else {

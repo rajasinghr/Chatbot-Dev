@@ -38,7 +38,7 @@ class Chatbot:
         #check notepad++ for old code
 
         if condition[0] == 'L':
-            topics = ['Introduction','Tutorial','Task Reminder','Clue_Ins','Clue','Redundant_Ins','Redundant','Submit','Conclusion']
+            topics = ['Introduction','Tutorial','Task Reminder','Clue_Ins','Clue','Clue_End_Ins','Redundant_Ins','Redundant','Submit','Conclusion']
             if(topic != 'Clue'):
                 if( (str(int(index)+1) not in self.jsonData[condition][topic]) ):
                     topic = topics[topics.index(topic)+1]

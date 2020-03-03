@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-
+    localStorage.clear();
     $('input[type=radio][name=optradio]').change(function () {
         if (this.value == 'yes') {
             $("#participantFullName").removeAttr('disabled');
@@ -122,6 +122,7 @@ $(document).ready(function () {
                         else {
                             window.location.replace(window.location.href + response['condition'])
                             localStorage.setItem("sessionId", response['sessionId']);
+                            localStorage.setItem("condition", response['condition']);
                         }
                     },
                     error: function (response) {

@@ -26,6 +26,9 @@
     "Clue_Ins": {
       "1": "Consider the following 5 major pieces of information:"
     },
+    "Clue_End_Ins": {
+      "1": "These five clues are also available in the Project Assignment Information Tab on the top left of the page."
+    },
     "Redundant_Ins": {
       "1": "Some more information to make the decision is provided below."
     },
@@ -168,6 +171,9 @@
     "Clue_Ins": {
       "1": "Consider the following 5 major pieces of information:"
     },
+    "Clue_End_Ins": {
+      "1": "These five clues are also available in the Project Assignment Information Tab on the top left of the page."
+    },
     "Redundant_Ins": {
       "1": "Some more information to make the decision is provided below."
     },
@@ -306,6 +312,9 @@
     },
     "Clue_Ins": {
       "1": "Here are 5 major pieces of information that you might want to consider."
+    },
+    "Clue_End_Ins": {
+      "1": "These five clues are also available in the Project Assignment Information Tab on the top left of the page."
     },
     "Redundant_Ins": {
       "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments."
@@ -455,6 +464,9 @@
     "Clue_Ins": {
       "1": "Consider the following 5 major pieces of information."
     },
+    "Clue_End_Ins": {
+      "1": "These five clues are also available in the Project Assignment Information Tab on the top left of the page."
+    },
     "Redundant_Ins": {
       "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments."
     },
@@ -594,7 +606,8 @@
       "1": "Consider the following 5 major pieces of information:"
     },
     "Clue_End_Ins": {
-      "1": "Status: All 5 major clues have been provided."
+      "1": "These five clues are also available in the Project Assignment Information Tab on the top left of the page.",
+      "2": "Status: All 5 major clues have been provided."
     },
     "Redundant_Ins": {
       "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
@@ -647,7 +660,8 @@
       "1": "Consider the following 5 major pieces of information:"
     },
     "Clue_End_Ins": {
-      "1": "Status: All 5 major clues have been provided."
+      "1": "These five clues are also available in the Project Assignment Information Tab on the top left of the page.",
+      "2": "Status: All 5 major clues have been provided."
     },
     "Redundant_Ins": {
       "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments.",
@@ -697,7 +711,8 @@
       "1": "Here are 5 major pieces of information that you might want to consider."
     },
     "Clue_End_Ins": {
-      "1": "I can provide you with extra information to help you make accurate decisions"
+      "1": "These five clues are also available in the Project Assignment Information Tab on the top left of the page.",
+      "2": "I can provide you with extra information to help you make accurate decisions"
     },
     "Redundant_Ins": {
       "1": "For your benefit, I have categorized the information into people, roles, or number of hours.",
@@ -755,7 +770,8 @@
       "1": "Here are 5 major pieces of information that you might want to consider."
     },
     "Clue_End_Ins": {
-      "1": "All 5 major clues have been provided."
+      "1": "These five clues are also available in the Project Assignment Information Tab on the top left of the page.",
+      "2": "All 5 major clues have been provided."
     },
     "Redundant_Ins": {
       "1": "For your benefit, I have categorized the information into people, roles, or number of hours.",
