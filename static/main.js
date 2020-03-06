@@ -14,8 +14,8 @@ $(document).ready(function () {
     //console.log(window.location.href.split('/').pop())
 
     if (localStorage.getItem("sessionId") == "" || localStorage.getItem("sessionId") == null ||
-        localStorage.getItem("condition") == "" || localStorage.getItem("condition") == null
-        || localStorage.getItem("condition") != window.location.href.split('/').pop()) {
+        localStorage.getItem("condition") == "" || localStorage.getItem("condition") == null) {
+        //|| localStorage.getItem("condition") != window.location.href.split('/').pop()) {
         window.location.replace(window.location.origin)
     }
     else {
@@ -68,7 +68,7 @@ $(document).ready(function () {
                     $('#sessionId').val(response["sessionId"]);
                     addThinking('bot', response["condition"])
                     var message = response["botResponse"];
-
+                    
                     
                     if (response['condition'][1] == 'H' && response['topic'] == 'Introduction' && response['index'] == "1") {
                         message = message + "<br/>For the next steps, please take your time to read the information I provide you. When you are done, press enter key or click on 'next' button, and I will move on"
@@ -87,8 +87,8 @@ $(document).ready(function () {
                     $("#nextButton").attr("disabled", false);
 
 
-                    //$('#topic').val('Clue_Ins')
-                    //$('#index').val("1")
+                   //$('#topic').val('Task Reminder')
+                    //$('#index').val("0")
 
                 }
             });
@@ -1117,7 +1117,7 @@ $(document).ready(function () {
             },
             type: 'GET',
             success: function (response) {
-                $('#sessionId').val(response["sessionId"]),
+                $('#sessionId').val(response["sessionId"]);
                 $('#condition').val(response["condition"]);
                 $('#topic').val(response["topic"]);
                 $('#index').val(response["index"]);
@@ -1136,13 +1136,15 @@ $(document).ready(function () {
                         $('#demoTable').hide()
                         $('#mainTable').show()
                     }
-                    if (response['condition'][0] == 'L') {
-                        fillLowConditionContent(response, istriggerEnterKeyEventActive, isTaskCompleted);
-                    }
-                    else if (response['condition'][0] == 'H') {
-                        
-                        fillHighConditionContent(response, istriggerEnterKeyEventActive, isTaskCompleted);
-                    }
+                        if (response['condition'][0] == 'L') {
+                            fillLowConditionContent(response, istriggerEnterKeyEventActive, isTaskCompleted);
+                        }
+                        else if (response['condition'][0] == 'H') {
+
+                            fillHighConditionContent(response, istriggerEnterKeyEventActive, isTaskCompleted);
+                        }
+                    
+                    
                     
                 }, 1000);
                 //////console.log("outside timeout")
@@ -1157,6 +1159,7 @@ $(document).ready(function () {
     function fillLowConditionContent(response, istriggerEnterKeyEventActive, isTaskCompleted) {
         $('#bot_thinking').remove();
         var message = '';
+        
         if (response['topic'] == 'Clue') {
             response_dict = response["botResponse"][0]
             var clues = []
@@ -1249,6 +1252,7 @@ $(document).ready(function () {
             message = '';
         }
         else {
+            
             message = response["botResponse"][0];
         }
 
@@ -1286,8 +1290,8 @@ $(document).ready(function () {
 
         }
 
-        if ((response['topic'] == 'Conclusion' && response['index'] == "5" && response['condition'][1] == 'H')
-            || (response['topic'] == 'Conclusion' && response['index'] == "4" && response['condition'][1] == 'L')) {
+        if ((response['topic'] == 'Conclusion' && response['index'] == "2" && response['condition'][1] == 'H')
+            || (response['topic'] == 'Conclusion' && response['index'] == "2" && response['condition'][1] == 'L')) {
             $("#submitButton").hide();
             $("#nextButton").hide();
             $("#nextButton").attr("disabled", true);
@@ -1324,7 +1328,7 @@ $(document).ready(function () {
         if (response['topic'] == 'Submit' && response['index'] == "2" ) {
             addMessage('full', response["condition"], message);
         }
-        else if ((response['topic'] != 'Redundant') && (response['topic'] != 'Clue')){
+        else if ((response['topic'] != 'Redundant') && (response['topic'] != 'Clue')) {
             addMessage('bot', response["condition"], message);
         }
         $("#nextButton").attr("disabled", false);
@@ -1338,7 +1342,7 @@ $(document).ready(function () {
 
             //alert("Task Completed. Click OK. Page will refresh in 3 seconds")
             //window.setTimeout(function () { location.reload() }, 3000)
-            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_3khoFXLSN8CbFJj")
+            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_3khoFXLSN8CbFJj" + '?id=' + localStorage.getItem("sessionId"))
             localStorage.clear()
         }
 
@@ -1457,8 +1461,8 @@ $(document).ready(function () {
 
         }
 
-        if ((response['topic'] == 'Conclusion' && response['index'] == "5" && response['condition'][1] == 'H')
-            || (response['topic'] == 'Conclusion' && response['index'] == "4" && response['condition'][1] == 'L')) {
+        if ((response['topic'] == 'Conclusion' && response['index'] == "2" && response['condition'][1] == 'H')
+            || (response['topic'] == 'Conclusion' && response['index'] == "2" && response['condition'][1] == 'L')) {
             $("#submitButton").hide();
             $("#nextButton").hide();
             $("#nextButton").attr("disabled", true);
@@ -1544,7 +1548,7 @@ $(document).ready(function () {
 
             //alert("Task Completed. Click OK. Page will refresh in 3 seconds")
             //window.setTimeout(function () { location.reload() }, 3000)
-            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_3khoFXLSN8CbFJj")
+            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_3khoFXLSN8CbFJj" + '?id=' + localStorage.getItem("sessionId"))
         }
 
 

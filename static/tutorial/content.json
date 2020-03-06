@@ -30,7 +30,7 @@
       "1": "These five clues are also available in the Project Assignment Information Tab on the top left of the page."
     },
     "Redundant_Ins": {
-      "1": "Some more information to make the decision is provided below."
+      "1": "Some more information to make the decision is provided below. User to click 'Next' each time to see new block of information."
     },
     "Redundant": {
       "1": {
@@ -133,10 +133,8 @@
       "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments. This will conclude the task."
     },
     "Conclusion": {
-      "1": "Project assignments have been recorded.",
-      "2": "Status: Task Completed",
-      "3": "Click Next, you will be redirected to Qualtrics shortly",
-      "4": "Thank you"
+      "1": "Project assignments have been recorded. Task complete. User to click 'Next' to redirect to survey.",
+      "2": "Thank you"
     }
   },
   "LLH": {
@@ -175,7 +173,7 @@
       "1": "These five clues are also available in the Project Assignment Information Tab on the top left of the page."
     },
     "Redundant_Ins": {
-      "1": "Some more information to make the decision is provided below."
+      "1": "Some more information to make the decision is also provided. User to click 'Next' each time to see new block of information."
     },
     "Redundant": {
       "1": {
@@ -278,10 +276,8 @@
       "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments. This will conclude the task"
     },
     "Conclusion": {
-      "1": "Project assignments have been recorded.",
-      "2": "Status: Task completed",
-      "3": "Click Next, you will be redirected to Qualtrics shortly",
-      "4": "Thank you"
+      "1": "Project assignments have been recorded. Task complete. User to click 'Next' to redirect to survey.",
+      "2": "Thank you"
     }
   },
   "LHL": {
@@ -317,7 +313,7 @@
       "1": "These five clues are also available in the Project Assignment Information Tab on the top left of the page."
     },
     "Redundant_Ins": {
-      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments."
+      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments. However, I have provided some more information for your benefit. Please click 'Next' each time you want to see a new block of information."
     },
     "Redundant": {
       "1": {
@@ -420,11 +416,8 @@
       "3": "When you're happy with the final decisions, please click the 'Submit' button to  enter the team assignments. This will conclude the task."
     },
     "Conclusion": {
-      "1": "Thanks, [Name]! I appreciate all your hard work.",
-      "2": "Great job! You've completed the task. ",
-      "3": "It's been a pleasure working with you. ",
-      "4": "Please click 'Next' below to proceed to answer a brief set of questions. You will be redirected to Qualtrics shortly",
-      "5": "Thank you"
+      "1": "Great job [Name]! You've completed the task. I appreciate all your hard work. Please click 'Next' below to proceed to answer a brief set of questions. You will be redirected to survey shortly.",
+      "2": "Thank you"
     }
   },
   "LHH": {
@@ -468,7 +461,7 @@
       "1": "These five clues are also available in the Project Assignment Information Tab on the top left of the page."
     },
     "Redundant_Ins": {
-      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments."
+      "1": "These 5 major pieces of information listed above contain all of the requirements for the project. They are sufficient for making all of the appropriate team assignments. However, I have provided some more information for your benefit. Please click 'Next' each time you want to see a new block of information."
     },
     "Redundant": {
       "1": {
@@ -571,11 +564,8 @@
       "3": "When you're happy with the final decisions, please click the 'Submit' button to  enter the team assignments. This will conclude the task."
     },
     "Conclusion": {
-      "1": "Thanks, [Name]! I appreciate all your hard work.",
-      "2": "Great job! You've completed the task. ",
-      "3": "It's been a pleasure working with you. ",
-      "4": "Please click 'Next' below to proceed to answer a brief set of questions. You will be redirected to Qualtrics shortly",
-      "5": "Thank you"
+      "1": "Great job [Name]! You've completed the task. I appreciate all your hard work. Please click 'Next' below to proceed to answer a brief set of questions. You will be redirected to survey shortly.",
+      "2": "Thank you"
     }
   },
   "HLL": {
@@ -621,10 +611,8 @@
       "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments. This will conclude the task."
     },
     "Conclusion": {
-      "1": "Project assignments have been recorded.",
-      "2": "Status: Task completed.",
-      "3": "Click Next, you will be redirected to Qualtrics shortly",
-      "4": "Thank you"
+      "1": "Project assignments have been recorded. Task complete. User to click 'Next' to redirect to survey.",
+      "2": "Thank you"
     }
   },
   "HLH": {
@@ -675,10 +663,8 @@
       "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments. This will conclude the task"
     },
     "Conclusion": {
-      "1": "Project assignments have been recorded.",
-      "2": "Status completed.",
-      "3": "Click Next, you will be redirected to Qualtrics shortly",
-      "4": "Thank you"
+      "1": "Project assignments have been recorded. Task complete. User to click 'Next' to redirect to survey.",
+      "2": "Thank you"
     }
   },
   "HHL": {
@@ -715,7 +701,7 @@
       "2": "I can provide you with extra information to help you make accurate decisions"
     },
     "Redundant_Ins": {
-      "1": "For your benefit, I have categorized the information into people, roles, or number of hours.",
+      "1": "I have categorized the information into people, roles, or number of hours.",
       "2": "Would you like to request more information?",
       "3": "Okay, sounds good. If you change your mind and want to make your final decisions, you can do so at any time by selecting your chosen assignments in the table and then clicking 'Submit Answer'"
     },
@@ -725,11 +711,8 @@
       "3": "When you're happy with the final decisions, please click the 'Submit' button to  enter the team assignments. This will conclude the task."
     },
     "Conclusion": {
-      "1": "Thanks, [Name]! I appreciate all your hard work.",
-      "2": "Great job! You've completed the task. ",
-      "3": "It's been a pleasure working with you. ",
-      "4": "Please click 'Next' below to proceed to answer a brief set of questions. You will be redirected to Qualtrics shortly",
-      "5": "Thank you"
+      "1": "Great job [Name]! You've completed the task. I appreciate all your hard work. Please click 'Next' below to proceed to answer a brief set of questions. You will be redirected to survey shortly.",
+      "2": "Thank you"
     }
   },
   "HHH": {
@@ -767,14 +750,14 @@
       "2": "And remember, your goal is to assign each candidate a project role and amount of weekly project hours."
     },
     "Clue_Ins": {
-      "1": "Here are 5 major pieces of information that you might want to consider."
+      "1": "Here are 5 major pieces of information that you might want to consider. These are sufficient to make decision."
     },
     "Clue_End_Ins": {
       "1": "These five clues are also available in the Project Assignment Information Tab on the top left of the page.",
-      "2": "All 5 major clues have been provided."
+      "2": "However for your benefit I have provided some extra information."
     },
     "Redundant_Ins": {
-      "1": "For your benefit, I have categorized the information into people, roles, or number of hours.",
+      "1": "I have categorized the information into people, roles, or number of hours.",
       "2": "Would you like to request more information?",
       "3": "Okay, sounds good. If you change your mind and want to make your final decisions, you can do so at any time by selecting your chosen assignments in the table and then clicking 'Submit Answer'"
     },
@@ -784,11 +767,8 @@
       "3": "When all decisions have been made, click the 'Submit' button to enter the team assignments. This will conclude the task."
     },
     "Conclusion": {
-      "1": "Thanks, [Name]! I appreciate all your hard work.",
-      "2": "Great job! You've completed the task. ",
-      "3": "It's been a pleasure working with you. ",
-      "4": "Please click 'Next' below to proceed to answer a brief set of questions. You will be redirected to Qualtrics shortly",
-      "5": "Thank you"
+      "1": "Great job [Name]! You've completed the task. I appreciate all your hard work. Please click 'Next' below to proceed to answer a brief set of questions. You will be redirected to survey shortly.",
+      "2": "Thank you"
     }
   }
 }
