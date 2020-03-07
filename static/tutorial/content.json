@@ -3,7 +3,7 @@
     "Introduction": {
       "1": "Status: Information bot is online.",
       "2": "The information bot will query the database to provide relevant information.",
-      "3": "This is a project  management simulation. The role of the user as project manager is to assign  employees to the appropriate projects and locations based on a set of information. "
+      "3": "This is a project  management simulation. The role of the user as project manager is to assign employees to the appropriate projects and roles based on a set of information. "
     },
     "Tutorial": {
       "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
@@ -141,7 +141,7 @@
     "Introduction": {
       "1": "Status: Information bot is online.",
       "2": "The information bot will query the database to provide relevant information.",
-      "3": "This is a project management simulation. The role of the user as project manager is to assign  employees to the appropriate projects and locations based on a set of information. The interactive logic grid on the left can be used to understand how to use the information to make a decision."
+      "3": "This is a project management simulation. The role of the user as project manager is to assign  employees to the appropriate projects and roles based on a set of information. The interactive logic grid on the left can be used to understand how to use the information to make a decision."
     },
     "Tutorial": {
       "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
@@ -285,7 +285,7 @@
       "1": "Hello! My name is Rocky.",
       "2": "What would you like to be called?",
       "3": "It's nice to meet you,",
-      "4": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and locations based on a set of information. "
+      "4": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and roles based on a set of information. "
     },
     "Tutorial": {
       "1": "I'm here to help by providing the information that you need to make the right decision.",
@@ -425,7 +425,7 @@
       "1": "Hello! My name is Rocky.",
       "2": "What would you like to be called?",
       "3": "It's nice to meet you,",
-      "4": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and locations based on a set of information. The interactive logic grid on the left can be used to understand how to use the information to make a decision."
+      "4": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and roles based on a set of information. The interactive logic grid on the left can be used to understand how to use the information to make a decision."
     },
     "Tutorial": {
       "1": "I'm here to help by providing the information that you need to make the right decision.",
@@ -572,7 +572,7 @@
     "Introduction": {
       "1": "Status: Information bot is online.",
       "2": "The information bot will query the database to provide relevant information.",
-      "3": "This is a project management simulation. The role of the user as project manager is to assign  employees to the appropriate projects and locations based on a set of information."
+      "3": "This is a project management simulation. The role of the user as project manager is to assign  employees to the appropriate projects and roles based on a set of information."
     },
     "Tutorial": {
       "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
@@ -619,7 +619,7 @@
     "Introduction": {
       "1": "Status: Information bot is online.",
       "2": "The information bot will query the database to provide relevant information.",
-      "3": "This is a project management simulation. The role of the user as project manager is to assign  employees to the appropriate projects and locations based on a set of information. The interactive logic grid on the left can be used to understand how to use the information to make a decision."
+      "3": "This is a project management simulation. The role of the user as project manager is to assign  employees to the appropriate projects and roles based on a set of information. The interactive logic grid on the left can be used to understand how to use the information to make a decision."
     },
     "Tutorial": {
       "1": "In the following messages, an example will be described which will demonstrate how to use the information grid.",
@@ -672,7 +672,7 @@
       "1": "Hello! My name is Rocky.",
       "2": "What would you like to be called?",
       "3": "It's nice to meet you,",
-      "4": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and locations based on a set of information."
+      "4": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and roles based on a set of information."
     },
     "Tutorial": {
       "1": "I'm here to help by providing the information that you need to make the right decision.",
@@ -720,7 +720,7 @@
       "1": "Hello! My name is Rocky.",
       "2": "What would you like to be called?",
       "3": "It's nice to meet you,",
-      "4": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and locations based on a set of information. The interactive logic grid on the left can be used to understand how to use the information to make a decision."
+      "4": "Welcome to the project management simulator. Your role as the project manager is to assign your employees to the appropriate projects and roles based on a set of information. The interactive logic grid on the left can be used to understand how to use the information to make a decision."
     },
     "Tutorial": {
       "1": "I'm here to help by providing the information that you need to make the right decision.",

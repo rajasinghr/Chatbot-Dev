@@ -1,6 +1,8 @@
 
 $(document).ready(function () {
     localStorage.clear();
+    var sona_id = window.location.href.split('=').pop()
+    console.log(sona_id)
     $('input[type=radio][name=optradio]').change(function () {
         if (this.value == 'yes') {
             $("#participantFullName").removeAttr('disabled');
@@ -111,7 +113,8 @@ $(document).ready(function () {
                     url: '/getSession',
                     data: {
                         'name': name,
-                        'uid': uid
+                        'uid': uid,
+                        'sonaid': window.location.href.split('=').pop()
                     },
                     type: 'GET',
                     success: function (response) {
@@ -119,10 +122,15 @@ $(document).ready(function () {
                         if (response['condition'] == 0) {
                             alert("Contact Administrator. Resetting the limit is required")
                         }
+                        else if (response['sessionId'] == 0) {
+                            alert("You are allowed to take the study only once. If you feel this is in error, then contact your professor.")
+                        }
                         else {
-                            window.location.replace(window.location.href + response['condition'])
                             localStorage.setItem("sessionId", response['sessionId']);
                             localStorage.setItem("condition", response['condition']);
+                            localStorage.setItem("sona_id", window.location.href.split('=').pop())
+                            window.location.replace(window.location.href.split('?')[0] + response['condition'])
+                            
                         }
                     },
                     error: function (response) {

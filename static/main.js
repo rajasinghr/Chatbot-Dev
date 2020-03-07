@@ -14,8 +14,8 @@ $(document).ready(function () {
     //console.log(window.location.href.split('/').pop())
 
     if (localStorage.getItem("sessionId") == "" || localStorage.getItem("sessionId") == null ||
-        localStorage.getItem("condition") == "" || localStorage.getItem("condition") == null) {
-        //|| localStorage.getItem("condition") != window.location.href.split('/').pop()) {
+        localStorage.getItem("condition") == "" || localStorage.getItem("condition") == null
+        || localStorage.getItem("condition") != window.location.href.split('/').pop()) {
         window.location.replace(window.location.origin)
     }
     else {
@@ -1342,7 +1342,7 @@ $(document).ready(function () {
 
             //alert("Task Completed. Click OK. Page will refresh in 3 seconds")
             //window.setTimeout(function () { location.reload() }, 3000)
-            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_3khoFXLSN8CbFJj" + '?id=' + localStorage.getItem("sessionId"))
+            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_3khoFXLSN8CbFJj" + '?id=' + localStorage.getItem("sona_id"))
             localStorage.clear()
         }
 
@@ -1548,7 +1548,7 @@ $(document).ready(function () {
 
             //alert("Task Completed. Click OK. Page will refresh in 3 seconds")
             //window.setTimeout(function () { location.reload() }, 3000)
-            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_3khoFXLSN8CbFJj" + '?id=' + localStorage.getItem("sessionId"))
+            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_3khoFXLSN8CbFJj" + '?id=' + localStorage.getItem("sona_id"))
         }
 
 
@@ -1953,7 +1953,8 @@ $(document).ready(function () {
                     'condition': $('#condition').val(),
                     'matrixDict': JSON.stringify(result),
                     'workGrid':'',
-                    'usedHints': usedHints
+                    'usedHints': usedHints,
+                    'sonaid': localStorage.getItem("sona_id")
                 }
                 //console.log(ajaxData)
                 $.ajax({

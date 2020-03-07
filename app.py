@@ -81,7 +81,7 @@ class Chatbot:
 
         return (topic,index,data)
 
-    def insertConsent(self,sessionId,fullname,uid,conditionId):
+    def insertConsent(self,sessionId,fullname,uid,sonaid,conditionId):
         server = 'mumachatserver.database.windows.net'
         database = 'mumachatdb'
         username = 'mumaadmin'
@@ -91,17 +91,24 @@ class Chatbot:
         conn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
         cursor = conn.cursor()
         try:
-            if sessionId == None or sessionId == '':
-                cursor.execute('''SELECT MAX(sessionId) FROM ParticipantConsent''')
-                sessionId = cursor.fetchone()[0]+1
-            elif sessionId == 0:
-                sessionId = 1
-            
-            insertValues = (sessionId,conditionId,fullname,uid)
-            #print(insertValues)
-            cursor.execute('''INSERT INTO ParticipantConsent (sessionId,conditionId,fullname,unumber)  VALUES (?,?,?,?)''',insertValues)
-            conn.commit()
-            conn.close()
+
+            cursor.execute('''SELECT COUNT(*) FROM ParticipantConsent where unumber = (?)''',uid)
+            row_count = cursor.fetchone()[0]
+
+            if row_count == 0:
+                if sessionId == None or sessionId == '':
+                    cursor.execute('''SELECT MAX(sessionId) FROM ParticipantConsent''')
+                    sessionId = cursor.fetchone()[0]+1
+                elif sessionId == 0:
+                    sessionId = 1
+
+                insertValues = (sessionId,conditionId,fullname,uid,sonaid)
+                #print(insertValues)
+                cursor.execute('''INSERT INTO ParticipantConsent (sessionId,conditionId,fullname,unumber,sonaid)  VALUES (?,?,?,?,?)''',insertValues)
+                conn.commit()
+                conn.close()
+            else:
+                sessionId = 0
         except:
             print(error)
             conn.close()
@@ -163,7 +170,7 @@ class Chatbot:
         return self.clueData['redundant'][clueId]
        
 
-    def insertMatrixResult(self,sessionId,conditionId,matrixDict,timeTaken,workGrid,usedHints):
+    def insertMatrixResult(self,sessionId,conditionId,matrixDict,timeTaken,workGrid,usedHints,sonaid):
         #print("Matrix Result")
         server = 'mumachatserver.database.windows.net'
         database = 'mumachatdb'
@@ -176,9 +183,9 @@ class Chatbot:
         try:
             if timeTaken=='NaN':
                 timeTaken=0
-            insertValues = (sessionId,conditionId,matrixDict,timeTaken,workGrid,usedHints)
+            insertValues = (sessionId,conditionId,matrixDict,timeTaken,workGrid,usedHints,sonaid)
             #print(insertValues)
-            cursor.execute('''INSERT INTO MatrixResult (sessionId,conditionId,matrixDict,timetaken,workGrid,usedHints) VALUES (?,?,?,?,?,?)''',insertValues)
+            cursor.execute('''INSERT INTO MatrixResult (sessionId,conditionId,matrixDict,timetaken,workGrid,usedHints,sonaid) VALUES (?,?,?,?,?,?,?)''',insertValues)
             conn.commit()
             conn.close()
             print("success")
@@ -193,17 +200,22 @@ chatbot = Chatbot()
 
 @app.route('/')
 def consent():
+    print(request.args['id'])
     return render_template("consent.html")
 
 @app.route('/getSession')
 def getSession():
     name = ''
     uid = '' 
+    sonaid = ''
     if 'name' in request.args:
         name = request.args['name']
         
     if 'uid' in request.args:
         uid = request.args['uid']
+
+    if 'sonaid' in request.args:
+        sonaid = request.args['sonaid']
         
     fileName = os.getcwd()+'/static/tutorial/availableLimit.json'
     allowedLimit = None
@@ -223,7 +235,7 @@ def getSession():
         randomCondition = random.choice(availableConditions)
         currentLimit = allowedLimit[randomCondition]
     allowedLimit[randomCondition] = currentLimit-1
-    sessionId = chatbot.insertConsent(None,name,uid,randomCondition)
+    sessionId = chatbot.insertConsent(None,name,uid,sonaid,randomCondition)
     with open(fileName, 'w') as outfile:
         json.dump(allowedLimit, outfile)
     return jsonify({"condition":randomCondition,"sessionId":sessionId})
@@ -283,6 +295,7 @@ def storeMatrixResult():
     timeTaken = ''
     usedHints = ''
     workGrid = ''
+    sonaid = ''
     
     if 'sessionId' in request.args:
         sessionId = request.args['sessionId']
@@ -302,8 +315,11 @@ def storeMatrixResult():
     if 'usedHints' in request.args:
         usedHints = request.args['usedHints']
         #print(usedHints)
+    if 'sonaid' in request.args:
+        sonaid = request.args['sonaid']
+        #print(sonaid)
 
-    chatbot.insertMatrixResult(sessionId,chatbot.conditionData[condition],matrixDict,timeTaken,workGrid,usedHints)
+    chatbot.insertMatrixResult(sessionId,chatbot.conditionData[condition],matrixDict,timeTaken,workGrid,usedHints,sonaid)
     print("Store matrix:")
     return jsonify({"result":"success"});
 
