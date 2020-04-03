@@ -194,14 +194,60 @@ class Chatbot:
             conn.close()
         return sessionId
 
+    def getMatrixResult(self,recordId):
+        server = 'mumachatserver.database.windows.net'
+        database = 'mumachatdb'
+        username = 'mumaadmin'
+        password = 'Mum@ch@t'
+        driver= '{ODBC Driver 17 for SQL Server}'
+        #sessionId = ''
+        row = ''
+        conn = pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+database+';UID='+username+';PWD='+ password)
+        cursor = conn.cursor()
+        try:
+            insertValues = (int(recordId))
+            #print(insertValues)
+            cursor.execute('''SELECT 
+                    id as ID,
+                    fullname as "Full Name", 
+                    unumber as "U Number", 
+                    mr.sonaid as "SONA ID", 
+                    mr.conditionId as "Condition (ARC)",
+                    matrixDict as "Matrix Result", 
+                    timetaken as "Time Taken", 
+                    workGrid as "Work Grid", 
+                    usedHints as "Unused Hints", 
+                    mr.insertTimestamp as "Inserted TS"
+               FROM [dbo].[ParticipantConsent] as pc
+               JOIN [dbo].[MatrixResult] as mr
+               ON mr.sessionId = pc.sessionId
+               AND mr.sonaid = pc.sonaid
+               WHERE id = ?''',insertValues)
+            row = cursor.fetchone()
+            
+            conn.commit()
+            conn.close()
+            print("success")
+        except:
+            print('error')
+            conn.close()
+        return row
+
 
 app = Flask(__name__)
 chatbot = Chatbot()
 
-@app.route('/')
-def consent():
+@app.route('/', defaults={'report': False})
+def consent(report=False):
     print(request.args['id'])
-    return render_template("consent.html")
+    report = False
+    if 'report' in request.args:
+        report = request.args['report'].lower()
+        print(report)
+    if report and report == "true":
+        return render_template("report.html")
+    else:
+        return render_template("consent.html")
 
 @app.route('/getSession')
 def getSession():
@@ -286,6 +332,26 @@ def getResponse():
     
     return jsonify({"botResponse":data,'topic':topic,'index':index,'sessionId':sessionId,'condition':condition})
 
+
+@app.route('/getMatrixResult',methods=['GET'])
+def getMatrixResult():
+    recordId = ''
+    
+    if 'recordId' in request.args:
+        recordId = request.args['recordId']
+    
+    data = chatbot.getMatrixResult(recordId)
+    result = {'id':data[0],
+              'fullname':data[1],
+              'unumber':data[2],
+              'sonaid':data[3],
+              'conditionId':data[4],
+              'matrixDict':data[5],
+              'timetaken':data[6],
+              'workGrid':data[7],
+              'usedHints':data[8]
+              }
+    return json.dumps({"result":result});
 
 @app.route('/storeMatrixResult',methods=['GET'])
 def storeMatrixResult():

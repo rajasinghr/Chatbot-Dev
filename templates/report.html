@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/report.css" />
+
+</head>
+
+<body style="background-color:#006747">
+    <div class="container" style="height:100vh;width:100%; ">
+        <div class="row" style="height:7vh; background-color:#CFC493">
+            <div class="input-group" style="padding: 5px 0px 0px 10px">
+                <div class="form-group row" style="">
+                    <div class="col-lg-8">
+                        <input class="form-control" id="recordId" type="text" style="height:30px" placeholder="Type record ID . . .">
+                    </div>
+                    <div class="col-lg-4" style="float:right">
+                        <button class="" id="getData"> Get Data </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="height:90vh;background-color:white">
+            <div class="column" style=" width: 54%;overflow: auto;background-color:white;border-radius:10px;border-right:20px !important">
+                <div id="clickableGrid">
+                    <table id="demoTable" class="table  table-sm" style="height:75%; max-height:75%;"></table>
+
+                </div>
+
+            </div>
+            <div class="column" style="width: 46%;border:solid #CFC493 3px;border-top:0px !important; height: 93vh;background-color:white; border-bottom-left-radius:10px">
+                <div id='matrixResult' class='table-responsive-sm' style='width:90%; padding: 10px 0px 0px 20px'>
+                    <div>
+                        <p> Correct Result</p>
+                    </div>
+                    <table class='table table-sm'>
+                        <thead>
+                            <tr style='font-size: 10px;font-weight:bold;'>
+                                <th scope='col'>Team Member</th>
+                                <th scope='col'>Role</th>
+                                <th scope='col'>Pjt hrs/wk</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td style='font-size: 14px;font-weight:bold;'>Alex</td>
+                                <td>
+                                    <select class='form-control form-control-sm'>
+                                        <option value='1'>Network Architect</option>
+
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class='form-control form-control-sm'>
+                                        <option value='2'>8</option>
+
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='font-size: 14px;font-weight:bold;'>Leon</td>
+                                <td>
+                                    <select class='form-control form-control-sm'>
+                                        <option value='2'>Systems Analyst</option>
+
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class='form-control form-control-sm'>
+                                        <option value='3'>10</option>
+
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='font-size: 14px;font-weight:bold;'>Rachel</td>
+                                <td>
+                                    <select class='form-control form-control-sm'>
+                                        <option value='4'>Database Administrator</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class='form-control form-control-sm'>
+                                        <option value='1'>6</option>
+
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='font-size: 14px;font-weight:bold;'>Tina</td>
+                                <td>
+                                    <select class='form-control form-control-sm'>
+                                        <option value='3'>Cyber Security Specalist</option>
+
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class='form-control form-control-sm'>
+                                        <option value='4'>12</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                    </div>
+                </div>
+
+
+
+                <div id='matrixResult' class='table-responsive-sm' style='width:90%; padding: 10px 0px 0px 20px'>
+                    <div>
+                        <p> User Result</p>
+                    </div>
+                    <table class='table table-sm'>
+                        <thead>
+                            <tr style='font-size: 10px;font-weight:bold;'>
+                                <th scope='col'>Team Member</th>
+                                <th scope='col'>Role</th>
+                                <th scope='col'>Pjt hrs/wk</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td style='font-size: 14px;font-weight:bold;'>Alex</td>
+                                <td>
+                                    <select class='form-control form-control-sm' id="1">
+                                        <option value='0'>Select</option>
+                                        <option value='1'>Network Architect</option>
+                                        <option value='2'>Systems Analyst</option>
+                                        <option value='3'>Cyber Security Specalist</option>
+                                        <option value='4'>Database Administrator</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class='form-control form-control-sm' id="2">
+                                        <option value='0'>Select</option>
+                                        <option value='1'>6</option>
+                                        <option value='2'>8</option>
+                                        <option value='3'>10</option>
+                                        <option value='4'>12</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='font-size: 14px;font-weight:bold;'>Leon</td>
+                                <td>
+                                    <select class='form-control form-control-sm' id="3">
+                                        <option value='0'>Select</option>
+                                        <option value='1'>Network Architect</option>
+                                        <option value='2'>Systems Analyst</option>
+                                        <option value='3'>Cyber Security Specalist</option>
+                                        <option value='4'>Database Administrator</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class='form-control form-control-sm' id="4">
+                                        <option value='0'>Select</option>
+                                        <option value='1'>6</option>
+                                        <option value='2'>8</option>
+                                        <option value='3'>10</option>
+                                        <option value='4'>12</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='font-size: 14px;font-weight:bold;'>Rachel</td>
+                                <td>
+                                    <select class='form-control form-control-sm' id="5">
+                                        <option value='0'>Select</option>
+                                        <option value='1'>Network Architect</option>
+                                        <option value='2'>Systems Analyst</option>
+                                        <option value='3'>Cyber Security Specalist</option>
+                                        <option value='4'>Database Administrator</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class='form-control form-control-sm' id="6">
+                                        <option value='0'>Select</option>
+                                        <option value='1'>6</option>
+                                        <option value='2'>8</option>
+                                        <option value='3'>10</option>
+                                        <option value='4'>12</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='font-size: 14px;font-weight:bold;'>Tina</td>
+                                <td>
+                                    <select class='form-control form-control-sm' id="7">
+                                        <option value='0'>Select</option>
+                                        <option value='1'>Network Architect</option>
+                                        <option value='2'>Systems Analyst</option>
+                                        <option value='3'>Cyber Security Specalist</option>
+                                        <option value='4'>Database Administrator</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select class='form-control form-control-sm' id="8">
+                                        <option value='0'>Select</option>
+                                        <option value='1'>6</option>
+                                        <option value='2'>8</option>
+                                        <option value='3'>10</option>
+                                        <option value='4'>12</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../static/report.js"></script>
+</body>
+
+</html>

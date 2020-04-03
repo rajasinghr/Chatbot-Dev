@@ -1,0 +1,46 @@
+
+
+
+.next-button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border-color: #4CAF50;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    float: right !important;
+    text-decoration: none !important;
+    font-size: 17px;
+    border: 1px solid #cccccc;
+}
+
+
+.click {
+    border: 1px solid black;
+    font-size: 10px;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.border {
+    border: 1px solid black !important;
+}
+
+
+.cross {
+    /*background-color: red;*/
+    background-image: url("../static/images/cross.png");
+    background-size: contain;
+    background-position: center;
+}
+
+.circle {
+    /*background-color: green;*/
+    background-image: url("../static/images/circle.png");
+    background-size: contain;
+    background-position: center;
+}
