@@ -1342,7 +1342,7 @@ $(document).ready(function () {
 
             //alert("Task Completed. Click OK. Page will refresh in 3 seconds")
             //window.setTimeout(function () { location.reload() }, 3000)
-            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_3khoFXLSN8CbFJj" + '?id=' + localStorage.getItem("sona_id"))
+            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_bjSxk2rNGebGUi9" + '?id=' + localStorage.getItem("sona_id"))
             localStorage.clear()
         }
 
@@ -1548,7 +1548,7 @@ $(document).ready(function () {
 
             //alert("Task Completed. Click OK. Page will refresh in 3 seconds")
             //window.setTimeout(function () { location.reload() }, 3000)
-            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_3khoFXLSN8CbFJj" + '?id=' + localStorage.getItem("sona_id"))
+            window.location.replace("https://usf.az1.qualtrics.com/jfe/form/SV_bjSxk2rNGebGUi9" + '?id=' + localStorage.getItem("sona_id"))
         }
 
 
