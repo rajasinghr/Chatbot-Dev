@@ -114,7 +114,8 @@ $(document).ready(function () {
                     data: {
                         'name': name,
                         'uid': uid,
-                        'sonaid': window.location.href.split('=').pop()
+                        //'sonaid': window.location.href.split('=').pop()
+                        'sonaid': '0000'
                     },
                     type: 'GET',
                     success: function (response) {
@@ -128,7 +129,8 @@ $(document).ready(function () {
                         else {
                             localStorage.setItem("sessionId", response['sessionId']);
                             localStorage.setItem("condition", response['condition']);
-                            localStorage.setItem("sona_id", window.location.href.split('=').pop())
+                            //localStorage.setItem("sona_id", window.location.href.split('=').pop())
+                            localStorage.setItem("sona_id", '0000')
                             window.location.replace(window.location.href.split('?')[0] + response['condition'])
                             
                         }

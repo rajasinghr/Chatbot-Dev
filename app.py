@@ -239,7 +239,7 @@ chatbot = Chatbot()
 
 @app.route('/', defaults={'report': False})
 def consent(report=False):
-    print(request.args['id'])
+    #print(request.args['id'])
     report = False
     if 'report' in request.args:
         report = request.args['report'].lower()

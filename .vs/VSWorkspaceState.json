@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\static",
-    "\\static\\tutorial",
     "\\templates"
   ],
-  "SelectedNode": "\\static\\main.css",
+  "SelectedNode": "\\templates\\report.html",
   "PreviewInSolutionExplorer": false
 }
