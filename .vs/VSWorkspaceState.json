@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\static",
+    "\\static\\tutorial",
     "\\templates"
   ],
-  "SelectedNode": "\\templates\\report.html",
+  "SelectedNode": "\\static\\tutorial\\availableLimit.json",
   "PreviewInSolutionExplorer": false
 }
